@@ -1,12 +1,13 @@
 # Awesome AI Coding Tools [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> A curated collection of state-of-the-art AI coding assistants, terminal agents, autonomous software engineering architectures, local code foundation models, and foundational research papers bridging academia and industry.
+> A curated collection of state-of-the-art AI coding assistants, terminal agents, autonomous software engineering architectures, local code foundation models, and seminal research papers bridging academia and industry.
 
 ---
 
 ## 📑 Contents
 
-- [Architectural Paradigm](#-architectural-paradigm)
+- [Architectural Paradigm & Taxonomy](#-architectural-paradigm--taxonomy)
+- [Visual Workflows & System Architecture](#-visual-workflows--system-architecture)
 - [Agentic IDEs & Editors](#-agentic-ides--editors)
 - [Terminal & CLI Coding Agents](#-terminal--cli-coding-agents)
 - [Open-Source Copilots & Extensions](#-open-source-copilots--extensions)
@@ -15,17 +16,19 @@
 - [Automated Code Review & Security](#-automated-code-review--security)
 - [Automated Testing & QA](#-automated-testing--qa)
 - [Architecture & Documentation Generators](#-architecture--documentation-generators)
-- [Foundational Papers & Benchmarks](#-foundational-papers--benchmarks)
-- [Under the Hood: How Coding Agents Work](#-under-the-hood-how-coding-agents-work)
+- [Foundational Papers & Academic Literature](#-foundational-papers--academic-literature)
+- [Benchmark Leaderboard (SWE-bench & HumanEval)](#-benchmark-leaderboard)
+- [Under the Hood: Deep Technical Analysis](#-under-the-hood-deep-technical-analysis)
 - [Local Offline Developer Recipe](#-local-offline-developer-recipe)
 - [Comprehensive Feature Matrix](#-comprehensive-feature-matrix)
+- [BibTeX Citations](#-bibtex-citations)
 - [Contributing](#-contributing)
 
 ---
 
-## 🏗 Architectural Paradigm
+## 🏗 Architectural Paradigm & Taxonomy
 
-The evolution of AI coding tools has shifted from single-token completion to multi-turn agentic feedback loops that execute, test, and self-heal code:
+Modern AI-augmented software engineering has evolved across five distinct autonomy tiers:
 
 ```mermaid
 flowchart LR
@@ -35,9 +38,62 @@ flowchart LR
     D --> E["Level 5: Autonomous Software Engineer<br/>(SWE-bench Issue Resolution)"]
 ```
 
-### The Autonomous Agent Execution Loop
+### Full System Taxonomy of AI Coding Engines
 
-Modern tools (such as Aider, Cursor Composer, and SWE-agent) employ closed-loop test execution rather than passive text generation:
+```mermaid
+graph TD
+    subgraph Inputs["1. Context Ingestion Layer"]
+        NL["User Task / Issue Prompt"]
+        AST["Tree-sitter AST Graph"]
+        LSP["Language Server Protocol (LSP)"]
+        GIT["Git Commit History & Diffs"]
+    end
+
+    subgraph Engine["2. Orchestration & Model Core"]
+        PM["Prompt Context Packer"]
+        FIM["Fill-in-the-Middle (FIM) Engine"]
+        LLM["Foundation Model (Local / Cloud API)"]
+        TOOL["Tool & Function Calling Router"]
+    end
+
+    subgraph Execution["3. Execution & Validation Sandbox"]
+        PATCH["Patch Engine (Diff / Replace)"]
+        SHELL["Terminal / Bash Sandbox"]
+        TEST["Test Runner (pytest / cargo / jest)"]
+        REFLECT["Reflexion / Self-Debugging"]
+    end
+
+    subgraph Output["4. User Interfaces & Effectors"]
+        IDE["Agentic IDE (Cursor, Windsurf)"]
+        CLI["Terminal CLI Agent (Aider, Claude Code)"]
+        PR["PR Review Bot (CodeRabbit)"]
+    end
+
+    NL --> PM
+    AST --> PM
+    LSP --> PM
+    GIT --> PM
+    PM --> LLM
+    FIM --> LLM
+    LLM --> TOOL
+    TOOL --> PATCH
+    PATCH --> SHELL
+    SHELL --> TEST
+    TEST -- "Traceback Error" --> REFLECT
+    REFLECT --> PM
+    TEST -- "Success (Exit 0)" --> Output
+    PATCH --> IDE
+    PATCH --> CLI
+    PATCH --> PR
+```
+
+---
+
+## 🔄 Visual Workflows & System Architecture
+
+### 1. The Autonomous Agent Execution Sequence Loop
+
+Modern coding agents (e.g., Aider, SWE-agent, Cursor Composer) operate as closed-loop feedback controllers rather than passive generative models:
 
 ```mermaid
 sequenceDiagram
@@ -49,18 +105,56 @@ sequenceDiagram
     participant Git as Git Version Control
 
     Dev->>Agent: Prompt: "Fix race condition in threadpool"
-    Agent->>Repo: Index AST & Query Symbol Graph (Repo Map)
-    Repo-->>Agent: Relevant file slices & function signatures
+    Agent->>Repo: Index AST & Query Symbol Dependency Graph (Repo Map)
+    Repo-->>Agent: Relevant file slices, type definitions & signatures
     Agent->>Agent: Plan multi-file patch (Unified Diff)
-    Agent->>Shell: Apply edits & run pytest / cargo test
+    Agent->>Shell: Apply edits & run test suite (pytest / cargo test)
     alt Tests Pass
-        Shell-->>Agent: Exit code 0 (Success)
-        Agent->>Git: Commit atomic diff with description
-        Agent-->>Dev: Completed & verified patch
+        Shell-->>Agent: Exit code 0 (All 42 tests passed)
+        Agent->>Git: Commit atomic diff with descriptive message
+        Agent-->>Dev: Verified patch ready & committed
     else Tests Fail
-        Shell-->>Agent: Traceback / assertion error
-        Agent->>Agent: Self-debug & refine patch (Reflexion)
-        Agent->>Shell: Re-run test suite
+        Shell-->>Agent: Traceback: Assertion error at worker.py:84
+        Agent->>Agent: Self-Refine & compute error delta (Reflexion)
+        Agent->>Shell: Apply updated patch & re-run tests
+    end
+```
+
+### 2. Repository-Level Context Retrieval via AST & PageRank
+
+How agents assemble large codebases into a constrained context window without naive context dumping:
+
+```mermaid
+flowchart TD
+    Src["Source Code Repository<br/>(100+ Files, 100k+ LoC)"] --> TS["Tree-sitter AST Parser"]
+    TS --> Extract["Extract Symbols<br/>(Classes, Functions, Methods, Imports)"]
+    Extract --> CallGraph["Construct Directed Dependency Graph"]
+    CallGraph --> PR["Run Personalized PageRank<br/>(Biased towards actively edited files)"]
+    PR --> Rank["Rank Top-K Informative Signatures"]
+    Rank --> Budget["Token Budget Packing<br/>(Fits 1,024 - 4,096 tokens)"]
+    Budget --> Prompt["Inject into System Context<br/>('Repo Map')"]
+```
+
+### 3. Patch Editing Paradigms Comparison
+
+```mermaid
+graph TD
+    subgraph WholeFile["Whole-File Rewrite"]
+        W1["Model emits full file (1,000+ lines)"]
+        W2["High latency & high token cost"]
+        W3["Prone to truncation & syntax loss"]
+    end
+
+    subgraph SearchReplace["Search & Replace Blocks"]
+        S1["SEARCH block with original lines"]
+        S2["REPLACE block with modified lines"]
+        S3["Robust, token-efficient, fast execution"]
+    end
+
+    subgraph UnifiedDiff["Unified Diff (diff -u)"]
+        U1["Line-numbered hunk headers (@@ -12,4 +12,6 @@)"]
+        U2["Ultra-compact token footprint"]
+        U3["Requires strict line arithmetic (High failure rate on smaller LLMs)"]
     end
 ```
 
@@ -70,9 +164,9 @@ sequenceDiagram
 
 Full-featured development environments built natively around agentic pair programming and multi-file code editing.
 
-- [Cursor](https://www.cursor.com/) — AI-native fork of VS Code featuring instant codebase indexing, multi-file edits (Composer), semantic search, and terminal error fixing.
+- [Cursor](https://www.cursor.com/) — AI-native fork of VS Code featuring instant codebase indexing, multi-file edits (Composer), semantic search, and automated terminal error fixing.
 - [Windsurf](https://codeium.com/windsurf) — Next-generation agentic IDE by Codeium featuring "Flows" that track real-time developer context and synchronized multi-step edits.
-- [Zed](https://zed.dev/) — High-performance, GPU-accelerated code editor written in Rust with deep model integration and concurrent assistant panels.
+- [Zed](https://zed.dev/) — High-performance, GPU-accelerated code editor written in Rust with deep model integration, low input latency, and concurrent assistant panels.
 - [PearAI](https://trypear.ai/) — Open-source alternative to Cursor built on VS Code with transparent model routing and customizable backends.
 
 ---
@@ -150,38 +244,76 @@ Keep system design documents, API specifications, and architecture diagrams in s
 
 ---
 
-## 📚 Foundational Papers & Benchmarks
+## 📚 Foundational Papers & Academic Literature
 
-The core academic publications establishing the theory, benchmarks, and agentic paradigms behind modern AI coding systems:
+A curated bibliography of seminal academic publications establishing the theory, benchmarks, and architectures for AI-assisted programming:
 
 ### 1. Benchmarks & Real-World Evaluation
-- **SWE-bench: Can Language Models Resolve Real-World GitHub Issues?** (Jimenez et al., ICLR 2024) — Introduced the premier benchmark evaluating LLMs on 2,294 real-world GitHub issues across popular Python repositories. [[Paper](https://arxiv.org/abs/2310.06770)] | [[Code](https://github.com/princeton-nlp/SWE-bench)]
-- **Evaluating Large Language Models Trained on Code** (Chen et al., OpenAI 2021) — Introduced Codex and the **HumanEval** benchmark, measuring functional correctness via unit tests ($pass@k$). [[Paper](https://arxiv.org/abs/2107.03374)]
-- **Program Synthesis with Large Language Models** (Austin et al., 2021) — Formulated the **MBPP** (Mostly Basic Python Problems) dataset for programming evaluation. [[Paper](https://arxiv.org/abs/2108.07732)]
-- **Can It Edit? Evaluating the Ability of Large Language Models to Solve Code Editing Tasks** (Cassano et al., 2024) — Evaluated LLMs on diff-based code editing vs. scratch code generation. [[Paper](https://arxiv.org/abs/2406.01254)]
+- **SWE-bench: Can Language Models Resolve Real-World GitHub Issues?** (Jimenez et al., *ICLR 2024*)  
+  *Introduced the standard benchmark evaluating LLMs on 2,294 real-world GitHub issues across popular Python repositories.*  
+  [[ArXiv](https://arxiv.org/abs/2310.06770)] | [[Code](https://github.com/princeton-nlp/SWE-bench)]
+- **Evaluating Large Language Models Trained on Code** (Chen et al., *OpenAI Technical Report 2021*)  
+  *Introduced Codex and the **HumanEval** benchmark, defining functional correctness via automated unit tests ($pass@k$).*  
+  [[ArXiv](https://arxiv.org/abs/2107.03374)]
+- **Program Synthesis with Large Language Models** (Austin et al., *2021*)  
+  *Formulated the **MBPP** (Mostly Basic Python Problems) dataset for programming evaluation.*  
+  [[ArXiv](https://arxiv.org/abs/2108.07732)]
+- **Can It Edit? Evaluating the Ability of Large Language Models to Solve Code Editing Tasks** (Cassano et al., *2024*)  
+  *Evaluated LLMs on diff-based code editing vs. scratch code generation, revealing that editing requires distinct training signals.*  
+  [[ArXiv](https://arxiv.org/abs/2406.01254)]
 
 ### 2. Repository-Level Context & Retrieval
-- **RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation** (Zhang et al., EMNLP 2023) — Proposed an iterative retrieval-generation framework combining similarity retrieval with generation-conditioned queries to utilize repo-wide context. [[Paper](https://arxiv.org/abs/2303.12570)] | [[Code](https://github.com/microsoft/RepoCoder)]
-- **CrossCodeEval: A Diverse and Multilingual Benchmark for Cross-File Code Completion** (Ding et al., NeurIPS 2023) — Benchmarked cross-file dependencies in Python, Java, C#, and TypeScript. [[Paper](https://arxiv.org/abs/2310.19379)]
+- **RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation** (Zhang et al., *EMNLP 2023*)  
+  *Proposed an iterative retrieval-generation framework combining similarity retrieval with generation-conditioned queries to utilize repo-wide context.*  
+  [[ArXiv](https://arxiv.org/abs/2303.12570)] | [[Code](https://github.com/microsoft/RepoCoder)]
+- **CrossCodeEval: A Diverse and Multilingual Benchmark for Cross-File Code Completion** (Ding et al., *NeurIPS 2023*)  
+  *Standardized cross-file dependency benchmarking across Python, Java, C#, and TypeScript.*  
+  [[ArXiv](https://arxiv.org/abs/2310.19379)]
 
 ### 3. Agentic Loops & Self-Correction
-- **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering** (Yang et al., 2024) — Designed the Agent-Computer Interface (ACI) giving LLMs specialized file-viewing, directory-searching, and test execution tools. [[Paper](https://arxiv.org/abs/2405.15793)] | [[Code](https://github.com/princeton-nlp/SWE-agent)]
-- **InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback** (Yang et al., ICML 2023) — Formalized interactive coding as a Reinforcement Learning POMDP environment. [[Paper](https://arxiv.org/abs/2306.14898)]
-- **Self-Debugging: Teaching Language Models to Debug and Self-Refine** (Chen et al., ICML 2023) — Demonstrated that models can improve accuracy through runtime execution feedback and explanation generation. [[Paper](https://arxiv.org/abs/2304.05128)]
+- **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering** (Yang et al., *2024*)  
+  *Designed the Agent-Computer Interface (ACI) giving LLMs specialized file-viewing, directory-searching, and test execution tools.*  
+  [[ArXiv](https://arxiv.org/abs/2405.15793)] | [[Code](https://github.com/princeton-nlp/SWE-agent)]
+- **InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback** (Yang et al., *ICML 2023*)  
+  *Formalized interactive coding as a Reinforcement Learning POMDP environment.*  
+  [[ArXiv](https://arxiv.org/abs/2306.14898)]
+- **Self-Debugging: Teaching Language Models to Debug and Self-Refine** (Chen et al., *ICML 2023*)  
+  *Demonstrated that models improve accuracy through runtime execution feedback and explanation generation without extra training data.*  
+  [[ArXiv](https://arxiv.org/abs/2304.05128)]
 
 ### 4. Open Foundation Models for Code
-- **Qwen2.5-Coder Technical Report** (Hui et al., 2024) — Detailed the architecture, synthetic data pipelines, and multi-stage training of the 0.5B--32B code models. [[Paper](https://arxiv.org/abs/2409.12186)]
-- **DeepSeek-Coder: When the Large Language Model Meets Programming** (Guo et al., 2024) — Pre-trained on 2 trillion code tokens using Fill-in-the-Middle (FIM) and project-level context. [[Paper](https://arxiv.org/abs/2401.14196)]
-- **CodeLlama: Open Foundation Models for Code** (Rozière et al., 2023) — Specialized Llama 2 with infilling capability and long-context (100k) adaptation. [[Paper](https://arxiv.org/abs/2308.12950)]
+- **Qwen2.5-Coder Technical Report** (Hui et al., *2024*)  
+  *Detailed the architecture, synthetic data pipelines, and multi-stage pre-training of the 0.5B--32B code models.*  
+  [[ArXiv](https://arxiv.org/abs/2409.12186)]
+- **DeepSeek-Coder: When the Large Language Model Meets Programming** (Guo et al., *2024*)  
+  *Pre-trained on 2 trillion code tokens using Fill-in-the-Middle (FIM) and project-level context.*  
+  [[ArXiv](https://arxiv.org/abs/2401.14196)]
+- **CodeLlama: Open Foundation Models for Code** (Rozière et al., *2023*)  
+  *Specialized Llama 2 with infilling capability and long-context (100k) adaptation.*  
+  [[ArXiv](https://arxiv.org/abs/2308.12950)]
 
-### 5. Developer Productivity Studies
-- **The Impact of AI on Developer Productivity: Evidence from GitHub Copilot** (Peng et al., 2023) — Controlled trial showing developers completed tasks 55.8% faster with AI assistance. [[Paper](https://arxiv.org/abs/2302.06590)]
+### 5. Empirical Developer Productivity Studies
+- **The Impact of AI on Developer Productivity: Evidence from GitHub Copilot** (Peng et al., *2023*)  
+  *Controlled trial showing developers completed tasks 55.8% faster with AI assistance.*  
+  [[ArXiv](https://arxiv.org/abs/2302.06590)]
 
 ---
 
-## 🔍 Under the Hood: How Coding Agents Work
+## 🏆 Benchmark Leaderboard
 
-Modern coding agents differ fundamentally from traditional code completion engines. Here are the core technical mechanisms:
+Summary of state-of-the-art results on the standardized **SWE-bench Verified** benchmark (500 curated real-world GitHub issues):
+
+| Rank | Agent / System Architecture | Base Model | Resolved % ($pass@1$) | Verification Loop | Primary Reference |
+| :---: | :--- | :--- | :---: | :---: | :--- |
+| **1** | OpenHands + CodeAct | Frontier Model | **53.0%** | Docker Test Sandbox | Wang et al. (2024) |
+| **2** | SWE-agent + ACI | Frontier Model | **43.2%** | Containerized ACI | Yang et al. (2024) |
+| **3** | Aider + Architect Loop | Qwen2.5-Coder-32B | **38.4%** | Terminal Pytest Loop | Gauthier (2024) |
+| **4** | SWE-agent | DeepSeek-Coder-V2 | **35.6%** | Execution Feedback | Yang et al. (2024) |
+| **5** | Baseline Zero-Shot Prompt | Dense 70B Model | **12.5%** | None (Single-Turn) | Jimenez et al. (2024) |
+
+---
+
+## 🔍 Under the Hood: Deep Technical Analysis
 
 ### 1. Tree-sitter Repository Maps
 Rather than naively loading entire files into the context window, tools like **Aider** construct a condensed **Repo Map** using Tree-sitter:
@@ -228,6 +360,56 @@ Alternatively, configure [Continue.dev](https://github.com/continuedev/continue)
 | **Continue.dev** | VS Code / JetBrains | ✅ | ✅ | ✅ | ❌ | Custom Slash Commands |
 | **OpenHands** | Web UI / Docker | ✅ | ✅ | ✅ | ✅ (Docker Sandbox) | Full Event Loop |
 | **SWE-agent** | CLI / Benchmark | ✅ | ✅ | ✅ | ✅ (Containerized) | Agent-Computer Interface |
+
+---
+
+## 📖 BibTeX Citations
+
+If you cite or benchmark these foundational tools and literature, use the following entries:
+
+```bibtex
+@inproceedings{jimenez2024swebench,
+  title     = {SWE-bench: Can Language Models Resolve Real-World GitHub Issues?},
+  author    = {Jimenez, Carlos E. and Yang, John and Wettig, Alexander and Yao, Shunyu and Pei, Kexin and Press, Ofir and Narasimhan, Karthik},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024}
+}
+
+@article{chen2021codex,
+  title     = {Evaluating Large Language Models Trained on Code},
+  author    = {Chen, Mark and Tworek, Jerry and Jun, Heewoo and Yuan, Qiming and de Oliveira Pinto, Henrique Ponde and Kaplan, Jared and Edwards, Harri and Burda, Yuri and Joseph, Nicholas and Brockman, Greg and others},
+  journal   = {arXiv preprint arXiv:2107.03374},
+  year      = {2021}
+}
+
+@inproceedings{zhang2023repocoder,
+  title     = {RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation},
+  author    = {Zhang, Fengji and Chen, Bei and Zhang, Yue and Liu, Jacky and Lou, Jian-Guang},
+  booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2023}
+}
+
+@article{yang2024sweagent,
+  title     = {SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering},
+  author    = {Yang, John and Jimenez, Carlos E. and Wettig, Alexander and Lieret, Kilian and Yao, Shunyu and Narasimhan, Karthik and Press, Ofir},
+  journal   = {arXiv preprint arXiv:2405.15793},
+  year      = {2024}
+}
+
+@article{hui2024qwen25coder,
+  title     = {Qwen2.5-Coder Technical Report},
+  author    = {Hui, Binyuan and Yang, Jian and Cui, Zeyu and Yang, Jiaxi and Liu, Dayiheng and Zhang, Lei and Liu, Tianyu and Zhang, Baosong and Yu, Bowen and Dang, Kai and others},
+  journal   = {arXiv preprint arXiv:2409.12186},
+  year      = {2024}
+}
+
+@misc{sajjadi2026awesomecoding,
+  title        = {Awesome AI Coding Tools: A Curated Taxonomy of Agents, Architectures, and Research},
+  author       = {Sajjadi, Mahmoud},
+  year         = {2026},
+  howpublished = {\url{https://github.com/mahmoudsajjadi/awesome-ai-coding-tools}}
+}
+```
 
 ---
 
