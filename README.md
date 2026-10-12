@@ -179,6 +179,7 @@ Command-line power tools that operate directly inside your terminal, managing gi
 - [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) — High-agency CLI research tool capable of navigating large code repositories, running shell commands, and managing complex multi-file refactors.
 - [Cline](https://github.com/cline/cline) — Autonomous coding agent extension for VS Code that executes terminal commands, inspects local browser previews, and requests human-in-the-loop permission.
 - [Mentat](https://github.com/AbanteAI/mentat) — Open-source AI tool capable of coordinating complex git workflows directly in the terminal with repo-wide context.
+- [Xenon](https://github.com/xianyu-sheng/Xenon) — CLI coding agent that records every session event in an append-only hash chain verifiable on demand via `/evidence`, blocks hollow answers through a single deterministic verification gate, and ships anything it could not verify as an explicit manual-verification checklist; multi-model (any OpenAI-compatible or DeepSeek endpoint) with MCP client support.
 
 ---
 
