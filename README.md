@@ -382,6 +382,10 @@ flowchart LR
 
 ---
 
+### 3. Track Usage Before It Burns
+
+- [TokenTracker](https://www.tokentracker.cc/) — Local-first AI token usage & cost tracker (CLI, dashboard, native apps) for Claude Code, Codex, Cursor, Gemini, Copilot, and more. Privacy-first: counts tokens only, never prompts or completions. `npx tokentracker-cli` · [GitHub](https://github.com/xiufengsun/TokenTracker)
+
 ## 🔬 Level 3: Expert (Autonomous Systems & Research)
 
 *For AI researchers, systems engineers, and teams building custom autonomous coding agents.*
