@@ -49,19 +49,21 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const comment = `### 🌟 Welcome to Awesome AI Coding Tools!
-
-Thank you for proposing an addition to this curated 2026 developer stack.
-
-### 📋 Automated Submission Quality Checklist:
-- [ ] **Formatting:** Follows \`- [ToolName](https://url) - Objective 1-2 sentence description.\`
-- [ ] **Punctuation:** Begins with capital letter, ends with a terminating period (\`.\`).
-- [ ] **Alphabetical Ordering:** Placed in alphabetical order within its subcategory.
-- [ ] **Categorization:** Mapped to the appropriate progressive tier (Beginner IDE / CLI Pair Programmer / Local Weights / SWE-bench).
-- [ ] **Zero Promotional Hype:** Factual descriptions with concrete capabilities (e.g. context window, supported runtimes, licenses).
-- [ ] **No Dead Links:** All URLs must serve valid 200 responses over HTTPS.
-
-*Our continuous integration link-check and markdown validation suite will verify this PR automatically. A maintainer will review and merge qualifying entries within 24 hours!*`;
+            const comment = [
+              '### 🌟 Welcome to Awesome AI Coding Tools!',
+              '',
+              'Thank you for proposing an addition to this curated 2026 developer stack.',
+              '',
+              '### 📋 Automated Submission Quality Checklist:',
+              '- [ ] **Formatting:** Follows `- [ToolName](https://url) - Objective 1-2 sentence description.`',
+              '- [ ] **Punctuation:** Begins with capital letter, ends with a terminating period (`.`).',
+              '- [ ] **Alphabetical Ordering:** Placed in alphabetical order within its subcategory.',
+              '- [ ] **Categorization:** Mapped to the appropriate progressive tier (Beginner IDE / CLI Pair Programmer / Local Weights / SWE-bench).',
+              '- [ ] **Zero Promotional Hype:** Factual descriptions with concrete capabilities (e.g. context window, supported runtimes, licenses).',
+              '- [ ] **No Dead Links:** All URLs must serve valid 200 responses over HTTPS.',
+              '',
+              '*Our continuous integration link-check and markdown validation suite will verify this PR automatically. A maintainer will review and merge qualifying entries within 24 hours!*'
+            ].join('\n');
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
