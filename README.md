@@ -239,6 +239,7 @@ sequenceDiagram
 ### Running Agents in Parallel
 Control planes, terminal managers, and orchestrators that run multiple coding agents concurrently across worktrees:
 - [AgentsMesh](https://github.com/AgentsMesh/AgentsMesh) — Platform for scheduling and isolating multiple coding agents across distributed workstations.
+- [Carbon Forge](https://carbonforge.dev/) — Hosted source control (a web service reached over MCP, no local model involved) where each coding agent works in a lane, a set of patches over the trunk, instead of a git worktree. A patch that no longer applies is reported as a named conflict rather than merged automatically, and git history is rendered from the record and pushed to GitHub.
 - [ccmanager](https://github.com/kbwo/ccmanager) — Session manager for coordinating parallel CLI agent workflows across multiple repositories.
 - [Claude Squad](https://github.com/smtg-ai/claude-squad) — Terminal manager for running multiple concurrent coding agent sessions across terminal tabs.
 - [cmux](https://github.com/manaflow-ai/cmux) — Ghostty-based macOS terminal designed with vertical workspaces and desktop notifications for agent fleets.
