@@ -25,3 +25,17 @@ Please list items in alphabetical order within their respective category:
 - [ ] Added to the most relevant category.
 - [ ] Alphabetically sorted within the category.
 - [ ] No duplicate entries.
+
+---
+
+## 🎖️ Feature Your Inclusion (README Badge)
+
+If your tool is listed in this directory, feel free to display the official badge on your project's `README.md`:
+
+```markdown
+[![Featured in Awesome AI Coding Tools](https://img.shields.io/badge/Featured%20in-Awesome%20AI%20Coding%20Tools-blue?style=flat-square&logo=github)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools)
+```
+
+Preview:
+[![Featured in Awesome AI Coding Tools](https://img.shields.io/badge/Featured%20in-Awesome%20AI%20Coding%20Tools-blue?style=flat-square&logo=github)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools)
+

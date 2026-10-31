@@ -62,6 +62,8 @@ jobs:
               '- [ ] **Zero Promotional Hype:** Factual descriptions with concrete capabilities (e.g. context window, supported runtimes, licenses).',
               '- [ ] **No Dead Links:** All URLs must serve valid 200 responses over HTTPS.',
               '',
+              '⭐ *If you find this curated ecosystem valuable, please consider giving the repository a star to help other developers discover your tool!*',
+              '',
               '*Our continuous integration link-check and markdown validation suite will verify this PR automatically. A maintainer will review and merge qualifying entries within 24 hours!*'
             ].join('\n');
 
