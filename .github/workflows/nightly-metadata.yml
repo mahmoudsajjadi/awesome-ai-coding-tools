@@ -1,0 +1,39 @@
+name: Nightly Catalog Metadata & Health Refresher
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Every night at 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-metadata:
+    name: Refresh Stars, Releases & Health
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify Catalog & Sync tools.json
+        run: |
+          python scripts/verify_catalog.py
+
+      - name: Fetch Live Stars, Licenses & Health
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/refresh_metadata.py
+
+      - name: Commit and Push Updated Metadata
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/tools.json docs/catalog_metadata.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(catalog): automated nightly live metadata & health sync [skip ci]" && git push)
