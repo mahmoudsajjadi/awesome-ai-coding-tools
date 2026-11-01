@@ -30,6 +30,16 @@ The highest-starred verified projects tracked in our core catalog:
 
 | Project | Stars | Status | Category |
 | :--- | :---: | :---: | :--- |
+| [llama.cpp](https://github.com/ggerganov/llama.cpp) | ⭐ 133.0k | Active | Local Execution Engines (Private & Offline) |
+| [Orca](https://github.com/stablyai/orca) | ⭐ 111.8k | Active | Running Agents in Parallel |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | ⭐ 108.6k | Active | Terminal & CLI Pair Programmers |
+| [DeepSeek-V3 / DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-V3) | ⭐ 104.7k | Active | Top Open-Weight Coding Models |
+| [vLLM](https://github.com/vllm-project/vllm) | ⭐ 96.0k | Active | Local Execution Engines (Private & Offline) |
+| [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) | ⭐ 92.4k | Active | Autonomous Software Engineers (SWE-bench) |
+| [Filesystem & Git MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | ⭐ 91.7k | Active | Model Context Protocol (MCP) Servers for Coding |
+| [GitHub MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/github) | ⭐ 91.7k | Active | Model Context Protocol (MCP) Servers for Coding |
+| [Postgres MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) | ⭐ 91.7k | Active | Model Context Protocol (MCP) Servers for Coding |
+| [Cline](https://github.com/cline/cline) | ⭐ 71.1k | Active | Terminal & CLI Pair Programmers |
 
 ---
 
