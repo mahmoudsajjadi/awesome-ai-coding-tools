@@ -1,0 +1,40 @@
+name: Weekly Discovery & Ecosystem Digest
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Every Monday at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  discover-and-digest:
+    name: Discover Trending Tools & Build Digest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Discover Trending AI Coding Tools & MCP Servers
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/discover_new.py
+
+      - name: Generate Weekly Digest
+        run: |
+          python scripts/build_digest.py
+
+      - name: Commit Digest & Discovered Candidates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/discovered_candidates.json docs/digests/ docs/LATEST_DIGEST.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(digest): update weekly discovered tools and digest [skip ci]" && git push)
