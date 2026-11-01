@@ -39,7 +39,6 @@ Explore our dedicated deep-dive technical benchmarks and guides:
 
 ## Contents
 
-- [⭐ Why Star This Repository?](#-why-star-this-repository)
 - [🔍 Popular 2026 Head-to-Head Comparisons](#-popular-2026-head-to-head-comparisons)
 - [🗺 Choose Your Path: Interactive Roadmap](#-choose-your-path-interactive-roadmap)
 - [🚀 60-Second Quickstart (Start Here)](#-60-second-quickstart-start-here)
@@ -71,15 +70,6 @@ Explore our dedicated deep-dive technical benchmarks and guides:
 - [📚 Detailed Guides & Documentation](#-detailed-guides--documentation)
 - [🤝 Contributing](#-contributing)
 - [📈 Star History](#-star-history)
-
----
-
-## ⭐ Why Star This Repository?
-
-- **Zero Hype, Technical Rigor:** Every tool and architecture is evaluated by empirical capabilities, local model support, and benchmark metrics.
-- **Progressive 3-Tier Journey:** Start with single-click autocomplete today; level up to local terminal agents and autonomous benchmark systems when ready.
-- **Academic & Industry Bridge:** Combines practical engineering tools with peer-reviewed research papers (ICLR, EMNLP, NeurIPS, ICML).
-- **100% Privacy Focused:** Dedicated local offline runbooks ensuring your proprietary code never leaves your workstation.
 
 ---
 
@@ -138,7 +128,7 @@ flowchart LR
 ### 1-Click Editor Extensions
 - [Codeium](https://codeium.com/) — Free AI code completion and chat extension for 40+ IDEs with low latency and enterprise self-hosting options.
 - [Continue.dev](https://github.com/continuedev/continue) — The leading open-source extension for VS Code and JetBrains; connects to cloud models or local models (Ollama, LM Studio).
-- [Supermaven](https://supermaven.com/) — Ultra-low latency inline code completion with a 1-million-token context window that indexes your entire repository in seconds.
+- [Supermaven](https://supermaven.com/) — Fast inline code completion engine featuring Babble architecture (acquired by Cursor in late 2024).
 - [Tabby](https://github.com/TabbyML/tabby) — Self-hosted AI coding assistant server; an open-source, private alternative to GitHub Copilot.
 
 ### Beginner Prompting Cheatsheet
@@ -231,7 +221,7 @@ sequenceDiagram
 - [Flisk](https://github.com/flisk-sh/flisk) — Agent-first local environment generator and CLI that automatically configures Docker Compose, Tilt, and Traefik stacks from an empty directory so coding agents can focus on application code.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — Google's command-line agent utilizing 1M+ token context windows to ingest entire repositories for refactoring and debugging.
 - [Goose](https://github.com/block/goose) — Open-source, extensible AI agent by Block that automates engineering tasks, script execution, and multi-tool workflows directly from the terminal.
-- [Kilo Code](https://github.com/kilo-code/kilo) — High-performance terminal coding assistant engineered for low latency and zero-cloud local workflow execution.
+- [Kilo Code](https://github.com/kilo-code/kilo) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
 - [Mentat](https://mentat.ai/) — Open-source AI tool capable of coordinating complex git workflows directly in the terminal with repo-wide context.
 - [OpenCode](https://github.com/opencode-ai/opencode) — Provider-agnostic open-source terminal coding agent harness supporting custom agent loops, local model routing, and unified diff execution.
 - [Roo Code (formerly Roo Cline)](https://github.com/RooVetGit/Roo-Code) — Community-driven autonomous coding assistant extension for VS Code featuring custom agent modes and MCP server connectivity.
@@ -393,7 +383,7 @@ flowchart LR
 *For AI researchers, systems engineers, and teams building custom autonomous coding agents.*
 
 ### Autonomous Software Engineers (SWE-bench)
-- [Devika](https://github.com/stitionai/devika) — Agentic open-source software engineer capable of breaking down user goals into multi-stage tasks and executing web research.
+- [Devika](https://github.com/stitionai/devika) — Experimental open-source software engineer agent capable of breaking down user goals into multi-stage tasks (historical reference).
 - [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — Autonomous software development agent capable of writing code, browsing the web, and running dockerized execution sandboxes.
 - [SWE-agent](https://github.com/princeton-nlp/SWE-agent) — Open-source agent developed by Princeton that resolves real GitHub issues on the SWE-bench benchmark using an Agent-Computer Interface (ACI).
 
@@ -566,18 +556,6 @@ Empirical evaluation on the standardized **SWE-bench Verified** benchmark (500 c
   *Controlled trial showing developers completed tasks 55.8% faster with AI assistance.*  
   [[ArXiv](https://arxiv.org/abs/2302.06590)]
 
-#### 6. Maintainer's Foundational Research & Surveys
-- **A Survey of Large Language Models: Evolution, Architectures, Adaptation, Benchmarking, Applications, Challenges, and Societal Implications** (Sajjadi Mohammadabadi et al., *Electronics 2025*)  
-  *Comprehensive 45-page survey analyzing foundation model architectures, PEFT/LoRA adaptation, test-time compute, and SWE-bench evaluations.*  
-  [[Interactive Page & BibTeX](https://mahmoudsajjadi.github.io/papers/survey-large-language-models-evolution.html)] | [[DOI](https://doi.org/10.3390/electronics14183580)]
-- **SOLAR: Communication-Efficient Model Adaptation via Subspace-Oriented Latent Adapter Reparametrization** (Sajjadi Mohammadabadi et al., *arXiv 2026*)  
-  *Subspace-oriented reparameterization achieving 35% smaller adapter footprint than LoRA for distributed foundation model adaptation.*  
-  [[Interactive Page & Demo](https://mahmoudsajjadi.github.io/papers/solar-subspace-latent-adapter-peft.html)] | [[arXiv](https://arxiv.org/abs/2604.08368)]
-- **A Survey on Hallucination in Large Language Models: Definitions, Detection, and Mitigation** (Sajjadi Mohammadabadi et al., *arXiv 2026*)  
-  *Systematic taxonomies and mitigation mechanisms for hallucination in code and reasoning generation.*  
-  [[Interactive Page & BibTeX](https://mahmoudsajjadi.github.io/papers/survey-hallucination-large-language-models.html)] | [[arXiv](https://arxiv.org/abs/2604.09912)]
-- 🏛️ **Explore all 20 peer-reviewed publications and 1-click citation widgets at the [Mahmoud Sajjadi Academic Research Hub](https://mahmoudsajjadi.github.io/research-hub.html).**
-
 ---
 
 ## ⚖️ Comprehensive Multi-Tier Comparison Matrix
@@ -662,29 +640,7 @@ If you cite or benchmark these foundational tools and literature, use the follow
   howpublished = {\url{https://github.com/mahmoudsajjadi/awesome-ai-coding-tools}}
 }
 
-@article{sajjadi2026sustainable,
-  title     = {Sustainable Smart Grid Resilience and Renewable Integration Using Multi-Agent Reinforcement Learning},
-  author    = {Sajjadi Mohammadabadi, Seyed Mahmoud and Sajjadi, Sayed Mohammad},
-  journal   = {Sustainability},
-  volume    = {18},
-  number    = {20},
-  pages     = {10574},
-  year      = {2026},
-  publisher = {MDPI},
-  doi       = {10.3390/su182010574},
-  url       = {https://www.mdpi.com/2071-1050/18/20/10574}
-}
 ```
-
-### 📄 Author's Foundational Research & Recent Publications
-
-- **🔥 [NEWLY PUBLISHED] Sustainable Smart Grid Resilience and Renewable Integration Using Multi-Agent Reinforcement Learning** — *S. M. Sajjadi Mohammadabadi, S. M. Sajjadi*, *Sustainability* (MDPI) 18(20), 10574 (2026). [[📄 **Read Open-Access on MDPI**](https://www.mdpi.com/2071-1050/18/20/10574)] • [[📥 **Download Official MDPI PDF**](https://www.mdpi.com/2071-1050/18/20/10574/pdf)] • [[DOI: 10.3390/su182010574](https://doi.org/10.3390/su182010574)] • [[Interactive Page](https://mahmoudsajjadi.github.io/papers/sustainable-smart-grid-resilience-marl.html)]
-- **SOLAR: Communication-Efficient Model Adaptation via Subspace-Oriented Latent Adapter Reparametrization** — *S. M. Sajjadi Mohammadabadi, X. Ma, L. Yang, F. Yan, J. Zhang*, *arXiv:2604.08368* (2026). [[arXiv](https://arxiv.org/abs/2604.08368)] • [[Code](https://github.com/mahmoudsajjadi/solar-peft)]
-- **Speed Up Federated Learning in Heterogeneous Environments: A Dynamic Tiering Approach** — *S. M. Sajjadi Mohammadabadi, S. Zawad, F. Yan, L. Yang*, *IEEE Internet of Things Journal* 12(5), 5026–5035 (2024). [[DOI](https://doi.org/10.1109/JIOT.2024.3468511)]
-- **Communication-Efficient Training Workload Balancing for Decentralized Multi-Agent Learning** — *S. M. Sajjadi Mohammadabadi, L. Yang, F. Yan, J. Zhang*, *IEEE ICDCS* (2024). [[DOI](https://doi.org/10.1109/ICDCS60910.2024.00062)]
-- **A Survey of Large Language Models: Evolution, Architectures, Adaptation, Benchmarking, Applications, Challenges, and Societal Implications** — *S. M. Sajjadi Mohammadabadi et al.*, *Electronics* 14(18), 3580 (2025). [[DOI](https://doi.org/10.3390/electronics14183580)]
-
-> 🏛️ Explore all 21 publications and 1-click BibTeX citations at the [**Academic Research Hub**](https://mahmoudsajjadi.github.io/research-hub.html) and [**Google Scholar**](https://scholar.google.com/citations?user=tkhCR5IAAAAJ&hl=en).
 
 ---
 

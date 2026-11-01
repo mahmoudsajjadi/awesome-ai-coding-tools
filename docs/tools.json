@@ -1,7 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27",
-  "toolCount": 61,
+  "toolCount": 63,
   "tools": [
     {
       "name": "Antigravity",
@@ -40,6 +39,12 @@
       "description": "Adaptive AI-powered IDE by ByteDance featuring Claude 3.5 Sonnet / GPT-4o integration, workspace-wide context indexing, and agentic code transformation."
     },
     {
+      "name": "Volt",
+      "url": "https://github.com/LeulAria/volt",
+      "category": "Standalone Agentic IDEs",
+      "description": "Open-source (MIT) agentic IDE built on the VS Code core that drives Claude Code and Codex agent CLIs over ACP and supports local LLMs via Ollama, with hunk-level review of agent edits and Git checkpoints."
+    },
+    {
       "name": "Windsurf",
       "url": "https://codeium.com/windsurf",
       "category": "Standalone Agentic IDEs",
@@ -67,7 +72,7 @@
       "name": "Supermaven",
       "url": "https://supermaven.com/",
       "category": "1-Click Editor Extensions",
-      "description": "Ultra-low latency inline code completion with a 1-million-token context window that indexes your entire repository in seconds."
+      "description": "Fast inline code completion engine featuring Babble architecture (acquired by Cursor in late 2024)."
     },
     {
       "name": "Tabby",
@@ -127,7 +132,7 @@
       "name": "Kilo Code",
       "url": "https://github.com/kilo-code/kilo",
       "category": "Terminal & CLI Pair Programmers",
-      "description": "High-performance terminal coding assistant engineered for low latency and zero-cloud local workflow execution."
+      "description": "Open-source terminal-based developer coding assistant engineered for low latency workflows."
     },
     {
       "name": "Mentat",
@@ -158,6 +163,12 @@
       "url": "https://github.com/AgentsMesh/AgentsMesh",
       "category": "Running Agents in Parallel",
       "description": "Platform for scheduling and isolating multiple coding agents across distributed workstations."
+    },
+    {
+      "name": "Carbon Forge",
+      "url": "https://carbonforge.dev/",
+      "category": "Running Agents in Parallel",
+      "description": "Hosted source control (a web service reached over MCP, no local model involved) where each coding agent works in a lane, a set of patches over the trunk, instead of a git worktree. A patch that no longer applies is reported as a named conflict rather than merged automatically, and git history is rendered from the record and pushed to GitHub."
     },
     {
       "name": "ccmanager",
@@ -355,7 +366,7 @@
       "name": "Devika",
       "url": "https://github.com/stitionai/devika",
       "category": "Autonomous Software Engineers (SWE-bench)",
-      "description": "Agentic open-source software engineer capable of breaking down user goals into multi-stage tasks and executing web research."
+      "description": "Experimental open-source software engineer agent capable of breaking down user goals into multi-stage tasks (historical reference)."
     },
     {
       "name": "OpenHands (formerly OpenDevin)",
