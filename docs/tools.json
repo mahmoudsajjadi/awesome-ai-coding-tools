@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "toolCount": 63,
+  "toolCount": 64,
   "tools": [
     {
       "name": "Antigravity",
@@ -253,6 +253,12 @@
       "url": "https://github.com/getremcp/remcp",
       "category": "Model Context Protocol (MCP) Servers for Coding",
       "description": "Hosted OAuth MCP for terminal, file, and browser actions on explicitly paired computers; actions may change device state."
+    },
+    {
+      "name": "sqlite-graph-memory",
+      "url": "https://github.com/tonydzi/sqlite-graph-memory",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Local stdio MCP server and CLI that lets Claude Code, Cursor or Codex recall from a markdown or Obsidian notes folder, combining vector search with hops along `[[wikilinks]]` in a single SQLite file; embeddings run locally via ONNX. MIT."
     },
     {
       "name": "Codestral",
