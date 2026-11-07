@@ -248,6 +248,7 @@ Open standard protocol connecting coding agents to local developer environments,
 - [GitHub MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/github) — Integrates GitHub issues, pull requests, repository searches, and commit reviews directly into agent reasoning loops.
 - [Postgres MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) — Read-only schema inspector and query execution bridge enabling coding agents to validate database migrations and models.
 - [ReMCP](https://github.com/getremcp/remcp) — Hosted OAuth MCP for terminal, file, and browser actions on explicitly paired computers; actions may change device state.
+- [sqlite-graph-memory](https://github.com/tonydzi/sqlite-graph-memory) — Local stdio MCP server and CLI that lets Claude Code, Cursor or Codex recall from a markdown or Obsidian notes folder, combining vector search with hops along `[[wikilinks]]` in a single SQLite file; embeddings run locally via ONNX. MIT.
 
 <details>
 <summary>📦 <b>Click to Copy: Ready-to-Use mcp.json Stack (GitHub + Context7 + Postgres + Playwright)</b></summary>
