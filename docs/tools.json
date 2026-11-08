@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "toolCount": 64,
+  "toolCount": 67,
   "tools": [
     {
       "name": "Antigravity",
@@ -129,6 +129,12 @@
       "description": "Open-source, extensible AI agent by Block that automates engineering tasks, script execution, and multi-tool workflows directly from the terminal."
     },
     {
+      "name": "Imagera Code",
+      "url": "https://imagera.ai/code",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Paid terminal coding agent (CLI, built on OpenCode) that reads and edits a project, runs commands and tests, and works headless or through ACP and MCP; one plan covers Claude, GPT, Gemini and other models."
+    },
+    {
       "name": "Kilo Code",
       "url": "https://github.com/kilo-code/kilo",
       "category": "Terminal & CLI Pair Programmers",
@@ -139,6 +145,12 @@
       "url": "https://mentat.ai/",
       "category": "Terminal & CLI Pair Programmers",
       "description": "Open-source AI tool capable of coordinating complex git workflows directly in the terminal with repo-wide context."
+    },
+    {
+      "name": "OMK",
+      "url": "https://github.com/dmae97/omk",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes."
     },
     {
       "name": "OpenCode",
@@ -205,6 +217,12 @@
       "url": "https://github.com/stablyai/orca",
       "category": "Running Agents in Parallel",
       "description": "Autonomous development environment built to orchestrate and execute a fleet of parallel coding agents."
+    },
+    {
+      "name": "Sqwakie",
+      "url": "https://sqwakie.si/?utm_source=awesome-ai-coding-tools-ms&utm_medium=listing",
+      "category": "Running Agents in Parallel",
+      "description": "Live dashboard and peer-to-peer CLI/MCP messaging for Claude Code and Codex agents across a team's machines, with project kanbans agents can start, review, and finish. Free for 2 people; FSL-1.1-ALv2 (source-available)."
     },
     {
       "name": "Vibe Kanban",
