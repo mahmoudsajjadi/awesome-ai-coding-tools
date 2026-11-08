@@ -238,6 +238,7 @@ Control planes, terminal managers, and orchestrators that run multiple coding ag
 - [MulmoTerminal](https://github.com/receptron/mulmoterminal) — Browser-based terminal grid running parallel coding agent sessions with dedicated git worktrees per cell, backed by tmux.
 - [Orkas](https://github.com/Orkas-AI/Orkas) — Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.
 - [Orca](https://github.com/stablyai/orca) — Autonomous development environment built to orchestrate and execute a fleet of parallel coding agents.
+- [Sqwakie](https://sqwakie.si/?utm_source=awesome-ai-coding-tools-ms&utm_medium=listing) — Live dashboard and peer-to-peer CLI/MCP messaging for Claude Code and Codex agents across a team's machines, with project kanbans agents can start, review, and finish. Free for 2 people; FSL-1.1-ALv2 (source-available).
 - [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) — Kanban board dashboard to plan, dispatch, monitor, and review tasks across multiple agent CLIs.
 
 ### 🔌 Model Context Protocol (MCP) Servers for Coding
