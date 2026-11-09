@@ -1,6 +1,6 @@
 # Awesome AI Coding Tools (2026) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![GitHub Stars](https://img.shields.io/github/stars/mahmoudsajjadi/awesome-ai-coding-tools?style=social)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/stargazers) [![Link Health](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/awesome-bot.yml/badge.svg)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/awesome-bot.yml) [![GitHub Forks](https://img.shields.io/github/forks/mahmoudsajjadi/awesome-ai-coding-tools?style=social)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/network/members) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT & CC0](https://img.shields.io/badge/License-MIT_%26_CC0-yellow.svg)](LICENSE) [![Last Commit](https://img.shields.io/github/last-commit/mahmoudsajjadi/awesome-ai-coding-tools)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/commits/main)
 
-> **`awesome-ai-coding-tools`** is the authoritative, curated catalog of state-of-the-art **Awesome AI Coding Tools (2026)**, autonomous coding agents, open foundation models, Model Context Protocol (MCP) servers, and seminal research papers — created and maintained by [**Mahmoud Sajjadi**](https://github.com/mahmoudsajjadi). Structured across three progressive skill tiers — from zero-setup beginner IDEs to autonomous SWE-bench systems — so every engineer and researcher can find exactly what they need.
+> **`awesome-ai-coding-tools`** is a curated catalog of **AI Coding Tools (2026)**, autonomous coding agents, open foundation models, Model Context Protocol (MCP) servers, and empirical research benchmarks — maintained by [**Mahmoud Sajjadi**](https://github.com/mahmoudsajjadi). Structured across three progressive skill tiers — from zero-setup beginner IDEs to autonomous SWE-bench systems — so every engineer and researcher can find relevant tools for their workflow.
 
 > 🚀 **Building an AI Coding Tool or Agent?** [**Submit your tool in 30 seconds**](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/issues/new?template=submit-tool.yml) — we review, test, and merge qualifying tools within 24 hours!
 
@@ -60,7 +60,7 @@ Explore our dedicated deep-dive technical benchmarks and guides:
   - [System Architecture & Context Assembly](#system-architecture--context-assembly)
   - [Tree-sitter & AST PageRank Repo-Maps](#tree-sitter--ast-pagerank-repo-maps)
   - [Code Editing Representation Trade-offs](#code-editing-representation-trade-offs)
-  - [SOTA Benchmark Leaderboard](#sota-benchmark-leaderboard)
+  - [SWE-bench Verified Official Benchmark Leaderboard](#swe-bench-verified-official-benchmark-leaderboard)
   - [Seminal Academic Papers](#seminal-academic-papers)
 - [⚖️ Comprehensive Multi-Tier Comparison Matrix](#-comprehensive-multi-tier-comparison-matrix)
 - [❓ Frequently Asked Questions (FAQ)](#-frequently-asked-questions-2026-ai-coding-faq)
@@ -120,13 +120,13 @@ flowchart LR
 - [PearAI](https://trypear.ai/) — Open-source alternative to Cursor built on VS Code with transparent model routing and customizable backends.
 - [Trae](https://www.trae.ai/) — Adaptive AI-powered IDE by ByteDance featuring Claude 3.5 Sonnet / GPT-4o integration, workspace-wide context indexing, and agentic code transformation.
 - [Volt](https://github.com/LeulAria/volt) — Open-source (MIT) agentic IDE built on the VS Code core that drives Claude Code and Codex agent CLIs over ACP and supports local LLMs via Ollama, with hunk-level review of agent edits and Git checkpoints.
-- [Windsurf](https://codeium.com/windsurf) — Next-generation agentic IDE by Codeium featuring "Flows" that track real-time developer context and synchronized multi-step edits.
+- [Windsurf](https://windsurf.com/) — Agentic IDE by Codeium featuring "Flows" that track real-time developer context and synchronized multi-step edits.
 - [Zed](https://zed.dev/) — Lightning-fast, GPU-accelerated code editor written in Rust with deep model integration and multi-model assistant panels.
 
 ### 1-Click Editor Extensions
 - [Codeium](https://codeium.com/) — Free AI code completion and chat extension for 40+ IDEs with low latency and enterprise self-hosting options.
 - [Continue.dev](https://github.com/continuedev/continue) — The leading open-source extension for VS Code and JetBrains; connects to cloud models or local models (Ollama, LM Studio).
-- [Supermaven](https://supermaven.com/) — Fast inline code completion engine featuring Babble architecture (acquired by Cursor in late 2024).
+- [Supermaven](https://supermaven.com/) — Inline code completion engine featuring Babble architecture (acquired by Cursor; standalone product sunsetted).
 - [Tabby](https://github.com/TabbyML/tabby) — Self-hosted AI coding assistant server; an open-source, private alternative to GitHub Copilot.
 
 ### Beginner Prompting Cheatsheet
@@ -213,18 +213,18 @@ sequenceDiagram
 ### Terminal & CLI Pair Programmers
 - [Aider](https://github.com/paul-gauthier/aider) — Command-line AI pair programmer that parses your repository into a Tree-sitter map, edits multiple files, runs lint/test commands, and automatically commits atomic git diffs.
 - [Avante.nvim](https://github.com/yetone/avante.nvim) — Neovim plugin designed to emulate Cursor AI's multi-file editing capabilities natively in Lua.
-- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) — High-agency agentic command-line tool capable of autonomous directory indexing, running bash commands, handling git diffs, and orchestrating complex multi-file refactors.
+- [Claude Code](https://code.claude.com/docs) — Agentic command-line tool capable of autonomous directory indexing, running bash commands, handling git diffs, and orchestrating complex multi-file refactors.
 - [Cline](https://github.com/cline/cline) — Autonomous coding agent extension for VS Code that executes terminal commands, inspects local browser previews, and requests human-in-the-loop permission.
-- [Codex CLI](https://github.com/openai/codex-cli) — Command-line interface for OpenAI's coding models optimized for fast in-terminal code modifications and script execution.
+- [Codex CLI](https://github.com/openai/codex) — Command-line interface for OpenAI's coding models optimized for fast in-terminal code modifications and script execution.
 - [Flisk](https://github.com/flisk-sh/flisk) — Agent-first local environment generator and CLI that automatically configures Docker Compose, Tilt, and Traefik stacks from an empty directory so coding agents can focus on application code.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — Google's command-line agent utilizing 1M+ token context windows to ingest entire repositories for refactoring and debugging.
 - [Goose](https://github.com/block/goose) — Open-source, extensible AI agent by Block that automates engineering tasks, script execution, and multi-tool workflows directly from the terminal.
 - [Imagera Code](https://imagera.ai/code) — Paid terminal coding agent (CLI, built on OpenCode) that reads and edits a project, runs commands and tests, and works headless or through ACP and MCP; one plan covers Claude, GPT, Gemini and other models.
-- [Kilo Code](https://github.com/kilo-code/kilo) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
-- [Mentat](https://mentat.ai/) — Open-source AI tool capable of coordinating complex git workflows directly in the terminal with repo-wide context.
+- [Kilo Code](https://github.com/Kilo-Org/kilocode) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
+- [Mentat](https://github.com/AbanteAI/archive-old-cli-mentat) — Open-source AI tool capable of coordinating git workflows directly in the terminal (historical CLI archived; team pivoted to MentatBot).
 - [OMK](https://github.com/dmae97/omk) — Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes.
-- [OpenCode](https://github.com/opencode-ai/opencode) — Provider-agnostic open-source terminal coding agent harness supporting custom agent loops, local model routing, and unified diff execution.
-- [Roo Code (formerly Roo Cline)](https://github.com/RooVetGit/Roo-Code) — Community-driven autonomous coding assistant extension for VS Code featuring custom agent modes and MCP server connectivity.
+- [OpenCode](https://github.com/anomalyco/opencode) — Provider-agnostic open-source terminal coding agent harness supporting custom agent loops, local model routing, and unified diff execution.
+- [Roo Code](https://github.com/RooVetGit/Roo-Code) — Community-driven autonomous coding assistant extension for VS Code (repository archived May 2026).
 - [Xenon](https://github.com/xianyu-sheng/Xenon) — CLI coding agent that records every session event in an append-only hash chain verifiable on demand via `/evidence`, enforces deterministic hollow-answer checks, and exports manual verification checklists with multi-model and MCP client support.
 
 ### Running Agents in Parallel
@@ -237,14 +237,14 @@ Control planes, terminal managers, and orchestrators that run multiple coding ag
 - [MulmoTerminal](https://github.com/receptron/mulmoterminal) — Browser-based terminal grid running parallel coding agent sessions with dedicated git worktrees per cell, backed by tmux.
 - [Orkas](https://github.com/Orkas-AI/Orkas) — Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.
 - [Orca](https://github.com/stablyai/orca) — Autonomous development environment built to orchestrate and execute a fleet of parallel coding agents.
-- [Sqwakie](https://sqwakie.si/?utm_source=awesome-ai-coding-tools-ms&utm_medium=listing) — Live dashboard and peer-to-peer CLI/MCP messaging for Claude Code and Codex agents across a team's machines, with project kanbans agents can start, review, and finish. Free for 2 people; FSL-1.1-ALv2 (source-available).
+- [Sqwakie](https://sqwakie.si/) — Live dashboard and peer-to-peer CLI/MCP messaging for Claude Code and Codex agents across a team's machines, with project kanbans agents can start, review, and finish. Free for 2 people; FSL-1.1-ALv2 (source-available).
 - [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) — Kanban board dashboard to plan, dispatch, monitor, and review tasks across multiple agent CLIs.
 
 ### 🔌 Model Context Protocol (MCP) Servers for Coding
 Open standard protocol connecting coding agents to local developer environments, version control, and system databases:
-- [BrowserTools MCP](https://github.com/agent-tools/browsertools-mcp) — Provides agents with headful/headless browser interaction, console error capture, and network inspection capabilities.
-- [call-me](https://callmemcp.com) — Hosted remote MCP server (Streamable HTTP, no auth, plus an iPhone/Android app; the app is a paid subscription) that lets a coding agent ring your real phone, read a question aloud and get your spoken answer back as text, or text you. Server is closed source; the plugin repo is at https://github.com/radres/call-me.
-- [Context7 MCP](https://github.com/context7/context7) — Dynamic context-curation server providing real-time AST symbol definitions and semantic codebase navigation.
+- [BrowserTools MCP](https://github.com/AgentDeskAI/browser-tools-mcp) — Provides agents with headful/headless browser interaction, console error capture, and network inspection capabilities.
+- [call-me](https://github.com/radres/call-me) — Hosted remote MCP server (Streamable HTTP, plus mobile companion app) that lets a coding agent ring your phone or text you for human-in-the-loop decisions.
+- [Context7 MCP](https://github.com/upstash/context7) — Dynamic context-curation server providing real-time AST symbol definitions and semantic codebase navigation.
 - [Docsy](https://github.com/getremcp/docsy-plugin) — Read-only hosted MCP for library/version lookup and source-linked developer docs; requires OAuth account sign-in.
 - [Filesystem & Git MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/git) — Official reference MCP server enabling agents to inspect git commits, staging areas, branches, and file structures securely.
 - [GitHub MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/github) — Integrates GitHub issues, pull requests, repository searches, and commit reviews directly into agent reasoning loops.
@@ -291,11 +291,11 @@ Paste this into your Claude Code, Cursor, Cline, or Antigravity configuration fi
 ### Top Open-Weight Coding Models
 - [Codestral](https://mistral.ai/news/codestral/) — Open-weight model specialized in code completion and fill-in-the-middle tasks with an 80-language vocabulary.
 - [DeepSeek-Coder-V2](https://github.com/deepseek-ai/DeepSeek-Coder-V2) — Mixture-of-Experts code language model with 128k context length supporting 338 programming languages.
-- [DeepSeek-V3 / DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-V3) — SOTA 671B Mixture-of-Experts (37B active) and reasoning foundation models matching top proprietary models in code generation, multi-file reasoning, and complex refactors.
-- [Devstral Small 2 (24B)](https://mistral.ai/news/devstral-24b/) — High-efficiency 24B open coding model by Mistral featuring an ultra-long 384k token context window optimized for whole-repo reasoning and local 16GB VRAM execution.
+- [DeepSeek-V3 / DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-V3) — 671B Mixture-of-Experts (37B active) and reasoning foundation models matching proprietary models in code generation, multi-file reasoning, and complex refactors.
+- [Devstral Small 2 (24B)](https://mistral.ai/news/devstral-2/) — 24B open-weight coding model by Mistral featuring an extended 256k token context window optimized for repo reasoning and local execution.
 - [Llama-4 / CodeLlama Series](https://github.com/meta-llama/llama) — Meta's open foundation architectures specialized for code generation, instruction following, and infilling tasks.
-- [Qwen2.5-Coder](https://github.com/QwenLM/Qwen2.5-Coder) — Leading open-source coding foundation model series (0.5B to 32B) competitive with leading closed models across code generation, completion, and multi-file reasoning.
-- [Qwen3-Coder Preview](https://github.com/QwenLM/Qwen) — Next-generation reasoning and agentic foundation model pre-trained on extended multimodal code corpora with native tool-calling.
+- [Qwen2.5-Coder](https://github.com/QwenLM/Qwen2.5-Coder) ([HuggingFace](https://huggingface.co/collections/Qwen/qwen25-coder-66ceeac92b3b4e07971eb6fb)) — Open-source coding foundation model series (0.5B to 32B) for code generation, completion, and multi-file reasoning.
+- [Qwen3-Coder Preview](https://github.com/QwenLM/Qwen3-Coder) ([HuggingFace](https://huggingface.co/Qwen)) — Agentic coding model series (including 30B MoE and 480B MoE) pre-trained for tool calling and long-context code understanding.
 - [StarCoder 2](https://github.com/bigcode-project/starcoder2) — Open, transparently trained code models (3B, 7B, 15B) curated by BigCode under permissive licenses.
 
 #### 💻 Exact GPU VRAM to Local Coding Model Cheat Sheet
@@ -386,7 +386,6 @@ flowchart LR
 *For AI researchers, systems engineers, and teams building custom autonomous coding agents.*
 
 ### Autonomous Software Engineers (SWE-bench)
-- [Devika](https://github.com/stitionai/devika) — Experimental open-source software engineer agent capable of breaking down user goals into multi-stage tasks (historical reference).
 - [OpenHands (formerly OpenDevin)](https://github.com/All-Hands-AI/OpenHands) — Autonomous software development agent capable of writing code, browsing the web, and running dockerized execution sandboxes.
 - [SWE-agent](https://github.com/princeton-nlp/SWE-agent) — Open-source agent developed by Princeton that resolves real GitHub issues on the SWE-bench benchmark using an Agent-Computer Interface (ACI).
 
@@ -493,20 +492,24 @@ graph TD
 
 ---
 
-### SOTA Benchmark Leaderboard
+### SWE-bench Verified Official Benchmark Leaderboard
 
-Empirical evaluation on the standardized **SWE-bench Verified** benchmark (500 curated, human-validated real-world GitHub issues):
+Empirical evaluation sourced directly from the official [**SWE-bench Verified Leaderboard**](https://www.swebench.com) (500 curated, human-validated real-world GitHub issues; last verified: 2026-11-09):
 
-| Rank | Agent / System Architecture | Base Foundation Model | Resolved % ($pass@1$) | Avg Cost / Issue | Verification Sandbox | License |
-| :---: | :--- | :--- | :---: | :---: | :---: | :--- |
-| **1** | OpenHands + CodeAct 2.1 | Claude 3.7 Sonnet (Thinking) | **68.2%** | ~$4.20 | Docker Container | MIT |
-| **2** | Factory Code Droid | Claude 3.5 Sonnet + Custom Harness | **64.8%** | ~$3.80 | Cloud Sandbox | Proprietary |
-| **3** | SWE-agent + Modular ACI | Claude 3.5 Sonnet | **54.2%** | ~$3.10 | Containerized ACI | MIT |
-| **4** | OpenHands + CodeAct | Claude 3.5 Sonnet | **53.0%** | ~$2.90 | Docker Container | MIT |
-| **5** | Aider + Architect / Editor Loop | DeepSeek-V3 / DeepSeek-R1 | **48.6%** | ~$0.35 | Local Pytest Loop | Apache-2.0 |
-| **6** | Aider + Local Weights | Qwen2.5-Coder-32B-Instruct | **38.4%** | **$0.00** (Local) | Local Shell Sandbox | Apache-2.0 |
-| **7** | SWE-agent | DeepSeek-Coder-V2 (236B) | **35.6%** | ~$0.40 | Docker Sandbox | MIT |
-| **8** | Baseline Zero-Shot Prompt | Llama-3-70B-Instruct | **12.5%** | ~$0.15 | None (Single Turn) | Open Weights |
+| Rank | Agent / System Architecture | Model | Resolved % ($pass@1$) | Avg Cost / Issue | Date | Source Link | Agent Open Source? |
+| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **1** | [Sonar Foundation Agent](https://www.sonarsource.com) | Claude 4.5 Opus | **79.2%** | N/A | 2025-12-05 | [SonarSource](https://www.sonarsource.com) | ❌ |
+| **2** | [live-SWE-agent](https://github.com/OpenAutoCoder/live-swe-agent) | Claude 4.5 Opus | **79.2%** | N/A | 2025-12-15 | [GitHub](https://github.com/OpenAutoCoder/live-swe-agent) | ✅ |
+| **3** | [TRAE](https://github.com/bytedance/trae-agent) | Doubao-Seed-Code | **78.8%** | N/A | 2025-09-28 | [ByteDance](https://github.com/bytedance/trae-agent) | ✅ |
+| **4** | [live-SWE-agent](https://github.com/OpenAutoCoder/live-swe-agent) | Gemini 3 Pro Preview | **77.4%** | N/A | 2025-11-20 | [GitHub](https://github.com/OpenAutoCoder/live-swe-agent) | ✅ |
+| **5** | [mini-SWE-agent](https://github.com/SWE-agent/SWE-agent) | Claude 4.5 Opus (high) | **76.8%** | $0.75 | 2026-02-17 | [SWE-bench](https://www.swebench.com) | ✅ |
+| **6** | [mini-SWE-agent](https://github.com/SWE-agent/SWE-agent) | Gemini 3 Flash (high) | **75.8%** | $0.36 | 2026-02-17 | [SWE-bench](https://www.swebench.com) | ✅ |
+| **7** | [mini-SWE-agent](https://github.com/SWE-agent/SWE-agent) | MiniMax M2.5 (high) | **75.8%** | $0.07 | 2026-02-17 | [SWE-bench](https://www.swebench.com) | ✅ |
+| **8** | [Warp](https://www.warp.dev) | Multi-Model Harness | **75.6%** | N/A | 2025-09-01 | [Warp](https://www.warp.dev) | ❌ |
+| **9** | [OpenHands](https://all-hands.dev/) | GPT-5 | **71.8%** | N/A | 2025-08-07 | [All-Hands](https://all-hands.dev/) | ✅ |
+| **10** | [OpenHands](https://all-hands.dev/) | Qwen3-Coder-480B-A35B | **69.6%** | N/A | 2025-08-05 | [Qwen Blog](https://qwenlm.github.io/blog/qwen3-coder/) | ✅ |
+| **11** | [SWE-agent](https://github.com/SWE-agent/SWE-agent) | Qwen3-Coder-480B-A35B | **55.4%** | $0.25 | 2025-08-02 | [SWE-bench](https://www.swebench.com) | ✅ |
+| **12** | [OpenHands](https://docs.all-hands.dev/) | CodeAct v2.1 (Claude 3.5 Sonnet) | **53.0%** | N/A | 2024-10-29 | [OpenHands](https://docs.all-hands.dev/) | ✅ |
 
 ### Seminal Academic Papers
 
@@ -592,7 +595,7 @@ AGENTS.md is the universal open standard supported across Cursor, Claude Code, C
 The highest-rated free open-source stack combines Continue.dev (or PearAI) in VS Code or Aider in the terminal, connected to local models running via Ollama (Qwen 2.5 Coder) or leveraging Gemini CLI's 1,000 free requests per day.
 
 ### Which AI coding agent scores highest on SWE-bench Verified?
-On the SWE-bench Verified benchmark (500 curated GitHub issues), OpenHands with CodeAct 2.1 achieves 68.2% pass@1 resolution using Claude 3.7 Sonnet (Thinking). SWE-agent achieves 54.2% pass@1, while local open-weight agents using Qwen 2.5 Coder 32B resolve 38.4% of issues at zero cloud cost.
+According to the official [SWE-bench Verified leaderboard](https://www.swebench.com) (500 human-validated GitHub issues; verified 2026-11-09), top systems include Sonar Foundation Agent (79.2%), live-SWE-agent (79.2% with Claude 4.5 Opus), TRAE (78.8%), and mini-SWE-agent (76.8%). OpenHands reaches up to 71.8% with GPT-5 and 69.6% with Qwen3-Coder-480B-A35B.
 
 ---
 

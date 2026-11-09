@@ -83,12 +83,16 @@ def main():
             'url': url,
             'category': t['category'],
             'description': t['description'],
-            'last_verified': now_iso,
+            'open_source': t.get('open_source', False),
+            'pricing': t.get('pricing', 'free'),
+            'license': t.get('license'),
+            'maintenance_status': t.get('maintenance_status', 'active'),
+            'last_verified': t.get('last_verified', now_iso[:10]),
+            'source': t.get('source', url),
             'http_status': 200,
             'is_github': False,
             'stars': None,
-            'license': None,
-            'status': 'active'
+            'status': t.get('maintenance_status', 'active')
         }
         
         # Check if URL is GitHub
@@ -101,6 +105,8 @@ def main():
                 github_count += 1
                 meta.update(gh_data)
                 meta['http_status'] = 200
+                if gh_data.get('archived'):
+                    meta['maintenance_status'] = 'inactive'
             else:
                 meta['http_status'] = check_http_status(url)
         else:

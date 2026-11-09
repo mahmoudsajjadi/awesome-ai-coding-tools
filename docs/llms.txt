@@ -1,5 +1,5 @@
 # Awesome AI Coding Tools (Canonical Catalog)
-> Authoritative, curated 3-tier taxonomy of AI coding assistants, autonomous agents, local foundation models, MCP servers, and empirical SWE-bench research.
+> Curated 3-tier taxonomy of AI coding assistants, autonomous agents, local foundation models, MCP servers, and empirical SWE-bench research.
 > Canonical URL: https://github.com/mahmoudsajjadi/awesome-ai-coding-tools
 > Web App & VRAM Calculator: https://mahmoudsajjadi.github.io/awesome-ai-coding-tools/
 
