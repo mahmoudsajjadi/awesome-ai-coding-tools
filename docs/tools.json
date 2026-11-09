@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "toolCount": 67,
+  "toolCount": 68,
   "tools": [
     {
       "name": "Antigravity",
@@ -235,6 +235,12 @@
       "url": "https://github.com/agent-tools/browsertools-mcp",
       "category": "Model Context Protocol (MCP) Servers for Coding",
       "description": "Provides agents with headful/headless browser interaction, console error capture, and network inspection capabilities."
+    },
+    {
+      "name": "call-me",
+      "url": "https://callmemcp.com",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Hosted remote MCP server (Streamable HTTP, no auth, plus an iPhone/Android app; the app is a paid subscription) that lets a coding agent ring your real phone, read a question aloud and get your spoken answer back as text, or text you. Server is closed source; the plugin repo is at https://github.com/radres/call-me."
     },
     {
       "name": "Context7 MCP",
