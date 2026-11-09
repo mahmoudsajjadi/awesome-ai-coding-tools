@@ -35,13 +35,19 @@ Use these questions to narrow down the right tool for your setup:
 2. **Do you require 100% offline privacy and zero API fees?**
    - Run a local model using [Ollama](https://ollama.com/) or [vLLM](https://github.com/vllm-project/vllm) serving [Qwen2.5-Coder](https://github.com/QwenLM/Qwen2.5-Coder) or [Devstral Small 2 (24B)](https://mistral.ai/news/devstral-2/), paired with [Aider](https://github.com/paul-gauthier/aider) or [Continue.dev](https://github.com/continuedev/continue). See the [Hardware & VRAM Guide](docs/HARDWARE_GUIDE.md).
 
-3. **Do you need multi-agent orchestration or parallel sessions?**
+3. **Need a side-by-side trade-off analysis across archetypes (IDE vs CLI vs Async vs Local)?**
+   - Consult the [Tool Decision Matrix](docs/TOOL_DECISION_MATRIX.md) for licensing, privacy posture, pricing, and suitability across tools.
+
+4. **Curious about real-world daily developer workflows?**
+   - Read the [Maintainer's Development Setup](docs/MAINTAINER_SETUP.md) for opinionated notes on terminal, editor, agent pairing, and local model orchestration.
+
+5. **Do you need multi-agent orchestration or parallel sessions?**
    - Manage multiple worktrees and concurrent agent sessions using [cmux](https://github.com/manaflow-ai/cmux), [Claude Squad](https://github.com/smtg-ai/claude-squad), [MulmoTerminal](https://github.com/receptron/mulmoterminal), or [Vibe Kanban](https://github.com/BloopAI/vibe-kanban).
 
-4. **Do you want automated PR reviews or regression testing in CI?**
+6. **Do you want automated PR reviews or regression testing in CI?**
    - Integrate [CodeRabbit](https://coderabbit.ai/) for pull-request reviews, [Cover-Agent](https://github.com/Codium-ai/cover-agent) for test coverage generation, or [Keploy](https://github.com/keploy/keploy) for zero-code network regression tests.
 
-5. **Are you researching autonomous software agents?**
+7. **Are you researching autonomous software agents?**
    - Benchmark or build on [SWE-agent](https://github.com/princeton-nlp/SWE-agent) and [OpenHands](https://github.com/All-Hands-AI/OpenHands). See empirical leaderboard results in [Benchmarks](docs/BENCHMARKS.md).
 
 ---
@@ -150,7 +156,9 @@ Use these questions to narrow down the right tool for your setup:
 
 ## Documentation & Deep Dives
 
-- [💻 Hardware & VRAM Sizing Guide](docs/HARDWARE_GUIDE.md) — GPU specifications, quantization memory tables, and offline recipes.
+- [🎯 Tool Decision Matrix (Which Tool for Which Job)](docs/TOOL_DECISION_MATRIX.md) — Comprehensive archetype comparison (IDE vs CLI vs Async vs Local) with licensing, pricing, and suitability.
+- [💻 Hardware & VRAM Sizing Guide](docs/HARDWARE_GUIDE.md) — Exact mathematical VRAM formulas, GPU tiers (8GB to 32GB+), quantization tables, and offline recipes.
+- [🛠️ Maintainer Setup & Daily Workflow](docs/MAINTAINER_SETUP.md) — Opinionated notes on editor choices, terminal agent pairing, and local model orchestration.
 - [📋 Agent Context Templates](docs/AGENT_CONTEXT_TEMPLATES.md) — Production-ready AGENTS.md, CLAUDE.md, and Cursor rules templates.
 - [📊 Benchmarks & Architecture](docs/BENCHMARKS.md) — Official SWE-bench Verified leaderboard, agent architecture, and AST PageRank.
 - [❓ Frequently Asked Questions](docs/FAQ.md) — Common questions, cost strategies, and local LLM guidance.

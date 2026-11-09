@@ -146,13 +146,14 @@
 
     <div class="grid">
       <div class="control-card">
-        <h3>💻 1. Hardware / VRAM</h3>
+        <h3>💻 1. Hardware / VRAM Tier</h3>
         <select id="vram" onchange="calculate()">
-          <option value="none">No GPU / CPU Only (Lightweight)</option>
-          <option value="8gb">8 GB VRAM (RTX 3060/4060, M1/M2 Base)</option>
-          <option value="16gb" selected>16 GB VRAM (RTX 4080, Apple 16GB)</option>
-          <option value="24gb">24 GB+ VRAM (RTX 3090/4090, Apple 36GB+)</option>
-          <option value="apple_ultra">Apple Silicon Ultra (64GB - 128GB Unified)</option>
+          <option value="none">CPU Only / No Discrete GPU (Quantized small models)</option>
+          <option value="8gb">8 GB VRAM (RTX 3060/4060, Apple M-Series Base)</option>
+          <option value="12gb">12 GB VRAM (RTX 3060 12GB / RTX 4070)</option>
+          <option value="16gb" selected>16 GB VRAM (RTX 4080, Apple 16GB-18GB)</option>
+          <option value="24gb">24 GB VRAM (RTX 3090/4090, Apple 36GB)</option>
+          <option value="32gb_plus">32 GB+ VRAM / Unified (Multi-GPU, Apple 64GB-128GB)</option>
         </select>
       </div>
 
@@ -175,6 +176,23 @@
       </div>
     </div>
 
+    <!-- Mathematical Formula Explainer Callout -->
+    <div style="background: #0a0c10; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 2rem;">
+      <h3 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        📐 The Deterministic VRAM Formula
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+        All memory values shown below are engineering estimates derived from the standardized formula:
+      </p>
+      <div style="background: var(--card-bg); border-left: 3px solid var(--accent); padding: 0.75rem 1rem; font-family: monospace; font-size: 0.9rem; color: #7ee787; margin-bottom: 0.75rem;">
+        Total VRAM ≈ Weight VRAM + KV Cache + 20% Overhead<br>
+        <span style="color: var(--text-muted); font-size: 0.8rem;">where Weight VRAM = (Parameters × Bits) / 8 and KV Cache = 2 × Layers × KV Heads × Head Dim × Precision Bytes × Context × Batch Size.</span>
+      </div>
+      <p style="font-size: 0.82rem; color: var(--text-muted);">
+        For exact layer counts, GGUF quants (Q4_K_M, Q5_K_M, Q8_0), and context lengths, see the full <a href="HARDWARE_GUIDE.md" style="color: var(--accent);">Hardware & VRAM Sizing Guide</a>.
+      </p>
+    </div>
+
     <div class="result-box">
       <h2>🎯 Recommended Stack Configuration</h2>
       <div class="recommendation-grid">
@@ -189,6 +207,10 @@
         <div class="rec-item">
           <div class="rec-label">Quantization / Engine</div>
           <div class="rec-val" id="rec-engine">Q4_K_M (Ollama)</div>
+        </div>
+        <div class="rec-item">
+          <div class="rec-label">Estimated Memory Footprint</div>
+          <div class="rec-val" id="rec-footprint">~12.0 GB (Estimate)</div>
         </div>
         <div class="rec-item">
           <div class="rec-label">SWE-bench Verified Pass</div>
@@ -226,24 +248,24 @@ aider --model ollama/qwen2.5-coder:14b
 
     <div style="margin-top: 2.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
       <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-        🔍 Popular 2026 Head-to-Head Comparisons & Guides
+        🔍 Guides, Architectural References & Decisions
       </h3>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
-        <a href="comparisons/cursor-vs-windsurf-vs-antigravity-2026.html" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
-          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">Cursor vs. Windsurf vs. Antigravity vs. Zed</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">2026 Agentic IDE Comparison</div>
+        <a href="TOOL_DECISION_MATRIX.md" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
+          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">🎯 Tool Decision Matrix</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Which tool for which job (IDE vs CLI vs Async vs Local)</div>
         </a>
-        <a href="comparisons/claude-code-vs-aider-vs-cline-vs-opencode.html" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
-          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">Claude Code vs. Aider vs. Cline vs. OpenCode</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">Best Terminal & CLI Coding Agents</div>
+        <a href="HARDWARE_GUIDE.md" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
+          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">💻 Hardware & VRAM Guide</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Exact math, GPU tiers (8GB-32GB+), and context sizing</div>
         </a>
-        <a href="comparisons/best-local-coding-llm-8gb-16gb-24gb-vram-ollama.html" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
-          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">Best Local Coding LLMs (8GB-24GB)</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">Ollama & vLLM VRAM Benchmark Guide</div>
+        <a href="MAINTAINER_SETUP.md" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
+          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">🛠️ Maintainer Setup</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Real-world daily workflow, editor and terminal agent pairing</div>
         </a>
-        <a href="comparisons/agents-md-vs-claude-md-vs-cursor-rules.html" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
-          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">AGENTS.md vs. CLAUDE.md vs. .cursor/rules</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">Universal Context Standards & Templates</div>
+        <a href="AGENT_CONTEXT_TEMPLATES.md" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
+          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">📋 Agent Context Templates</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Tested AGENTS.md, CLAUDE.md, and Cursor rules</div>
         </a>
       </div>
     </div>
@@ -263,10 +285,12 @@ aider --model ollama/qwen2.5-coder:14b
       let tool = "Aider";
       let model = "Qwen2.5-Coder:14b";
       let engine = "Q4_K_M (Ollama)";
+      let footprint = "~12.0 GB (Estimate)";
       let pass = "38.4%";
       let cmd = "";
 
       if (privacy === "cloud") {
+        footprint = "0 GB (Remote Cloud API)";
         if (iface === "ide") {
           tool = "Cursor / Windsurf";
           model = "Claude 3.7 Sonnet / GPT-4o";
@@ -289,8 +313,9 @@ aider --model ollama/qwen2.5-coder:14b
       } else {
         // Offline or Hybrid
         if (vram === "none") {
-          model = "Qwen2.5-Coder:1.5b / 7b (Q4)";
+          model = "Qwen2.5-Coder:1.5b (Q4_K_M)";
           engine = "llama.cpp (CPU avx2)";
+          footprint = "~1.4 GB System RAM (Estimate)";
           pass = "28.5%";
           if (iface === "ide") {
             tool = "Continue.dev + Ollama";
@@ -300,8 +325,9 @@ aider --model ollama/qwen2.5-coder:14b
             cmd = "ollama run qwen2.5-coder:1.5b\npip install aider-chat\naider --model ollama/qwen2.5-coder:1.5b";
           }
         } else if (vram === "8gb") {
-          model = "Qwen2.5-Coder:7b (Q8) or DeepSeek-Coder:6.7b";
+          model = "Qwen2.5-Coder:7b (Q4_K_M)";
           engine = "Ollama / llama.cpp";
+          footprint = "~5.8 GB VRAM @ 16k context (Estimate)";
           pass = "34.1%";
           if (iface === "fleet") {
             tool = "MulmoTerminal + Ollama";
@@ -310,9 +336,22 @@ aider --model ollama/qwen2.5-coder:14b
             tool = "Aider / Cline";
             cmd = "ollama run qwen2.5-coder:7b\npip install aider-chat\naider --model ollama/qwen2.5-coder:7b";
           }
+        } else if (vram === "12gb") {
+          model = "Qwen2.5-Coder:7b (Q8_0) or Devstral:24b (Q3_K_S)";
+          engine = "Ollama / llama.cpp";
+          footprint = "~9.6 GB VRAM @ 32k context (Estimate)";
+          pass = "36.2%";
+          if (iface === "ide") {
+            tool = "PearAI / Continue.dev";
+            cmd = "ollama run qwen2.5-coder:7b-instruct-q8_0\n# Set endpoint in Continue/PearAI to localhost:11434";
+          } else {
+            tool = "Aider (Local Mode)";
+            cmd = "ollama run qwen2.5-coder:7b-instruct-q8_0\npip install aider-chat\naider --model ollama/qwen2.5-coder:7b-instruct-q8_0";
+          }
         } else if (vram === "16gb") {
           model = "Qwen2.5-Coder:14b (Q4_K_M)";
-          engine = "Ollama (VRAM 11GB load)";
+          engine = "Ollama / llama.cpp";
+          footprint = "~12.0 GB VRAM @ 32k context (Estimate)";
           pass = "38.4%";
           if (iface === "ide") {
             tool = "PearAI / Windsurf (Local Backend)";
@@ -325,21 +364,23 @@ aider --model ollama/qwen2.5-coder:14b
             cmd = "ollama run qwen2.5-coder:14b\npip install aider-chat\naider --model ollama/qwen2.5-coder:14b --architect";
           }
         } else if (vram === "24gb") {
-          model = "Qwen2.5-Coder:32b (Q4_K_M)";
-          engine = "vLLM or Ollama (20GB VRAM load)";
+          model = "Qwen2.5-Coder:32b (Q4_K_M) or Devstral:24b (Q5_K_M)";
+          engine = "vLLM or Ollama";
+          footprint = "~23.1 GB VRAM @ 32k context (Estimate)";
           pass = "42.1%";
           if (iface === "fleet") {
             tool = "Vibe Kanban / Orca";
             cmd = "ollama run qwen2.5-coder:32b\nnpx vibe-kanban";
           } else {
-            tool = "Aider + DeepSeek Endpoint";
+            tool = "Aider + Ollama (Architect Mode)";
             cmd = "ollama run qwen2.5-coder:32b\npip install aider-chat\naider --model ollama/qwen2.5-coder:32b --architect";
           }
-        } else { // apple_ultra
-          model = "DeepSeek-R1 / DeepSeek-V3 (Q4 / GGUF)";
-          engine = "llama.cpp (Metal Unified RAM)";
+        } else { // 32gb_plus
+          model = "Qwen2.5-Coder:32b (Q8_0) / DeepSeek-R1 (Q4)";
+          engine = "vLLM or llama.cpp (Dual GPU / Metal Unified)";
+          footprint = "~37.2 GB Unified/Multi-GPU VRAM (Estimate)";
           pass = "58.4%";
-          tool = "Aider + OpenHands Local Docker";
+          tool = "Aider + OpenHands Local Container";
           cmd = "ollama run deepseek-r1:70b\npip install aider-chat\naider --model ollama/deepseek-r1:70b";
         }
       }
@@ -347,6 +388,7 @@ aider --model ollama/qwen2.5-coder:14b
       document.getElementById('rec-tool').innerText = tool;
       document.getElementById('rec-model').innerText = model;
       document.getElementById('rec-engine').innerText = engine;
+      document.getElementById('rec-footprint').innerText = footprint;
       document.getElementById('rec-pass').innerText = pass;
       document.getElementById('install-cmd').innerText = cmd;
     }
