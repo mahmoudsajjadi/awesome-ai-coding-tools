@@ -412,18 +412,6 @@
       "source": "https://github.com/receptron/mulmoterminal"
     },
     {
-      "name": "Orkas",
-      "url": "https://github.com/Orkas-AI/Orkas",
-      "category": "Running Agents in Parallel",
-      "description": "Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.",
-      "open_source": true,
-      "pricing": "free",
-      "license": "MIT",
-      "maintenance_status": "active",
-      "last_verified": "2026-11-09",
-      "source": "https://github.com/Orkas-AI/Orkas"
-    },
-    {
       "name": "Orca",
       "url": "https://github.com/stablyai/orca",
       "category": "Running Agents in Parallel",
@@ -434,6 +422,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/stablyai/orca"
+    },
+    {
+      "name": "Orkas",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "category": "Running Agents in Parallel",
+      "description": "Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/Orkas-AI/Orkas"
     },
     {
       "name": "Sqwakie",
@@ -784,7 +784,7 @@
       "source": "https://semgrep.dev/"
     },
     {
-      "name": "OpenHands (formerly OpenDevin)",
+      "name": "OpenHands",
       "url": "https://github.com/All-Hands-AI/OpenHands",
       "category": "Autonomous Software Engineers (SWE-bench)",
       "description": "Autonomous software development agent capable of writing code, browsing the web, and running dockerized execution sandboxes.",
