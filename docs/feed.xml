@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Awesome AI Coding Tools - Changelog &amp; Ecosystem Feed</title>
+    <link>https://mahmoudsajjadi.github.io/awesome-ai-coding-tools/</link>
+    <description>Curated updates, new tool additions, deprecations, and weekly digests from the Awesome AI Coding Tools catalog.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Nov 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://mahmoudsajjadi.github.io/awesome-ai-coding-tools/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Phase 2 &amp; Phase 3 Overhaul: 17 New Tools, Hardware VRAM Guide, and SWE-bench Leaderboard</title>
+      <link>https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/blob/main/docs/CHANGELOG.md#2026-11-09---phase-2--phase-3-overhaul</link>
+      <guid isPermaLink="true">https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/blob/main/docs/CHANGELOG.md#2026-11-09---phase-2--phase-3-overhaul</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>Added 17 verified tools across agentic IDEs, parallel fleet runners, MCP servers, and open-weight models:</p>
+        <ul>
+          <li><strong>IDEs &amp; Runners:</strong> Google Jules, Volt, Imagera Code, OMK, Carbon Forge, ccmanager, Claude Squad, cmux, MulmoTerminal, Sqwakie.</li>
+          <li><strong>MCP &amp; QA:</strong> call-me, Docsy, ReMCP, sqlite-graph-memory, agent-qa.</li>
+          <li><strong>Models:</strong> Devstral Small 2 (24B), Qwen3-Coder Preview.</li>
+          <li><strong>Guides Added:</strong> HARDWARE_GUIDE.md, AGENT_CONTEXT_TEMPLATES.md, BENCHMARKS.md, FAQ.md, RESEARCH_PAPERS.md.</li>
+          <li><strong>Deprecations:</strong> Supermaven (acquired), Mentat (archived), Roo Code (archived).</li>
+        </ul>
+      ]]></description>
+    </item>
+
+    <item>
+      <title>AI Coding &amp; MCP Ecosystem Digest: 2026-11-09</title>
+      <link>https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/blob/main/docs/LATEST_DIGEST.md</link>
+      <guid isPermaLink="true">https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/blob/main/docs/digests/2026-11-09-digest.md</guid>
+      <pubDate>Mon, 09 Nov 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>Weekly automated ecosystem discovery tracking newly surfaced open-source coding agents, MCP servers, and GitHub developer tooling.</p>
+        <p>Featured newly surfaced repositories: n8n, Scrapling, worldmonitor, rtk, ruflo, openinterpreter, context7, codebase-memory-mcp, and more.</p>
+      ]]></description>
+    </item>
+  </channel>
+</rss>

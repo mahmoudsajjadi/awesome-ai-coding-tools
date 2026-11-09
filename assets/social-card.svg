@@ -61,7 +61,7 @@
 
     <!-- Box 4 -->
     <rect x="795" y="0" width="240" height="155" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
-    <text x="815" y="35" fill="#ffa657" font-family="sans-serif" font-size="16" font-weight="700">🔬 Autonomous SOTA</text>
+    <text x="815" y="35" fill="#ffa657" font-family="sans-serif" font-size="16" font-weight="700">🔬 Autonomous Agents</text>
     <text x="815" y="65" fill="#8b949e" font-family="sans-serif" font-size="14">• OpenHands &amp; SWE-agent</text>
     <text x="815" y="92" fill="#8b949e" font-family="sans-serif" font-size="14">• Tree-sitter Repo-maps</text>
     <text x="815" y="119" fill="#8b949e" font-family="sans-serif" font-size="14">• Docker Sandboxes</text>

@@ -7,6 +7,7 @@
   <meta name="description" content="Official interactive tool for awesome-ai-coding-tools. Calculate your optimal AI coding assistant, model quantization, and GPU VRAM footprint (8GB, 12GB, 16GB, 24GB). Includes 1-click terminal install commands.">
   <meta name="keywords" content="ai coding, coding agents, vram calculator, ollama, aider, claude code, cursor, deepseek, qwen 2.5 coder, swe-bench, mcp servers">
   <link rel="canonical" href="https://mahmoudsajjadi.github.io/awesome-ai-coding-tools/">
+  <link rel="alternate" type="application/rss+xml" title="Awesome AI Coding Tools Changelog RSS" href="feed.xml">
 
   <!-- OpenGraph / Twitter Cards -->
   <meta property="og:type" content="website">
@@ -129,15 +130,34 @@
     footer { text-align: center; margin-top: 3rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+
+    /* Tool Catalog Table Styles */
+    .table-container { width: 100%; overflow-x: auto; margin-top: 1rem; border: 1px solid var(--border); border-radius: 6px; }
+    table.tools-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
+    table.tools-table th { background: #161b22; color: #fff; padding: 0.75rem 0.85rem; border-bottom: 1px solid var(--border); white-space: nowrap; font-weight: 600; cursor: pointer; user-select: none; }
+    table.tools-table th:hover { color: var(--accent); }
+    table.tools-table td { padding: 0.7rem 0.85rem; border-bottom: 1px solid #21262d; vertical-align: middle; }
+    table.tools-table tr:hover { background: #161b2244; }
+    .badge { display: inline-block; padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; }
+    .badge-free { background: #23863622; color: #3fb950; border: 1px solid #238636; }
+    .badge-freemium { background: #1f6feb22; color: #58a6ff; border: 1px solid #1f6feb; }
+    .badge-paid { background: #d2992222; color: #e3b341; border: 1px solid #d29922; }
+    .badge-oss { background: #8957e522; color: #bc8cff; border: 1px solid #8957e5; }
+    .badge-prop { background: #30363d; color: #8b949e; border: 1px solid #484f58; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>⚡ Awesome AI Coding Tools (2026) & VRAM Calculator</h1>
-      <a class="star-btn" href="https://github.com/mahmoudsajjadi/awesome-ai-coding-tools" target="_blank">
-        ⭐ Star on GitHub
-      </a>
+      <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+        <a class="star-btn" href="feed.xml" target="_blank" style="background: #e3b34122; border-color: #d29922; color: #e3b341;">
+          📡 RSS Feed
+        </a>
+        <a class="star-btn" href="https://github.com/mahmoudsajjadi/awesome-ai-coding-tools" target="_blank">
+          ⭐ Star on GitHub
+        </a>
+      </div>
     </header>
 
     <p class="lead">
@@ -235,15 +255,72 @@ aider --model ollama/qwen2.5-coder:14b
       </div>
     </div>
 
-    <!-- Quick Search / Filter Input -->
-    <div style="margin-top: 2rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-      <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-        🔍 Interactive Tool & Model Quick Filter
-      </h3>
-      <input type="text" id="quickFilter" placeholder="Filter tools, models, quantizations (e.g. Qwen, Cursor, Aider, Ollama, 24GB)..." oninput="filterCatalog()" style="width: 100%; background: #0a0c10; border: 1px solid var(--border); color: #fff; padding: 0.65rem 0.85rem; border-radius: 6px; font-size: 0.95rem; outline: none; margin-bottom: 1rem;">
-      <div id="filterResults" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem;">
-        <!-- Populated dynamically via JS -->
+    <!-- Searchable & Filterable Tool Table -->
+    <div style="margin-top: 2.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+        <div>
+          <h2 style="color: #fff; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+            📊 Searchable Tool & Model Catalog (<span id="toolCountBadge">67</span> verified tools)
+          </h2>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            Dynamically loaded from <a href="tools.json" target="_blank" style="color: var(--accent); font-family: monospace;">tools.json</a>. Search, filter by category or license, and inspect verified sources.
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <a href="feed.xml" target="_blank" style="font-size: 0.8rem; background: #e3b34122; border: 1px solid #d29922; color: #e3b341; padding: 0.35rem 0.65rem; border-radius: 4px; text-decoration: none;">
+            📡 RSS Changelog
+          </a>
+          <a href="tools.json" target="_blank" style="font-size: 0.8rem; background: #1f6feb22; border: 1px solid #1f6feb; color: var(--accent); padding: 0.35rem 0.65rem; border-radius: 4px; text-decoration: none;">
+            { } JSON API
+          </a>
+        </div>
       </div>
+
+      <!-- Filter Controls Bar -->
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+        <input type="text" id="toolTableSearch" placeholder="Search by name, description, or keyword (e.g. Aider, Qwen, git, MCP, SWE-bench)..." oninput="renderTable()" style="background: #0a0c10; border: 1px solid var(--border); color: #fff; padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.9rem; outline: none;">
+        
+        <select id="toolCategoryFilter" onchange="renderTable()" style="background: #0a0c10; border: 1px solid var(--border); color: #fff; padding: 0.6rem; border-radius: 6px; font-size: 0.88rem; outline: none;">
+          <option value="">All Categories (All 9)</option>
+          <option value="Standalone Agentic IDEs">Standalone Agentic IDEs</option>
+          <option value="1-Click Editor Extensions">1-Click Editor Extensions</option>
+          <option value="Terminal & CLI Pair Programmers">Terminal & CLI Pair Programmers</option>
+          <option value="Running Agents in Parallel">Running Agents in Parallel</option>
+          <option value="Model Context Protocol (MCP) Servers for Coding">MCP Servers for Coding</option>
+          <option value="Top Open-Weight Coding Models">Top Open-Weight Models</option>
+          <option value="Local Execution Engines (Private & Offline)">Local Execution Engines</option>
+          <option value="Automated Testing, QA & Code Review">Automated Testing & QA</option>
+          <option value="Autonomous Software Engineers (SWE-bench)">Autonomous SWE-bench</option>
+        </select>
+
+        <select id="toolPricingFilter" onchange="renderTable()" style="background: #0a0c10; border: 1px solid var(--border); color: #fff; padding: 0.6rem; border-radius: 6px; font-size: 0.88rem; outline: none;">
+          <option value="">All Pricing / Licenses</option>
+          <option value="free">Free / Open Source</option>
+          <option value="freemium">Freemium</option>
+          <option value="paid">Commercial / Paid</option>
+          <option value="oss_only">Open Source Only</option>
+        </select>
+      </div>
+
+      <div class="table-container">
+        <table class="tools-table" id="toolsTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable('name')" style="width: 22%;">Tool Name ⇕</th>
+              <th onclick="sortTable('category')" style="width: 25%;">Category ⇕</th>
+              <th style="width: 35%;">Description & Capabilities</th>
+              <th onclick="sortTable('pricing')" style="width: 10%;">Pricing ⇕</th>
+              <th style="width: 8%;">License</th>
+            </tr>
+          </thead>
+          <tbody id="toolsTableBody">
+            <tr>
+              <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 2rem;">Loading verified tools from tools.json...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="tableStatus" style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted); text-align: right;"></div>
     </div>
 
     <div style="margin-top: 2.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
@@ -263,9 +340,13 @@ aider --model ollama/qwen2.5-coder:14b
           <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">🛠️ Maintainer Setup</div>
           <div style="font-size: 0.85rem; color: var(--text-muted);">Real-world daily workflow, editor and terminal agent pairing</div>
         </a>
-        <a href="AGENT_CONTEXT_TEMPLATES.md" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
-          <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.3rem;">📋 Agent Context Templates</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">Tested AGENTS.md, CLAUDE.md, and Cursor rules</div>
+        <a href="feed.xml" target="_blank" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
+          <div style="color: #e3b341; font-weight: 600; margin-bottom: 0.3rem;">📡 RSS Feed &amp; Changelog</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Real-time XML feed for catalog updates &amp; additions</div>
+        </a>
+        <a href="LATEST_DIGEST.md" style="background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--text); display: block;">
+          <div style="color: #3fb950; font-weight: 600; margin-bottom: 0.3rem;">📰 Weekly Ecosystem Digest</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Trending newly discovered repos &amp; MCP servers</div>
         </a>
       </div>
     </div>
@@ -399,53 +480,114 @@ aider --model ollama/qwen2.5-coder:14b
       alert("Script copied to clipboard!");
     }
 
-    const catalogItems = [
-      { name: "Cursor", cat: "Agentic IDE", desc: "VS Code fork with Composer multi-file diffs and indexer.", tags: "cloud sonnet ide" },
-      { name: "Windsurf", cat: "Agentic IDE", desc: "Cascade context flows, real-time index, and tool-use.", tags: "cloud flow ide" },
-      { name: "Zed", cat: "GPU Editor", desc: "High-performance Rust editor with native assistant panel.", tags: "local rust fast" },
-      { name: "PearAI", cat: "Open IDE", desc: "Open-source Cursor alternative powered by Continue.", tags: "open source ide" },
-      { name: "Aider", cat: "CLI Agent", desc: "Terminal git pair programmer with Tree-sitter repo-maps.", tags: "cli git local ollama" },
-      { name: "Claude Code", cat: "CLI Agent", desc: "Anthropic's terminal agent for whole-repo refactoring.", tags: "cli terminal anthropic sonnet" },
-      { name: "Cline / Roo Code", cat: "VS Code Extension", desc: "Autonomous extension with MCP and bash command execution.", tags: "extension mcp vscode" },
-      { name: "Qwen 2.5 Coder 32B", cat: "Open Model", desc: "Frontier open-weight coding LLM (42.1% SWE-bench pass).", tags: "model 24gb ollama local" },
-      { name: "Qwen 2.5 Coder 14B", cat: "Open Model", desc: "Sweet-spot model for 16GB GPUs with 128k context.", tags: "model 16gb ollama local" },
-      { name: "Qwen 2.5 Coder 7B", cat: "Open Model", desc: "Ultra-fast low-latency code completion for 8GB VRAM.", tags: "model 8gb ollama local" },
-      { name: "DeepSeek-Coder-V2", cat: "MoE Model", desc: "236B MoE (21B active) supporting 338 programming languages.", tags: "model moe 24gb" },
-      { name: "OpenHands (CodeAct)", cat: "Autonomous Agent", desc: "Dockerized autonomous software engineer (68.2% SOTA).", tags: "autonomous swe-bench docker" },
-      { name: "SWE-agent", cat: "Autonomous Agent", desc: "Princeton benchmark agent using Agent-Computer Interfaces.", tags: "autonomous swe-bench princeton" },
-      { name: "MulmoTerminal", cat: "Fleet Runner", desc: "Browser multi-pane grid running git worktree agents in parallel.", tags: "fleet parallel worktree" },
-      { name: "Ollama", cat: "Runtime Engine", desc: "1-click local LLM runner for macOS, Linux, and Windows.", tags: "engine local llama" },
-      { name: "vLLM", cat: "Serving Engine", desc: "High-throughput PagedAttention inference server for local agent APIs.", tags: "engine server fast" },
-      { name: "agent-qa", cat: "Testing & QA", desc: "CLI/MCP natural-language app tests with persistent memory and validated self-improvement.", tags: "qa testing web android ios cli mcp local", url: "https://vostride.com" },
-      { name: "Orkas", cat: "Fleet Coordinator", desc: "Local-first desktop AI team coordinating specialist agents, Claude Code and Codex.", tags: "fleet desktop local parallel coordinator", url: "https://github.com/Orkas-AI/Orkas" },
-      { name: "Flisk", cat: "DevOps CLI", desc: "Agent-first local environment generator for Docker Compose, Tilt and Traefik.", tags: "cli devops docker tilt environment", url: "https://github.com/flisk-sh/flisk" },
-      { name: "Docsy", cat: "MCP Server", desc: "Read-only MCP for library/version lookup and source-linked developer docs.", tags: "mcp documentation search docs", url: "https://github.com/getremcp/docsy-plugin" },
-      { name: "ReMCP", cat: "MCP Server", desc: "Hosted OAuth MCP for terminal, file, and browser actions on paired machines.", tags: "mcp remote terminal execute oauth", url: "https://github.com/getremcp/remcp" }
-    ];
+    // Dynamic Tool Catalog loaded from tools.json
+    let allCatalogTools = [];
+    let currentSortCol = 'name';
+    let currentSortAsc = true;
 
-    function filterCatalog() {
-      const q = (document.getElementById('quickFilter').value || '').toLowerCase().trim();
-      const container = document.getElementById('filterResults');
-      if (!container) return;
-      
-      const filtered = catalogItems.filter(item => {
-        return !q || item.name.toLowerCase().includes(q) || item.cat.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q) || item.tags.toLowerCase().includes(q);
+    async function loadCatalogTools() {
+      try {
+        const res = await fetch('tools.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        allCatalogTools = data.tools || [];
+        document.getElementById('toolCountBadge').innerText = allCatalogTools.length;
+        renderTable();
+      } catch (err) {
+        console.warn('Could not fetch tools.json directly, using fallback:', err);
+        // Fallback placeholder notice
+        const tbody = document.getElementById('toolsTableBody');
+        if (tbody) {
+          tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">
+            Unable to load tools.json automatically. View raw catalog at <a href="tools.json" style="color: var(--accent);">tools.json</a>.
+          </td></tr>`;
+        }
+      }
+    }
+
+    function sortTable(column) {
+      if (currentSortCol === column) {
+        currentSortAsc = !currentSortAsc;
+      } else {
+        currentSortCol = column;
+        currentSortAsc = true;
+      }
+      renderTable();
+    }
+
+    function renderTable() {
+      const q = (document.getElementById('toolTableSearch')?.value || '').toLowerCase().trim();
+      const catFilter = document.getElementById('toolCategoryFilter')?.value || '';
+      const pricingFilter = document.getElementById('toolPricingFilter')?.value || '';
+      const tbody = document.getElementById('toolsTableBody');
+      const status = document.getElementById('tableStatus');
+      if (!tbody) return;
+
+      let filtered = allCatalogTools.filter(item => {
+        // Search query
+        if (q) {
+          const matchName = (item.name || '').toLowerCase().includes(q);
+          const matchDesc = (item.description || '').toLowerCase().includes(q);
+          const matchCat = (item.category || '').toLowerCase().includes(q);
+          const matchLic = (item.license || '').toLowerCase().includes(q);
+          if (!matchName && !matchDesc && !matchCat && !matchLic) return false;
+        }
+
+        // Category filter
+        if (catFilter && item.category !== catFilter) {
+          return false;
+        }
+
+        // Pricing filter
+        if (pricingFilter) {
+          if (pricingFilter === 'oss_only') {
+            if (!item.open_source) return false;
+          } else if (item.pricing !== pricingFilter) {
+            return false;
+          }
+        }
+
+        return true;
+      });
+
+      // Sorting
+      filtered.sort((a, b) => {
+        let valA = (a[currentSortCol] || '').toString().toLowerCase();
+        let valB = (b[currentSortCol] || '').toString().toLowerCase();
+        if (valA < valB) return currentSortAsc ? -1 : 1;
+        if (valA > valB) return currentSortAsc ? 1 : -1;
+        return 0;
       });
 
       if (filtered.length === 0) {
-        container.innerHTML = '<div style="color:var(--text-muted); font-size:0.9rem; grid-column:1/-1;">No matching tools found. Try searching for "Ollama", "Aider", "Qwen", or "IDE".</div>';
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:2rem; color:var(--text-muted);">
+          No tools match the selected filters. Clear search or filters to see all entries.
+        </td></tr>`;
+        if (status) status.innerText = `Showing 0 of ${allCatalogTools.length} tools`;
         return;
       }
 
-      container.innerHTML = filtered.map(item => `
-        <div style="background:#0a0c10; border:1px solid var(--border); padding:0.85rem; border-radius:6px;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
-            <strong style="color:#fff; font-size:0.95rem;">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" style="color:inherit;">${item.name}</a>` : item.name}</strong>
-            <span style="font-size:0.7rem; background:#161b22; color:var(--accent); padding:0.15rem 0.4rem; border-radius:4px; border:1px solid #30363d;">${item.cat}</span>
-          </div>
-          <div style="font-size:0.82rem; color:var(--text-muted); line-height:1.4;">${item.desc}</div>
-        </div>
-      `).join('');
+      tbody.innerHTML = filtered.map(t => {
+        const pricingClass = t.pricing === 'free' ? 'badge-free' : (t.pricing === 'freemium' ? 'badge-freemium' : 'badge-paid');
+        const ossBadge = t.open_source ? '<span class="badge badge-oss" style="margin-left: 0.35rem;">OSS</span>' : '';
+        const sourceUrl = t.source || t.url;
+        return `
+          <tr>
+            <td>
+              <strong style="color: #fff;"><a href="${t.url}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--accent);">${t.name}</a></strong>
+              ${ossBadge}
+            </td>
+            <td><span style="font-size: 0.8rem; color: var(--accent);">${t.category}</span></td>
+            <td style="color: var(--text); line-height: 1.45; font-size: 0.85rem;">${t.description}</td>
+            <td><span class="badge ${pricingClass}">${t.pricing}</span></td>
+            <td><code style="font-size: 0.76rem; color: var(--text-muted);">${t.license || 'N/A'}</code></td>
+          </tr>
+        `;
+      }).join('');
+
+      if (status) {
+        status.innerHTML = `Showing <strong>${filtered.length}</strong> of <strong>${allCatalogTools.length}</strong> verified tools &bull; Last verified: <code>2026-11-09</code>`;
+      }
     }
 
     const configsData = {
@@ -533,7 +675,7 @@ You are an expert full-stack software engineer and system architect. Adhere to t
     }
 
     calculate();
-    filterCatalog();
+    loadCatalogTools();
   </script>
 </body>
 </html>

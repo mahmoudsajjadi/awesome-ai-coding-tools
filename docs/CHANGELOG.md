@@ -2,6 +2,8 @@
 
 All notable changes, tool additions, deprecations, and schema updates to the catalog are documented here.
 
+Subscribe to updates via [RSS Feed (feed.xml)](feed.xml).
+
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
