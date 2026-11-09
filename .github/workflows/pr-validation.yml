@@ -1,0 +1,45 @@
+name: Pull Request Validation & Catalog Verification
+
+on:
+  pull_request:
+    branches: [main]
+
+# SECURITY: Read-only permissions on pull requests to ensure untrusted contributor
+# code never receives write tokens.
+permissions:
+  contents: read
+
+jobs:
+  validate-pr:
+    name: Lint Markdown & Verify Catalog Integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify Catalog Consistency & HTTPS URLs
+        run: |
+          python scripts/verify_catalog.py
+          git diff --exit-code docs/tools.json || (echo "Error: docs/tools.json is out of sync with README.md. Run 'python scripts/verify_catalog.py' locally and commit the changes." && exit 1)
+
+      - name: Setup Node.js for Markdown Linting
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Markdown Lint Validation
+        run: |
+          npx --yes markdownlint-cli "README.md" --disable MD013 MD024 MD033 MD041
+
+      - name: Validate Markdown Links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        continue-on-error: true
+        with:
+          use-quiet-mode: 'yes'
+          check-modified-files-only: 'yes'
+          config-file: '.github/mlc_config.json'

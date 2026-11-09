@@ -129,7 +129,32 @@ def main():
     with open(METADATA_JSON, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2)
 
-    print(f"\nMetadata refresh complete! Wrote {len(enriched)} enriched tools to {METADATA_JSON}")
+    # Also update tools.json with refreshed status, reachability, license, stars, and last_verified
+    for t in tools:
+        matching_enriched = next((e for e in enriched if e['name'] == t['name']), None)
+        if matching_enriched:
+            if matching_enriched.get('license'):
+                t['license'] = matching_enriched['license']
+            if matching_enriched.get('archived') is not None:
+                t['archived'] = matching_enriched['archived']
+            if matching_enriched.get('archived'):
+                t['maintenance_status'] = 'inactive'
+            elif matching_enriched.get('maintenance_status'):
+                t['maintenance_status'] = matching_enriched['maintenance_status']
+            if matching_enriched.get('stars') is not None:
+                t['stars'] = matching_enriched['stars']
+            if matching_enriched.get('pushed_at'):
+                t['last_commit'] = matching_enriched['pushed_at']
+            if matching_enriched.get('http_status'):
+                t['reachable'] = matching_enriched['http_status'] in (200, 301, 302, 307, 308)
+            t['last_verified'] = now_iso[:10]
+
+    catalog['lastUpdated'] = now_iso[:10]
+    catalog['tools'] = tools
+    with open(TOOLS_JSON, 'w', encoding='utf-8') as f:
+        json.dump(catalog, f, indent=2)
+
+    print(f"\nMetadata refresh complete! Wrote {len(enriched)} enriched tools to {METADATA_JSON} and updated {TOOLS_JSON}")
 
 if __name__ == '__main__':
     main()

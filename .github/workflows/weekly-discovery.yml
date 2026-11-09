@@ -6,12 +6,12 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   issues: write
 
 jobs:
   discover-and-digest:
-    name: Discover Trending Tools & Build Digest
+    name: Discover Trending Tools & Open Review Issue
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -28,13 +28,43 @@ jobs:
         run: |
           python scripts/discover_new.py
 
-      - name: Generate Weekly Digest
-        run: |
-          python scripts/build_digest.py
+      - name: Generate Current Date String
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
-      - name: Commit Digest & Discovered Candidates
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/discovered_candidates.json docs/digests/ docs/LATEST_DIGEST.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(digest): update weekly discovered tools and digest [skip ci]" && git push)
+      - name: Open Human Review Issue for Discovered Candidates
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = './docs/DISCOVERY_ISSUE_BODY.md';
+            if (!fs.existsSync(path)) {
+              core.setFailed('DISCOVERY_ISSUE_BODY.md not found');
+              return;
+            }
+            const body = fs.readFileSync(path, 'utf8');
+            const dateStr = '${{ steps.date.outputs.date }}';
+            const title = `Ecosystem Discovery: Candidate Tools for Human Review (${dateStr})`;
+
+            // Check if an open issue with the same title already exists
+            const existingIssues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              creator: 'github-actions[bot]'
+            });
+
+            const duplicate = existingIssues.data.find(issue => issue.title === title);
+            if (duplicate) {
+              core.info(`Issue already exists: #${duplicate.number}`);
+            } else {
+              const res = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['ecosystem-discovery', 'needs-review']
+              });
+              core.info(`Created discovery issue: #${res.data.number}`);
+            }

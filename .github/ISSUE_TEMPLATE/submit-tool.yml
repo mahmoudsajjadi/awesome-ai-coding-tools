@@ -71,5 +71,5 @@ body:
           required: true
         - label: "The URL uses HTTPS."
           required: true
-        - label: "I have starred or bookmarked this repository."
-          required: false
+        - label: "The tool conforms to factual, neutral descriptions without promotional hype."
+          required: true
