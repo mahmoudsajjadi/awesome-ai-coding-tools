@@ -26,21 +26,38 @@ A curated catalog of verified AI coding assistants, autonomous software engineer
 
 ## Visual Decision Guide
 
+### 1. By Experience & Autonomy Level
 ```mermaid
 flowchart TD
-    Start["What is your primary development workflow?"] --> Q1{"Select Workflow Focus"}
+    Start["Where are you in your AI coding journey?"] --> Q1{"What is your goal?"}
     
-    Q1 -->|"AI-First Dedicated Editor"| IDE["Agentic IDEs<br/>• Cursor (VS Code Fork)<br/>• Windsurf (Flow Tracking)<br/>• Zed (GPU Rust Editor)"]
-    Q1 -->|"Keep Current Editor (VS Code / JetBrains)"| EXT["Editor Extensions<br/>• Continue.dev (Open Source)<br/>• Codeium (Free / Enterprise)"]
-    Q1 -->|"Terminal & Git CLI"| CLI["CLI Pair Programmers<br/>• Claude Code (Anthropic CLI)<br/>• Aider (Git & Tree-sitter)<br/>• OpenCode (Model Agnostic)"]
-    Q1 -->|"Zero Cloud / 100% Offline"| LOCAL["Local Execution & Weights<br/>• Ollama / vLLM Engines<br/>• Qwen2.5-Coder / Devstral<br/>• Hardware & VRAM Guide"]
-    Q1 -->|"Autonomous CI / Batch Issues"| SWE["Autonomous SWE Agents<br/>• mini-SWE-agent<br/>• OpenHands<br/>• Google Jules / CodeRabbit"]
+    Q1 -->|"Beginner / In-Editor"| L1["🌱 Level 1: Beginner<br/>Cursor, Windsurf, Continue.dev, Codeium<br/>• Zero terminal setup<br/>• In-editor ghost-text autocomplete<br/>• Sidecar chat & multi-file composer"]
+    
+    Q1 -->|"Intermediate / Terminal & Local"| L2["⚡ Level 2: Intermediate<br/>Claude Code, Aider, Ollama, Qwen2.5-Coder<br/>• Terminal git workflows<br/>• Multi-file automated edits with test loops<br/>• 100% private offline models (Ollama/vLLM)"]
+    
+    Q1 -->|"Expert / Autonomous Systems"| L3["🔬 Level 3: Expert<br/>SWE-agent, OpenHands, mini-SWE-agent<br/>• Autonomous issue & PR resolution<br/>• Tree-sitter AST & repo-map reasoning<br/>• SWE-bench empirical evaluation"]
+    
+    style L1 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style L2 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style L3 fill:#ede7f6,stroke:#7e57c2,stroke-width:2px
+```
 
-    IDE -.-> Matrix["Detailed Trade-Offs in Tool Decision Matrix ➔"]
+### 2. By Development Environment
+```mermaid
+flowchart TD
+    EnvStart["Select your primary coding environment"] --> E1{"Environment Focus"}
+    
+    E1 -->|"Dedicated AI IDE"| IDE["Agentic IDEs<br/>• Cursor, Windsurf, Zed, Trae"]
+    E1 -->|"VS Code / JetBrains Extensions"| EXT["Editor Extensions<br/>• Continue.dev, Codeium"]
+    E1 -->|"Terminal / CLI Pair Programming"| CLI["CLI Pair Programmers<br/>• Claude Code, Aider, OpenCode"]
+    E1 -->|"Zero Cloud / 100% Offline"| LOCAL["Local LLM Stack<br/>• Ollama, vLLM, Qwen2.5-Coder"]
+    E1 -->|"Autonomous CI / GitHub Sandboxes"| AUTO["SWE-bench & Cloud Agents<br/>• mini-SWE-agent, OpenHands, Jules"]
+
+    IDE -.-> Matrix["Compare in Tool Decision Matrix ➔"]
     EXT -.-> Matrix
     CLI -.-> Matrix
     LOCAL -.-> Matrix
-    SWE -.-> Matrix
+    AUTO -.-> Matrix
 
     click Matrix "docs/TOOL_DECISION_MATRIX.md" "Open Tool Decision Matrix"
 ```
