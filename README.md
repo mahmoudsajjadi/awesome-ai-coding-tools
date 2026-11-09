@@ -1,6 +1,6 @@
 # Awesome AI Coding Tools (2026) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![GitHub Stars](https://img.shields.io/github/stars/mahmoudsajjadi/awesome-ai-coding-tools?style=social)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/stargazers) [![Link Health](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/awesome-bot.yml/badge.svg)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/awesome-bot.yml) [![GitHub Forks](https://img.shields.io/github/forks/mahmoudsajjadi/awesome-ai-coding-tools?style=social)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/network/members) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT & CC0](https://img.shields.io/badge/License-MIT_%26_CC0-yellow.svg)](LICENSE) [![Last Commit](https://img.shields.io/github/last-commit/mahmoudsajjadi/awesome-ai-coding-tools)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/commits/main)
 
-> **`awesome-ai-coding-tools`** is the authoritative, curated catalog of state-of-the-art **Awesome AI Coding Tools (2026)**, autonomous coding agents, open foundation models, Model Context Protocol (MCP) servers, and seminal research papers — created and maintained by [**Mahmoud Sajjadi**](https://github.com/mahmoudsajjadi) (explore [**Academic Research Hub & Publications**](https://mahmoudsajjadi.github.io/research-hub.html)). Structured across three progressive skill tiers — from zero-setup beginner IDEs to autonomous SWE-bench systems — so every engineer and researcher can find exactly what they need.
+> **`awesome-ai-coding-tools`** is the authoritative, curated catalog of state-of-the-art **Awesome AI Coding Tools (2026)**, autonomous coding agents, open foundation models, Model Context Protocol (MCP) servers, and seminal research papers — created and maintained by [**Mahmoud Sajjadi**](https://github.com/mahmoudsajjadi). Structured across three progressive skill tiers — from zero-setup beginner IDEs to autonomous SWE-bench systems — so every engineer and researcher can find exactly what they need.
 
 > 🚀 **Building an AI Coding Tool or Agent?** [**Submit your tool in 30 seconds**](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/issues/new?template=submit-tool.yml) — we review, test, and merge qualifying tools within 24 hours!
 
@@ -10,8 +10,6 @@
 > ```
 
 > 💡 **Sister Repository:** Looking for scientific discovery, paper writing, and literature review tools? Check out [**Awesome AI Research Tools (2026 Taxonomy & Benchmarks)**](https://github.com/mahmoudsajjadi/awesome-ai-research-tools).
-
-> 🏛️ **Academic Research Hub & Foundational Publications:** Explore peer-reviewed papers and surveys in foundation models, parameter-efficient adaptation (SOLAR), and distributed optimization authored by the maintainer at the [**Mahmoud Sajjadi Research Hub**](https://mahmoudsajjadi.github.io/research-hub.html) — including our newly published **Oct 2026** open-access article: [**Sustainable Smart Grid Resilience and Renewable Integration Using Multi-Agent Reinforcement Learning (*MDPI Sustainability*, 18(20), 10574)**](https://www.mdpi.com/2071-1050/18/20/10574) ([**📥 Official PDF**](https://www.mdpi.com/2071-1050/18/20/10574/pdf) • [**DOI: 10.3390/su182010574**](https://doi.org/10.3390/su182010574)).
 
 ---
 
@@ -506,8 +504,8 @@ Empirical evaluation on the standardized **SWE-bench Verified** benchmark (500 c
 | **3** | SWE-agent + Modular ACI | Claude 3.5 Sonnet | **54.2%** | ~$3.10 | Containerized ACI | MIT |
 | **4** | OpenHands + CodeAct | Claude 3.5 Sonnet | **53.0%** | ~$2.90 | Docker Container | MIT |
 | **5** | Aider + Architect / Editor Loop | DeepSeek-V3 / DeepSeek-R1 | **48.6%** | ~$0.35 | Local Pytest Loop | Apache-2.0 |
-| **6** | SWE-agent | DeepSeek-Coder-V2 (236B) | **35.6%** | ~$0.40 | Docker Sandbox | MIT |
-| **7** | Aider + Local Weights | Qwen2.5-Coder-32B-Instruct | **38.4%** | **$0.00** (Local) | Local Shell Sandbox | Apache-2.0 |
+| **6** | Aider + Local Weights | Qwen2.5-Coder-32B-Instruct | **38.4%** | **$0.00** (Local) | Local Shell Sandbox | Apache-2.0 |
+| **7** | SWE-agent | DeepSeek-Coder-V2 (236B) | **35.6%** | ~$0.40 | Docker Sandbox | MIT |
 | **8** | Baseline Zero-Shot Prompt | Llama-3-70B-Instruct | **12.5%** | ~$0.15 | None (Single Turn) | Open Weights |
 
 ### Seminal Academic Papers

@@ -1,4 +1,8 @@
-name: Automated PR Verification & Auto-Merge
+name: Safe Auto-Merge for Single-Entry Submissions
+
+# SECURITY: This workflow never checks out or executes code from the PR.
+# It only inspects the diff via the GitHub API, so a malicious fork cannot
+# run code with this repository's write token.
 
 on:
   pull_request_target:
@@ -8,83 +12,40 @@ on:
 permissions:
   pull-requests: write
   contents: write
-  issues: write
 
 jobs:
-  auto-verify-and-merge:
-    name: Verify Submission and Auto-Merge
+  safe-auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 0
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Verify Catalog Integrity
-        id: verify_catalog
-        run: |
-          python scripts/verify_catalog.py
-
-      - name: Check Diff Boundaries
-        id: check_diff
-        run: |
-          # Ensure PR only touches README.md or docs/
-          git fetch origin main
-          CHANGED_FILES=$(git diff --name-only origin/main HEAD)
-          echo "Changed files: $CHANGED_FILES"
-          for file in $CHANGED_FILES; do
-            if [[ "$file" != "README.md" && "$file" != docs/* ]]; then
-              echo "PR modifies protected code outside catalog: $file"
-              exit 1
-            fi
-          done
-          echo "safe=true" >> $GITHUB_OUTPUT
-
-      - name: Auto-Merge Qualifying PR
-        if: steps.verify_catalog.conclusion == 'success' && steps.check_diff.conclusion == 'success'
+      - name: Validate diff and merge
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const pr = context.payload.pull_request;
-            console.log(`Auto-merging clean PR #${pr.number} by ${pr.user.login}...`);
+            const { owner, repo } = context.repo;
+            const files = await github.paginate(github.rest.pulls.listFiles, { owner, repo, pull_number: pr.number });
 
-            try {
-              await github.rest.pulls.merge({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pr.number,
-                merge_method: 'squash'
-              });
+            const reject = async (reason) => {
+              core.info(`Not auto-merging: ${reason}`);
+              await github.rest.issues.createComment({ owner, repo, issue_number: pr.number,
+                body: `Thanks for the submission! This PR needs manual maintainer review (${reason}).` });
+            };
 
-              // Post celebratory welcome comment with badge
-              const badgeSnippet = `### 🎉 Congratulations @${pr.user.login}!
+            if (files.length !== 1 || files[0].filename !== 'README.md') return reject('must change README.md only');
+            const f = files[0];
+            if (f.additions !== 1 || f.deletions !== 0) return reject('must add exactly one line');
 
-Your contribution has passed automated validation and has been automatically merged into **Awesome AI Coding Tools**.
+            const added = (f.patch || '').split('\n').filter(l => l.startsWith('+') && !l.startsWith('+++')).map(l => l.slice(1));
+            const line = added[0] || '';
+            const entry = /^- \[[^\]]{1,80}\]\(https:\/\/[^\s)]+\) [—-] [A-Z].{20,400}\.$/;
+            if (!entry.test(line)) return reject('entry must match `- [Name](https://url) — Description.`');
+            if (/utm_|ref=|affiliate/i.test(line)) return reject('tracking/affiliate parameters are not allowed');
 
-#### 🛡️ Embed Your Featured Badge:
-Add this badge to your repository's README to showcase your tool in this curated catalog:
+            const url = line.match(/\]\((https:\/\/[^\s)]+)\)/)[1];
+            const readme = await github.rest.repos.getContent({ owner, repo, path: 'README.md', ref: 'main' });
+            const current = Buffer.from(readme.data.content, 'base64').toString('utf8');
+            if (current.includes(url)) return reject('this URL is already listed');
 
-\`\`\`markdown
-[![Featured in Awesome AI Coding Tools](https://raw.githubusercontent.com/mahmoudsajjadi/awesome-ai-coding-tools/main/assets/badge-featured.svg)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools)
-\`\`\`
-
-⭐ *If you haven't yet, starring the repository helps increase visibility for all featured open-source tools!*`;
-
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pr.number,
-                body: badgeSnippet
-              });
-
-              console.log('Successfully merged PR and posted badge comment.');
-            } catch (err) {
-              console.error('Error during auto-merge:', err);
-            }
+            await github.rest.pulls.merge({ owner, repo, pull_number: pr.number, merge_method: 'squash' });
+            await github.rest.issues.createComment({ owner, repo, issue_number: pr.number,
+              body: `Merged automatically. Thanks, @${pr.user.login}!\n\nOptional badge for your README:\n\n\`\`\`markdown\n[![Featured in Awesome AI Coding Tools](https://raw.githubusercontent.com/mahmoudsajjadi/awesome-ai-coding-tools/main/assets/badge-featured.svg)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools)\n\`\`\`` });
