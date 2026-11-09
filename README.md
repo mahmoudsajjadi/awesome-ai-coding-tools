@@ -245,6 +245,7 @@ Control planes, terminal managers, and orchestrators that run multiple coding ag
 ### 🔌 Model Context Protocol (MCP) Servers for Coding
 Open standard protocol connecting coding agents to local developer environments, version control, and system databases:
 - [BrowserTools MCP](https://github.com/agent-tools/browsertools-mcp) — Provides agents with headful/headless browser interaction, console error capture, and network inspection capabilities.
+- [call-me](https://callmemcp.com) — Hosted remote MCP server (Streamable HTTP, no auth, plus an iPhone/Android app; the app is a paid subscription) that lets a coding agent ring your real phone, read a question aloud and get your spoken answer back as text, or text you. Server is closed source; the plugin repo is at https://github.com/radres/call-me.
 - [Context7 MCP](https://github.com/context7/context7) — Dynamic context-curation server providing real-time AST symbol definitions and semantic codebase navigation.
 - [Docsy](https://github.com/getremcp/docsy-plugin) — Read-only hosted MCP for library/version lookup and source-linked developer docs; requires OAuth account sign-in.
 - [Filesystem & Git MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/git) — Official reference MCP server enabling agents to inspect git commits, staging areas, branches, and file structures securely.
