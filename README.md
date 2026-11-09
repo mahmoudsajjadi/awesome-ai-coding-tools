@@ -1,4 +1,4 @@
-# Awesome AI Coding Tools [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Link Health](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/awesome-bot.yml/badge.svg)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/awesome-bot.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT & CC0](https://img.shields.io/badge/License-MIT_%26_CC0-yellow.svg)](LICENSE)
+# Awesome AI Coding Tools [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![CI](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/pr-validation.yml/badge.svg)](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/actions/workflows/pr-validation.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: MIT & CC0](https://img.shields.io/badge/License-MIT_%26_CC0-yellow.svg)](LICENSE)
 
 A curated catalog of verified AI coding assistants, autonomous software engineering agents, open-weight foundation models, and Model Context Protocol (MCP) servers. Maintained by [Mahmoud Sajjadi](https://github.com/mahmoudsajjadi).
 
@@ -6,6 +6,7 @@ A curated catalog of verified AI coding assistants, autonomous software engineer
 
 ## Contents
 
+- [Visual Decision Guide](#visual-decision-guide)
 - [How to Choose](#how-to-choose)
 - [Catalog](#catalog)
   - [Standalone Agentic IDEs](#standalone-agentic-ides)
@@ -20,6 +21,29 @@ A curated catalog of verified AI coding assistants, autonomous software engineer
 - [Documentation & Deep Dives](#documentation--deep-dives)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
+
+---
+
+## Visual Decision Guide
+
+```mermaid
+flowchart TD
+    Start["What is your primary development workflow?"] --> Q1{"Select Workflow Focus"}
+    
+    Q1 -->|"AI-First Dedicated Editor"| IDE["Agentic IDEs<br/>• Cursor (VS Code Fork)<br/>• Windsurf (Flow Tracking)<br/>• Zed (GPU Rust Editor)"]
+    Q1 -->|"Keep Current Editor (VS Code / JetBrains)"| EXT["Editor Extensions<br/>• Continue.dev (Open Source)<br/>• Codeium (Free / Enterprise)"]
+    Q1 -->|"Terminal & Git CLI"| CLI["CLI Pair Programmers<br/>• Claude Code (Anthropic CLI)<br/>• Aider (Git & Tree-sitter)<br/>• OpenCode (Model Agnostic)"]
+    Q1 -->|"Zero Cloud / 100% Offline"| LOCAL["Local Execution & Weights<br/>• Ollama / vLLM Engines<br/>• Qwen2.5-Coder / Devstral<br/>• Hardware & VRAM Guide"]
+    Q1 -->|"Autonomous CI / Batch Issues"| SWE["Autonomous SWE Agents<br/>• mini-SWE-agent<br/>• OpenHands<br/>• Google Jules / CodeRabbit"]
+
+    IDE -.-> Matrix["Detailed Trade-Offs in Tool Decision Matrix ➔"]
+    EXT -.-> Matrix
+    CLI -.-> Matrix
+    LOCAL -.-> Matrix
+    SWE -.-> Matrix
+
+    click Matrix "docs/TOOL_DECISION_MATRIX.md" "Open Tool Decision Matrix"
+```
 
 ---
 
