@@ -28,7 +28,7 @@ jobs:
           git diff --exit-code docs/tools.json || (echo "Error: docs/tools.json is out of sync with README.md. Run 'python scripts/verify_catalog.py' locally and commit the changes." && exit 1)
 
       - name: Setup Node.js for Markdown Linting
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '20'
 
