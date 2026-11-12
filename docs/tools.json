@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 67,
+  "toolCount": 68,
   "tools": [
     {
       "name": "Antigravity",
@@ -530,6 +530,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+    },
+    {
+      "name": "Ironheights",
+      "url": "https://github.com/Frank-Masciopinto/ironheights",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Local stdio MCP server and CLI (`npx -y ironheights mcp`) that lets Claude Code, Cursor or Codex check an agent skill or MCP config before installing it, returning an A\u2013F grade with findings for prompt injection, credential reads and remote-exec installs. Rule-based and pre-1.0, so it misses many plain-language attacks. Apache-2.0.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "Apache-2.0",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/Frank-Masciopinto/ironheights"
     },
     {
       "name": "Postgres MCP",
