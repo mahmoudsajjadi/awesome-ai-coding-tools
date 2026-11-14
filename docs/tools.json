@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 68,
+  "toolCount": 69,
   "tools": [
     {
       "name": "Antigravity",
@@ -350,6 +350,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/AgentsMesh/AgentsMesh"
+    },
+    {
+      "name": "Althar",
+      "url": "https://github.com/AltharIDE/althar",
+      "category": "Running Agents in Parallel",
+      "description": "Desktop ADE that turns requests into tasks, assigns coding agents, and has another model review the changes. Local models are supported through OpenCode.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "Apache-2.0",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/AltharIDE/althar"
     },
     {
       "name": "Carbon Forge",

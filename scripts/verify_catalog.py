@@ -23,6 +23,7 @@ CATEGORIES = [
 # Tool metadata overrides and factual catalog data
 # Fields: open_source (bool), pricing (free / freemium / paid), license (str), maintenance_status (active / slow / inactive)
 TOOL_METADATA = {
+    "Althar": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/AltharIDE/althar"},
     "Antigravity": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://antigravity.google"},
     "Cursor": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://www.cursor.com/"},
     "Google Jules": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://jules.google/"},
