@@ -27,6 +27,7 @@ A curated catalog of verified AI coding assistants, autonomous software engineer
 ## Visual Decision Guide
 
 ### 1. By Experience & Autonomy Level
+
 ```mermaid
 flowchart TD
     Start["Where are you in your AI coding journey?"] --> Q1{"What is your goal?"}
@@ -43,6 +44,7 @@ flowchart TD
 ```
 
 ### 2. By Development Environment
+
 ```mermaid
 flowchart TD
     EnvStart["Select your primary coding environment"] --> E1{"Environment Focus"}
@@ -137,6 +139,7 @@ Use these questions to narrow down the right tool for your setup:
 ### Running Agents in Parallel
 
 - [AgentsMesh](https://github.com/AgentsMesh/AgentsMesh) — Platform for scheduling and isolating multiple coding agents across distributed workstations.
+- [Althar](https://github.com/AltharIDE/althar) — Desktop ADE that turns requests into tasks, assigns coding agents, and has another model review the changes. Local models are supported through OpenCode.
 - [Carbon Forge](https://carbonforge.dev/) — Hosted source control (a web service reached over MCP, no local model involved) where each coding agent works in a lane, a set of patches over the trunk, instead of a git worktree. A patch that no longer applies is reported as a named conflict rather than merged automatically, and git history is rendered from the record and pushed to GitHub.
 - [ccmanager](https://github.com/kbwo/ccmanager) — Session manager for coordinating parallel CLI agent workflows across multiple repositories.
 - [Claude Squad](https://github.com/smtg-ai/claude-squad) — Terminal manager for running multiple concurrent coding agent sessions across terminal tabs.
