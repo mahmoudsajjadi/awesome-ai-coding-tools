@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T16:30:25Z",
-  "totalTools": 67,
-  "activeTools": 57,
-  "githubRepos": 9,
+  "generatedAt": "2026-11-14T09:33:06Z",
+  "totalTools": 68,
+  "activeTools": 62,
+  "githubRepos": 45,
   "tools": [
     {
       "name": "Antigravity",
@@ -114,11 +114,11 @@
       "source": "https://github.com/LeulAria/volt",
       "http_status": 200,
       "is_github": true,
-      "stars": 27,
+      "stars": 30,
       "status": "active",
       "forks": 4,
-      "open_issues": 4,
-      "pushed_at": "2026-11-09T11:14:29Z",
+      "open_issues": 7,
+      "pushed_at": "2026-11-13T10:53:33Z",
       "archived": false
     },
     {
@@ -182,11 +182,11 @@
       "source": "https://github.com/continuedev/continue",
       "http_status": 200,
       "is_github": true,
-      "stars": 36442,
+      "stars": 36480,
       "status": "active",
-      "forks": 5555,
-      "open_issues": 866,
-      "pushed_at": "2026-11-05T15:28:28Z",
+      "forks": 5561,
+      "open_issues": 862,
+      "pushed_at": "2026-11-13T13:26:06Z",
       "archived": false
     },
     {
@@ -218,10 +218,10 @@
       "source": "https://github.com/TabbyML/tabby",
       "http_status": 200,
       "is_github": true,
-      "stars": 33927,
+      "stars": 33936,
       "status": "active",
-      "forks": 1795,
-      "open_issues": 345,
+      "forks": 1797,
+      "open_issues": 350,
       "pushed_at": "2026-06-30T20:38:02Z",
       "archived": false
     },
@@ -238,9 +238,9 @@
       "source": "https://github.com/paul-gauthier/aider",
       "http_status": 200,
       "is_github": true,
-      "stars": 50034,
+      "stars": 50113,
       "status": "active",
-      "forks": 5150,
+      "forks": 5164,
       "open_issues": 1960,
       "pushed_at": "2026-05-22T14:02:20Z",
       "archived": false
@@ -258,11 +258,11 @@
       "source": "https://github.com/yetone/avante.nvim",
       "http_status": 200,
       "is_github": true,
-      "stars": 18184,
+      "stars": 18193,
       "status": "active",
       "forks": 856,
       "open_issues": 56,
-      "pushed_at": "2026-11-09T12:44:57Z",
+      "pushed_at": "2026-11-12T13:21:40Z",
       "archived": false
     },
     {
@@ -294,11 +294,11 @@
       "source": "https://github.com/cline/cline",
       "http_status": 200,
       "is_github": true,
-      "stars": 71464,
+      "stars": 71610,
       "status": "active",
-      "forks": 7896,
-      "open_issues": 1742,
-      "pushed_at": "2026-11-09T14:41:17Z",
+      "forks": 7921,
+      "open_issues": 1774,
+      "pushed_at": "2026-11-13T23:33:41Z",
       "archived": false
     },
     {
@@ -314,11 +314,11 @@
       "source": "https://github.com/openai/codex",
       "http_status": 200,
       "is_github": true,
-      "stars": 134257,
+      "stars": 135232,
       "status": "active",
-      "forks": 21257,
-      "open_issues": 26946,
-      "pushed_at": "2026-11-09T12:55:22Z",
+      "forks": 21448,
+      "open_issues": 27602,
+      "pushed_at": "2026-11-14T08:48:23Z",
       "archived": false
     },
     {
@@ -334,11 +334,11 @@
       "source": "https://github.com/flisk-sh/flisk",
       "http_status": 200,
       "is_github": true,
-      "stars": 36,
+      "stars": 45,
       "status": "active",
-      "forks": 55,
-      "open_issues": 538,
-      "pushed_at": "2026-11-09T15:57:56Z",
+      "forks": 89,
+      "open_issues": 723,
+      "pushed_at": "2026-11-14T00:31:26Z",
       "archived": false
     },
     {
@@ -354,11 +354,11 @@
       "source": "https://github.com/google-gemini/gemini-cli",
       "http_status": 200,
       "is_github": true,
-      "stars": 108760,
+      "stars": 108822,
       "status": "active",
-      "forks": 14930,
-      "open_issues": 740,
-      "pushed_at": "2026-11-09T01:05:59Z",
+      "forks": 14955,
+      "open_issues": 722,
+      "pushed_at": "2026-11-14T01:10:53Z",
       "archived": false
     },
     {
@@ -374,8 +374,12 @@
       "source": "https://github.com/block/goose",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 56588,
+      "status": "active",
+      "forks": 6587,
+      "open_issues": 538,
+      "pushed_at": "2026-11-14T03:56:38Z",
+      "archived": false
     },
     {
       "name": "Imagera Code",
@@ -406,8 +410,12 @@
       "source": "https://github.com/Kilo-Org/kilocode",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 27980,
+      "status": "active",
+      "forks": 3356,
+      "open_issues": 899,
+      "pushed_at": "2026-11-14T07:15:46Z",
+      "archived": false
     },
     {
       "name": "Mentat",
@@ -422,8 +430,12 @@
       "source": "https://github.com/AbanteAI/archive-old-cli-mentat",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "inactive"
+      "stars": 2535,
+      "status": "archived",
+      "forks": 231,
+      "open_issues": 0,
+      "pushed_at": "2025-01-07T22:52:59Z",
+      "archived": true
     },
     {
       "name": "OMK",
@@ -438,8 +450,12 @@
       "source": "https://github.com/dmae97/omk",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 152,
+      "status": "active",
+      "forks": 29,
+      "open_issues": 5,
+      "pushed_at": "2026-11-14T09:04:41Z",
+      "archived": false
     },
     {
       "name": "OpenCode",
@@ -454,8 +470,12 @@
       "source": "https://github.com/anomalyco/opencode",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 226751,
+      "status": "active",
+      "forks": 30712,
+      "open_issues": 4008,
+      "pushed_at": "2026-11-14T09:26:50Z",
+      "archived": false
     },
     {
       "name": "Roo Code",
@@ -470,8 +490,12 @@
       "source": "https://github.com/RooVetGit/Roo-Code",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "inactive"
+      "stars": 24238,
+      "status": "archived",
+      "forks": 3437,
+      "open_issues": 1028,
+      "pushed_at": "2026-05-15T18:08:47Z",
+      "archived": true
     },
     {
       "name": "Xenon",
@@ -486,8 +510,12 @@
       "source": "https://github.com/xianyu-sheng/Xenon",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 56,
+      "status": "active",
+      "forks": 10,
+      "open_issues": 35,
+      "pushed_at": "2026-11-12T19:15:07Z",
+      "archived": false
     },
     {
       "name": "AgentsMesh",
@@ -534,8 +562,12 @@
       "source": "https://github.com/kbwo/ccmanager",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 1278,
+      "status": "active",
+      "forks": 94,
+      "open_issues": 5,
+      "pushed_at": "2026-10-27T23:41:16Z",
+      "archived": false
     },
     {
       "name": "Claude Squad",
@@ -550,8 +582,12 @@
       "source": "https://github.com/smtg-ai/claude-squad",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 8805,
+      "status": "active",
+      "forks": 634,
+      "open_issues": 52,
+      "pushed_at": "2026-11-13T13:13:11Z",
+      "archived": false
     },
     {
       "name": "cmux",
@@ -560,14 +596,18 @@
       "description": "Ghostty-based macOS terminal designed with vertical workspaces and desktop notifications for agent fleets.",
       "open_source": true,
       "pricing": "free",
-      "license": "MIT",
+      "license": "NOASSERTION",
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/manaflow-ai/cmux",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 28793,
+      "status": "active",
+      "forks": 2665,
+      "open_issues": 6855,
+      "pushed_at": "2026-11-14T09:32:38Z",
+      "archived": false
     },
     {
       "name": "MulmoTerminal",
@@ -582,24 +622,12 @@
       "source": "https://github.com/receptron/mulmoterminal",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
-    },
-    {
-      "name": "Orkas",
-      "url": "https://github.com/Orkas-AI/Orkas",
-      "category": "Running Agents in Parallel",
-      "description": "Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.",
-      "open_source": true,
-      "pricing": "free",
-      "license": "MIT",
-      "maintenance_status": "active",
-      "last_verified": "2026-11-09",
-      "source": "https://github.com/Orkas-AI/Orkas",
-      "http_status": 200,
-      "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 268,
+      "status": "active",
+      "forks": 32,
+      "open_issues": 6,
+      "pushed_at": "2026-11-10T21:34:44Z",
+      "archived": false
     },
     {
       "name": "Orca",
@@ -614,8 +642,32 @@
       "source": "https://github.com/stablyai/orca",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 124582,
+      "status": "active",
+      "forks": 7895,
+      "open_issues": 8416,
+      "pushed_at": "2026-11-14T09:30:13Z",
+      "archived": false
+    },
+    {
+      "name": "Orkas",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "category": "Running Agents in Parallel",
+      "description": "Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/Orkas-AI/Orkas",
+      "http_status": 200,
+      "is_github": true,
+      "stars": 9345,
+      "status": "active",
+      "forks": 554,
+      "open_issues": 19,
+      "pushed_at": "2026-11-14T02:13:46Z",
+      "archived": false
     },
     {
       "name": "Sqwakie",
@@ -646,8 +698,12 @@
       "source": "https://github.com/BloopAI/vibe-kanban",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 28682,
+      "status": "active",
+      "forks": 3062,
+      "open_issues": 536,
+      "pushed_at": "2026-11-12T14:00:45Z",
+      "archived": false
     },
     {
       "name": "BrowserTools MCP",
@@ -662,8 +718,12 @@
       "source": "https://github.com/AgentDeskAI/browser-tools-mcp",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 7344,
+      "status": "active",
+      "forks": 538,
+      "open_issues": 9,
+      "pushed_at": "2026-10-28T19:06:19Z",
+      "archived": false
     },
     {
       "name": "call-me",
@@ -672,14 +732,18 @@
       "description": "Hosted remote MCP server (Streamable HTTP, plus mobile companion app) that lets a coding agent ring your phone or text you for human-in-the-loop decisions.",
       "open_source": true,
       "pricing": "paid",
-      "license": "MIT (Client) / Proprietary",
+      "license": "MIT",
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/radres/call-me",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 44,
+      "status": "active",
+      "forks": 8,
+      "open_issues": 3,
+      "pushed_at": "2026-11-12T04:30:08Z",
+      "archived": false
     },
     {
       "name": "Context7 MCP",
@@ -688,14 +752,18 @@
       "description": "Dynamic context-curation server providing real-time AST symbol definitions and semantic codebase navigation.",
       "open_source": true,
       "pricing": "freemium",
-      "license": "Apache-2.0",
+      "license": "MIT",
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/upstash/context7",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 64778,
+      "status": "active",
+      "forks": 3248,
+      "open_issues": 45,
+      "pushed_at": "2026-11-13T19:52:46Z",
+      "archived": false
     },
     {
       "name": "Docsy",
@@ -710,8 +778,12 @@
       "source": "https://github.com/getremcp/docsy-plugin",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 1,
+      "status": "active",
+      "forks": 1,
+      "open_issues": 0,
+      "pushed_at": "2026-11-02T13:06:19Z",
+      "archived": false
     },
     {
       "name": "Filesystem & Git MCP",
@@ -720,14 +792,18 @@
       "description": "Official reference MCP server enabling agents to inspect git commits, staging areas, branches, and file structures securely.",
       "open_source": true,
       "pricing": "free",
-      "license": "MIT",
+      "license": "NOASSERTION",
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 91979,
+      "status": "active",
+      "forks": 11965,
+      "open_issues": 19,
+      "pushed_at": "2026-11-12T05:37:52Z",
+      "archived": false
     },
     {
       "name": "GitHub MCP Server",
@@ -736,14 +812,38 @@
       "description": "Integrates GitHub issues, pull requests, repository searches, and commit reviews directly into agent reasoning loops.",
       "open_source": true,
       "pricing": "free",
-      "license": "MIT",
+      "license": "NOASSERTION",
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
-      "http_status": 404,
+      "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 91979,
+      "status": "active",
+      "forks": 11965,
+      "open_issues": 19,
+      "pushed_at": "2026-11-12T05:37:52Z",
+      "archived": false
+    },
+    {
+      "name": "Ironheights",
+      "url": "https://github.com/Frank-Masciopinto/ironheights",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Local stdio MCP server and CLI (`npx -y ironheights mcp`) that lets Claude Code, Cursor or Codex check an agent skill or MCP config before installing it, returning an A\u2013F grade with findings for prompt injection, credential reads and remote-exec installs. Rule-based and pre-1.0, so it misses many plain-language attacks. Apache-2.0.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "Apache-2.0",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/Frank-Masciopinto/ironheights",
+      "http_status": 200,
+      "is_github": true,
+      "stars": 4,
+      "status": "active",
+      "forks": 1,
+      "open_issues": 10,
+      "pushed_at": "2026-11-14T01:13:16Z",
+      "archived": false
     },
     {
       "name": "Postgres MCP",
@@ -752,14 +852,18 @@
       "description": "Read-only schema inspector and query execution bridge enabling coding agents to validate database migrations and models.",
       "open_source": true,
       "pricing": "free",
-      "license": "MIT",
+      "license": "NOASSERTION",
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
-      "http_status": 404,
+      "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 91979,
+      "status": "active",
+      "forks": 11965,
+      "open_issues": 19,
+      "pushed_at": "2026-11-12T05:37:52Z",
+      "archived": false
     },
     {
       "name": "ReMCP",
@@ -774,8 +878,12 @@
       "source": "https://github.com/getremcp/remcp",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 4,
+      "status": "active",
+      "forks": 1,
+      "open_issues": 1,
+      "pushed_at": "2026-11-14T00:02:40Z",
+      "archived": false
     },
     {
       "name": "sqlite-graph-memory",
@@ -790,8 +898,12 @@
       "source": "https://github.com/tonydzi/sqlite-graph-memory",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 15,
+      "status": "active",
+      "forks": 16,
+      "open_issues": 9,
+      "pushed_at": "2026-11-14T05:48:39Z",
+      "archived": false
     },
     {
       "name": "Codestral",
@@ -816,14 +928,18 @@
       "description": "Mixture-of-Experts code language model with 128k context length supporting 338 programming languages.",
       "open_source": true,
       "pricing": "free",
-      "license": "DeepSeek / MIT",
+      "license": "MIT",
       "maintenance_status": "slow",
       "last_verified": "2026-11-09",
       "source": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "slow"
+      "stars": 7039,
+      "status": "active",
+      "forks": 1122,
+      "open_issues": 79,
+      "pushed_at": "2025-11-11T06:44:45Z",
+      "archived": false
     },
     {
       "name": "DeepSeek-V3 / DeepSeek-R1",
@@ -838,8 +954,12 @@
       "source": "https://github.com/deepseek-ai/DeepSeek-V3",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 104828,
+      "status": "active",
+      "forks": 16745,
+      "open_issues": 333,
+      "pushed_at": "2025-08-28T03:24:37Z",
+      "archived": false
     },
     {
       "name": "Devstral Small 2 (24B)",
@@ -864,30 +984,38 @@
       "description": "Meta's open foundation architectures specialized for code generation, instruction following, and infilling tasks.",
       "open_source": true,
       "pricing": "free",
-      "license": "Llama Community License",
+      "license": "NOASSERTION",
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/meta-llama/llama",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 59623,
+      "status": "active",
+      "forks": 9762,
+      "open_issues": 538,
+      "pushed_at": "2025-01-26T21:42:26Z",
+      "archived": false
     },
     {
       "name": "Qwen2.5-Coder",
       "url": "https://github.com/QwenLM/Qwen2.5-Coder",
       "category": "Top Open-Weight Coding Models",
-      "description": "Open-source coding foundation model series (0.5B to 32B) on HuggingFace and GitHub for code generation, completion, and multi-file reasoning.",
+      "description": "Open-source coding foundation model series (0.5B to 32B) for code generation, completion, and multi-file reasoning.",
       "open_source": true,
       "pricing": "free",
-      "license": "Apache-2.0",
+      "license": null,
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/QwenLM/Qwen2.5-Coder",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 16852,
+      "status": "active",
+      "forks": 1265,
+      "open_issues": 116,
+      "pushed_at": "2026-03-24T08:22:10Z",
+      "archived": false
     },
     {
       "name": "Qwen3-Coder Preview",
@@ -896,14 +1024,18 @@
       "description": "Agentic coding model series (including 30B MoE and 480B MoE) pre-trained for tool calling and long-context code understanding.",
       "open_source": true,
       "pricing": "free",
-      "license": "Apache-2.0",
+      "license": null,
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/QwenLM/Qwen3-Coder",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 16852,
+      "status": "active",
+      "forks": 1265,
+      "open_issues": 116,
+      "pushed_at": "2026-03-24T08:22:10Z",
+      "archived": false
     },
     {
       "name": "StarCoder 2",
@@ -912,14 +1044,18 @@
       "description": "Open, transparently trained code models (3B, 7B, 15B) curated by BigCode under permissive licenses.",
       "open_source": true,
       "pricing": "free",
-      "license": "BigCode OpenRAIL-M",
+      "license": "Apache-2.0",
       "maintenance_status": "slow",
       "last_verified": "2026-11-09",
       "source": "https://github.com/bigcode-project/starcoder2",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "slow"
+      "stars": 2096,
+      "status": "active",
+      "forks": 205,
+      "open_issues": 18,
+      "pushed_at": "2024-03-21T11:54:59Z",
+      "archived": false
     },
     {
       "name": "llama.cpp",
@@ -934,8 +1070,12 @@
       "source": "https://github.com/ggerganov/llama.cpp",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 134944,
+      "status": "active",
+      "forks": 25589,
+      "open_issues": 2605,
+      "pushed_at": "2026-11-14T08:58:39Z",
+      "archived": false
     },
     {
       "name": "LM Studio",
@@ -982,8 +1122,12 @@
       "source": "https://github.com/vllm-project/vllm",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 96905,
+      "status": "active",
+      "forks": 24809,
+      "open_issues": 10325,
+      "pushed_at": "2026-11-14T09:18:42Z",
+      "archived": false
     },
     {
       "name": "agent-qa",
@@ -1030,8 +1174,12 @@
       "source": "https://github.com/Codium-ai/cover-agent",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 5688,
+      "status": "active",
+      "forks": 573,
+      "open_issues": 37,
+      "pushed_at": "2026-04-05T12:27:16Z",
+      "archived": false
     },
     {
       "name": "Keploy",
@@ -1046,8 +1194,12 @@
       "source": "https://github.com/keploy/keploy",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 19764,
+      "status": "active",
+      "forks": 2455,
+      "open_issues": 843,
+      "pushed_at": "2026-11-14T09:26:56Z",
+      "archived": false
     },
     {
       "name": "Qodo (CodiumAI)",
@@ -1082,7 +1234,7 @@
       "status": "active"
     },
     {
-      "name": "OpenHands (formerly OpenDevin)",
+      "name": "OpenHands",
       "url": "https://github.com/All-Hands-AI/OpenHands",
       "category": "Autonomous Software Engineers (SWE-bench)",
       "description": "Autonomous software development agent capable of writing code, browsing the web, and running dockerized execution sandboxes.",
@@ -1094,8 +1246,12 @@
       "source": "https://github.com/All-Hands-AI/OpenHands",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 93452,
+      "status": "active",
+      "forks": 12507,
+      "open_issues": 1185,
+      "pushed_at": "2026-11-14T09:18:34Z",
+      "archived": false
     },
     {
       "name": "SWE-agent",
@@ -1110,8 +1266,12 @@
       "source": "https://github.com/princeton-nlp/SWE-agent",
       "http_status": 200,
       "is_github": true,
-      "stars": null,
-      "status": "active"
+      "stars": 20803,
+      "status": "active",
+      "forks": 2267,
+      "open_issues": 184,
+      "pushed_at": "2026-11-09T22:24:38Z",
+      "archived": false
     }
   ]
 }
