@@ -55,6 +55,7 @@ TOOL_METADATA = {
     "ccmanager": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/kbwo/ccmanager"},
     "Claude Squad": {"open_source": True, "pricing": "free", "license": "AGPL-3.0", "maintenance_status": "active", "source": "https://github.com/smtg-ai/claude-squad"},
     "cmux": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/manaflow-ai/cmux"},
+    "Kodama": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/optimiware/kodama"},
     "MulmoTerminal": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/receptron/mulmoterminal"},
     "Orkas": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/Orkas-AI/Orkas"},
     "Orca": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/stablyai/orca"},

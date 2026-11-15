@@ -141,6 +141,7 @@ Use these questions to narrow down the right tool for your setup:
 - [ccmanager](https://github.com/kbwo/ccmanager) — Session manager for coordinating parallel CLI agent workflows across multiple repositories.
 - [Claude Squad](https://github.com/smtg-ai/claude-squad) — Terminal manager for running multiple concurrent coding agent sessions across terminal tabs.
 - [cmux](https://github.com/manaflow-ai/cmux) — Ghostty-based macOS terminal designed with vertical workspaces and desktop notifications for agent fleets.
+- [Kodama](https://github.com/optimiware/kodama) — Self-hosted API-first, multi-tenant software factory (Go CLI/server, Apache-2.0) running container pipelines and AI coding agents (Claude Code, OpenCode, Codex, Pi) on rootless Podman 5 or Kubernetes Jobs, with PostgreSQL RLS, NATS JetStream, REST/MCP edges, a model gateway for cloud and local OpenAI/Anthropic-compatible endpoints, gitolite-style Git access rules, and human-in-the-loop role inbox approvals.
 - [MulmoTerminal](https://github.com/receptron/mulmoterminal) — Browser-based terminal grid running parallel coding agent sessions with dedicated git worktrees per cell, backed by tmux.
 - [Orca](https://github.com/stablyai/orca) — Autonomous development environment built to orchestrate and execute a fleet of parallel coding agents.
 - [Orkas](https://github.com/Orkas-AI/Orkas) — Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.
