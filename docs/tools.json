@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 69,
+  "toolCount": 76,
   "tools": [
     {
       "name": "Antigravity",
@@ -316,6 +316,18 @@
       "source": "https://github.com/anomalyco/opencode"
     },
     {
+      "name": "Qwen Code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source AI coding agent CLI by QwenLM for terminal-based code editing, debugging, and repository workflows.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "Apache-2.0",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/QwenLM/qwen-code"
+    },
+    {
       "name": "Roo Code",
       "url": "https://github.com/RooVetGit/Roo-Code",
       "category": "Terminal & CLI Pair Programmers",
@@ -326,6 +338,18 @@
       "maintenance_status": "inactive",
       "last_verified": "2026-11-09",
       "source": "https://github.com/RooVetGit/Roo-Code"
+    },
+    {
+      "name": "RTK (Rust Token Killer)",
+      "url": "https://github.com/rtk-ai/rtk",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Single-binary Rust CLI proxy that reduces LLM token consumption on common developer commands with zero external dependencies.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "Apache-2.0",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/rtk-ai/rtk"
     },
     {
       "name": "Xenon",
@@ -508,6 +532,30 @@
       "source": "https://github.com/radres/call-me"
     },
     {
+      "name": "Chrome DevTools MCP",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Official Chrome DevTools MCP server enabling coding agents to inspect DOM, console logs, network requests, and browser state.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "Apache-2.0",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    },
+    {
+      "name": "codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Local code intelligence MCP server connecting code, docs, and infrastructure in a persistent graph with change-aware test selection.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/DeusData/codebase-memory-mcp"
+    },
+    {
       "name": "Context7 MCP",
       "url": "https://github.com/upstash/context7",
       "category": "Model Context Protocol (MCP) Servers for Coding",
@@ -590,6 +638,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/getremcp/remcp"
+    },
+    {
+      "name": "Serena",
+      "url": "https://github.com/oraios/serena",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "MCP toolkit for coding agents providing semantic symbol retrieval and code editing capabilities.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/oraios/serena"
     },
     {
       "name": "sqlite-graph-memory",
@@ -758,6 +818,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://vostride.com"
+    },
+    {
+      "name": "code-review-graph",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "category": "Automated Testing, QA & Code Review",
+      "description": "Local-first code intelligence graph for MCP and CLI that builds a persistent codebase map so AI coding tools read only relevant context during reviews.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/tirth8205/code-review-graph"
     },
     {
       "name": "CodeRabbit",

@@ -133,7 +133,9 @@ Use these questions to narrow down the right tool for your setup:
 - [Mentat](https://github.com/AbanteAI/archive-old-cli-mentat) — Open-source AI tool capable of coordinating git workflows directly in the terminal (historical CLI archived; team pivoted to MentatBot).
 - [OMK](https://github.com/dmae97/omk) — Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes.
 - [OpenCode](https://github.com/anomalyco/opencode) — Provider-agnostic open-source terminal coding agent harness supporting custom agent loops, local model routing, and unified diff execution.
+- [Qwen Code](https://github.com/QwenLM/qwen-code) — Open-source AI coding agent CLI by QwenLM for terminal-based code editing, debugging, and repository workflows.
 - [Roo Code](https://github.com/RooVetGit/Roo-Code) — Community-driven autonomous coding assistant extension for VS Code (repository archived May 2026).
+- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk) — Single-binary Rust CLI proxy that reduces LLM token consumption on common developer commands with zero external dependencies.
 - [Xenon](https://github.com/xianyu-sheng/Xenon) — CLI coding agent that records every session event in an append-only hash chain verifiable on demand via `/evidence`, enforces deterministic hollow-answer checks, and exports manual verification checklists with multi-model and MCP client support.
 
 ### Running Agents in Parallel
@@ -155,6 +157,8 @@ Use these questions to narrow down the right tool for your setup:
 
 - [BrowserTools MCP](https://github.com/AgentDeskAI/browser-tools-mcp) — Provides agents with headful/headless browser interaction, console error capture, and network inspection capabilities.
 - [call-me](https://github.com/radres/call-me) — Hosted remote MCP server (Streamable HTTP, plus mobile companion app) that lets a coding agent ring your phone or text you for human-in-the-loop decisions.
+- [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) — Official Chrome DevTools MCP server enabling coding agents to inspect DOM, console logs, network requests, and browser state.
+- [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) — Local code intelligence MCP server connecting code, docs, and infrastructure in a persistent graph with change-aware test selection.
 - [Context7 MCP](https://github.com/upstash/context7) — Dynamic context-curation server providing real-time AST symbol definitions and semantic codebase navigation.
 - [Docsy](https://github.com/getremcp/docsy-plugin) — Read-only hosted MCP for library/version lookup and source-linked developer docs; requires OAuth account sign-in.
 - [Filesystem & Git MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/git) — Official reference MCP server enabling agents to inspect git commits, staging areas, branches, and file structures securely.
@@ -162,6 +166,7 @@ Use these questions to narrow down the right tool for your setup:
 - [Ironheights](https://github.com/Frank-Masciopinto/ironheights) — Local stdio MCP server and CLI (`npx -y ironheights mcp`) that lets Claude Code, Cursor or Codex check an agent skill or MCP config before installing it, returning an A–F grade with findings for prompt injection, credential reads and remote-exec installs. Rule-based and pre-1.0, so it misses many plain-language attacks. Apache-2.0.
 - [Postgres MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) — Read-only schema inspector and query execution bridge enabling coding agents to validate database migrations and models.
 - [ReMCP](https://github.com/getremcp/remcp) — Hosted OAuth MCP for terminal, file, and browser actions on explicitly paired computers; actions may change device state.
+- [Serena](https://github.com/oraios/serena) — MCP toolkit for coding agents providing semantic symbol retrieval and code editing capabilities.
 - [sqlite-graph-memory](https://github.com/tonydzi/sqlite-graph-memory) — Local stdio MCP server and CLI that lets Claude Code, Cursor or Codex recall from a markdown or Obsidian notes folder, combining vector search with hops along `[[wikilinks]]` in a single SQLite file; embeddings run locally via ONNX. MIT.
 
 ### Top Open-Weight Coding Models
@@ -185,6 +190,7 @@ Use these questions to narrow down the right tool for your setup:
 ### Automated Testing, QA & Code Review
 
 - [agent-qa](https://vostride.com) — CLI and MCP agent for natural-language Web, Android and iOS testing, with persistent memory and validated self-improvement. Supports local models through OpenAI-compatible endpoints.
+- [code-review-graph](https://github.com/tirth8205/code-review-graph) — Local-first code intelligence graph for MCP and CLI that builds a persistent codebase map so AI coding tools read only relevant context during reviews.
 - [CodeRabbit](https://coderabbit.ai/) — AI-driven pull request reviewer providing line-by-line feedback, sequence diagrams, and security vulnerability checks.
 - [Cover-Agent](https://github.com/Codium-ai/cover-agent) — Open-source generative testing tool that iteratively generates unit tests until target coverage is met.
 - [Keploy](https://github.com/keploy/keploy) — Open-source zero-code test generator that captures real network calls and creates automated regression test suites.
