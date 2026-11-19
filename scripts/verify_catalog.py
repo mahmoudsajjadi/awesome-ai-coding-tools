@@ -75,6 +75,7 @@ TOOL_METADATA = {
     "Filesystem & Git MCP": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/git"},
     "GitHub MCP Server": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"},
     "Ironheights": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/Frank-Masciopinto/ironheights"},
+    "Oh My Android": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/ateymoori/oh-my-android"},
     "Postgres MCP": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres"},
     "ReMCP": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/getremcp/remcp"},
     "sqlite-graph-memory": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/tonydzi/sqlite-graph-memory"},
