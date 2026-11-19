@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 76,
+  "toolCount": 77,
   "tools": [
     {
       "name": "Antigravity",
@@ -614,6 +614,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/Frank-Masciopinto/ironheights"
+    },
+    {
+      "name": "Oh My Android",
+      "url": "https://github.com/ateymoori/oh-my-android",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Native macOS app (MIT, free) that controls the Android Emulator and adb devices from a GUI; its built-in stdio MCP server (18 tools) lets Claude Code, Codex, Cursor or VS Code see and drive the emulator. It is an MCP server, not an AI tool itself, so local-LLM support depends on the client you pair it with.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/ateymoori/oh-my-android"
     },
     {
       "name": "Postgres MCP",
