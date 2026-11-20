@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 77,
+  "toolCount": 78,
   "tools": [
     {
       "name": "Antigravity",
@@ -542,6 +542,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    },
+    {
+      "name": "Cloud Alter Ego",
+      "url": "https://cloudalterego.cafeboon.com",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Remote MCP connector that logs AI chat questions and shares rules and work history across Claude, ChatGPT, Gemini, and other MCP clients, stored as plain files in your own cloud storage. Free / freemium.",
+      "open_source": false,
+      "pricing": "freemium",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://cloudalterego.cafeboon.com"
     },
     {
       "name": "codebase-memory-mcp",

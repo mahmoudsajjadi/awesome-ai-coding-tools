@@ -158,6 +158,7 @@ Use these questions to narrow down the right tool for your setup:
 - [BrowserTools MCP](https://github.com/AgentDeskAI/browser-tools-mcp) — Provides agents with headful/headless browser interaction, console error capture, and network inspection capabilities.
 - [call-me](https://github.com/radres/call-me) — Hosted remote MCP server (Streamable HTTP, plus mobile companion app) that lets a coding agent ring your phone or text you for human-in-the-loop decisions.
 - [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) — Official Chrome DevTools MCP server enabling coding agents to inspect DOM, console logs, network requests, and browser state.
+- [Cloud Alter Ego](https://cloudalterego.cafeboon.com) — Remote MCP connector that logs AI chat questions and shares rules and work history across Claude, ChatGPT, Gemini, and other MCP clients, stored as plain files in your own cloud storage. Free / freemium.
 - [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) — Local code intelligence MCP server connecting code, docs, and infrastructure in a persistent graph with change-aware test selection.
 - [Context7 MCP](https://github.com/upstash/context7) — Dynamic context-curation server providing real-time AST symbol definitions and semantic codebase navigation.
 - [Docsy](https://github.com/getremcp/docsy-plugin) — Read-only hosted MCP for library/version lookup and source-linked developer docs; requires OAuth account sign-in.

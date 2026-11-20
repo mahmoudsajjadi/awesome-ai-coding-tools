@@ -24,6 +24,7 @@ CATEGORIES = [
 # Fields: open_source (bool), pricing (free / freemium / paid), license (str), maintenance_status (active / slow / inactive)
 TOOL_METADATA = {
     "Chrome DevTools MCP": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp"},
+    "Cloud Alter Ego": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://cloudalterego.cafeboon.com"},
     "code-review-graph": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/tirth8205/code-review-graph"},
     "codebase-memory-mcp": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/DeusData/codebase-memory-mcp"},
     "Qwen Code": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/QwenLM/qwen-code"},
