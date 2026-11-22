@@ -75,6 +75,7 @@ TOOL_METADATA = {
     "Context7 MCP": {"open_source": True, "pricing": "freemium", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/upstash/context7"},
     "Docsy": {"open_source": True, "pricing": "freemium", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/getremcp/docsy-plugin"},
     "Filesystem & Git MCP": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/git"},
+    "Geonode MCP Server": {"open_source": True, "pricing": "freemium", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/geonodecom/mcp"},
     "GitHub MCP Server": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"},
     "Ironheights": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/Frank-Masciopinto/ironheights"},
     "Oh My Android": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/ateymoori/oh-my-android"},
