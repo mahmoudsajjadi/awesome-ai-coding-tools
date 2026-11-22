@@ -68,6 +68,7 @@ TOOL_METADATA = {
     "Orkas": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/Orkas-AI/Orkas"},
     "Orca": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/stablyai/orca"},
     "Sqwakie": {"open_source": False, "pricing": "freemium", "license": "FSL-1.1-ALv2", "maintenance_status": "active", "source": "https://sqwakie.si/"},
+    "Valo": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://getvalo.dev"},
     "Vibe Kanban": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/BloopAI/vibe-kanban"},
     "BrowserTools MCP": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/AgentDeskAI/browser-tools-mcp"},
     "call-me": {"open_source": True, "pricing": "paid", "license": "MIT (Client) / Proprietary", "maintenance_status": "active", "source": "https://github.com/radres/call-me"},

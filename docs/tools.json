@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 78,
+  "toolCount": 79,
   "tools": [
     {
       "name": "Antigravity",
@@ -494,6 +494,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://sqwakie.si/"
+    },
+    {
+      "name": "Valo",
+      "url": "https://getvalo.dev",
+      "category": "Running Agents in Parallel",
+      "description": "Desktop workspace that runs Claude Code, Codex and local Ollama models side by side on Windows, macOS and Linux, with per-tool permissions. Closed source with a free plan.",
+      "open_source": false,
+      "pricing": "freemium",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://getvalo.dev"
     },
     {
       "name": "Vibe Kanban",
