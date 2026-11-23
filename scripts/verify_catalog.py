@@ -93,6 +93,7 @@ TOOL_METADATA = {
     "llama.cpp": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/ggerganov/llama.cpp"},
     "LM Studio": {"open_source": False, "pricing": "free", "license": "Proprietary", "maintenance_status": "active", "source": "https://lmstudio.ai/"},
     "Ollama": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://ollama.com/"},
+    "Outlier": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://outlier.host/"},
     "vLLM": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/vllm-project/vllm"},
     "agent-qa": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://vostride.com"},
     "CodeRabbit": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://coderabbit.ai/"},
