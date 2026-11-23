@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 80,
+  "toolCount": 81,
   "tools": [
     {
       "name": "Antigravity",
@@ -842,6 +842,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://ollama.com/"
+    },
+    {
+      "name": "Outlier",
+      "url": "https://outlier.host/",
+      "category": "Local Execution Engines (Private & Offline)",
+      "description": "Mac desktop app (Apple Silicon) that runs open-weight models such as Qwen locally, with a Pro coding agent that edits files and runs tests; free tier, Pro paid once.",
+      "open_source": false,
+      "pricing": "freemium",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://outlier.host/"
     },
     {
       "name": "vLLM",

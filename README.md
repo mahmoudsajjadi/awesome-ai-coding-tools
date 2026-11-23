@@ -189,6 +189,7 @@ Use these questions to narrow down the right tool for your setup:
 - [llama.cpp](https://github.com/ggerganov/llama.cpp) — High-performance C/C++ inference engine for quantized GGUF models with minimal hardware overhead.
 - [LM Studio](https://lmstudio.ai/) — Graphical desktop application for running local GGUF models on Apple Silicon and NVIDIA GPUs.
 - [Ollama](https://ollama.com/) — The easiest way to get up and running with local models via a single terminal command (`ollama run qwen2.5-coder`).
+- [Outlier](https://outlier.host/) — Mac desktop app (Apple Silicon) that runs open-weight models such as Qwen locally, with a Pro coding agent that edits files and runs tests; free tier, Pro paid once.
 - [vLLM](https://github.com/vllm-project/vllm) — High-throughput, memory-efficient LLM serving engine featuring PagedAttention for production local deployments.
 
 ### Automated Testing, QA & Code Review
