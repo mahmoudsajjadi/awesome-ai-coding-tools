@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 80,
+  "toolCount": 81,
   "tools": [
     {
       "name": "Antigravity",
@@ -386,6 +386,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/AltharIDE/althar"
+    },
+    {
+      "name": "Bivy",
+      "url": "https://github.com/bivysh/bivy",
+      "category": "Running Agents in Parallel",
+      "description": "Workspace that runs Claude Code, Codex, OpenCode, Pi and other agent CLIs as sessions on your own Mac or Linux machines or a hosted cloud computer, steered from a browser or phone, with approvals and automations started by GitHub, CI or a schedule. Local models via Ollama, LM Studio or vLLM endpoints for Pi; MIT, self-hostable.",
+      "open_source": true,
+      "pricing": "freemium",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/bivysh/bivy"
     },
     {
       "name": "Carbon Forge",

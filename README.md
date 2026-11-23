@@ -142,6 +142,7 @@ Use these questions to narrow down the right tool for your setup:
 
 - [AgentsMesh](https://github.com/AgentsMesh/AgentsMesh) — Platform for scheduling and isolating multiple coding agents across distributed workstations.
 - [Althar](https://github.com/AltharIDE/althar) — Desktop ADE that turns requests into tasks, assigns coding agents, and has another model review the changes. Local models are supported through OpenCode.
+- [Bivy](https://github.com/bivysh/bivy) — Workspace that runs Claude Code, Codex, OpenCode, Pi and other agent CLIs as sessions on your own Mac or Linux machines or a hosted cloud computer, steered from a browser or phone, with approvals and automations started by GitHub, CI or a schedule. Local models via Ollama, LM Studio or vLLM endpoints for Pi; MIT, self-hostable.
 - [Carbon Forge](https://carbonforge.dev/) — Hosted source control (a web service reached over MCP, no local model involved) where each coding agent works in a lane, a set of patches over the trunk, instead of a git worktree. A patch that no longer applies is reported as a named conflict rather than merged automatically, and git history is rendered from the record and pushed to GitHub.
 - [ccmanager](https://github.com/kbwo/ccmanager) — Session manager for coordinating parallel CLI agent workflows across multiple repositories.
 - [Claude Squad](https://github.com/smtg-ai/claude-squad) — Terminal manager for running multiple concurrent coding agent sessions across terminal tabs.
