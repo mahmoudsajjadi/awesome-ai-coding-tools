@@ -59,6 +59,7 @@ TOOL_METADATA = {
     "OpenCode": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/anomalyco/opencode"},
     "Roo Code": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "inactive", "source": "https://github.com/RooVetGit/Roo-Code"},
     "Xenon": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/xianyu-sheng/Xenon"},
+    "Bivy": {"open_source": True, "pricing": "freemium", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/bivysh/bivy"},
     "Carbon Forge": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://carbonforge.dev/"},
     "ccmanager": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/kbwo/ccmanager"},
     "Claude Squad": {"open_source": True, "pricing": "free", "license": "AGPL-3.0", "maintenance_status": "active", "source": "https://github.com/smtg-ai/claude-squad"},
