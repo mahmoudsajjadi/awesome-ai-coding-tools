@@ -124,11 +124,14 @@ Use these questions to narrow down the right tool for your setup:
 - [Avante.nvim](https://github.com/yetone/avante.nvim) — Neovim plugin designed to emulate Cursor AI's multi-file editing capabilities natively in Lua.
 - [Claude Code](https://code.claude.com/docs) — Agentic command-line tool capable of autonomous directory indexing, running bash commands, handling git diffs, and orchestrating complex multi-file refactors.
 - [Cline](https://github.com/cline/cline) — Autonomous coding agent extension for VS Code that executes terminal commands, inspects local browser previews, and requests human-in-the-loop permission.
+- [Codewhale](https://github.com/codewhale-hq/Codewhale) — Open-source (MIT) terminal coding agent written in Rust that supports any model and splits tasks across multiple agents.
 - [Codex CLI](https://github.com/openai/codex) — Command-line interface for OpenAI's coding models optimized for fast in-terminal code modifications and script execution.
+- [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — Open-source (MIT) coding agent for software engineering tasks.
 - [Flisk](https://github.com/flisk-sh/flisk) — Agent-first local environment generator and CLI that automatically configures Docker Compose, Tilt, and Traefik stacks from an empty directory so coding agents can focus on application code.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — Google's command-line agent utilizing 1M+ token context windows to ingest entire repositories for refactoring and debugging.
 - [Goose](https://github.com/block/goose) — Open-source, extensible AI agent by Block that automates engineering tasks, script execution, and multi-tool workflows directly from the terminal.
 - [Imagera Code](https://imagera.ai/code) — Paid terminal coding agent (CLI, built on OpenCode) that reads and edits a project, runs commands and tests, and works headless or through ACP and MCP; one plan covers Claude, GPT, Gemini and other models.
+- [jcode](https://github.com/1jehuang/jcode) — Open-source (MIT) Rust coding agent harness built for multi-agent development workflows.
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
 - [Mentat](https://github.com/AbanteAI/archive-old-cli-mentat) — Open-source AI tool capable of coordinating git workflows directly in the terminal (historical CLI archived; team pivoted to MentatBot).
 - [OMK](https://github.com/dmae97/omk) — Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes.
@@ -151,6 +154,8 @@ Use these questions to narrow down the right tool for your setup:
 - [MulmoTerminal](https://github.com/receptron/mulmoterminal) — Browser-based terminal grid running parallel coding agent sessions with dedicated git worktrees per cell, backed by tmux.
 - [Orca](https://github.com/stablyai/orca) — Autonomous development environment built to orchestrate and execute a fleet of parallel coding agents.
 - [Orkas](https://github.com/Orkas-AI/Orkas) — Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.
+- [Paradev](https://github.com/ParadevAI/Paradev) — Open-source (MIT) parallel coding agent orchestrator for running multiple agents concurrently.
+- [ruflo](https://github.com/ruvnet/ruflo) — Open-source (MIT) multi-agent swarm orchestration harness with adaptive memory, vector RAG, and native Claude Code / Codex integration.
 - [Sqwakie](https://sqwakie.si/) — Live dashboard and peer-to-peer CLI/MCP messaging for Claude Code and Codex agents across a team's machines, with project kanbans agents can start, review, and finish. Free for 2 people; FSL-1.1-ALv2 (source-available).
 - [Valo](https://getvalo.dev) — Desktop workspace that runs Claude Code, Codex and local Ollama models side by side on Windows, macOS and Linux, with per-tool permissions. Closed source with a free plan.
 - [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) — Kanban board dashboard to plan, dispatch, monitor, and review tasks across multiple agent CLIs.

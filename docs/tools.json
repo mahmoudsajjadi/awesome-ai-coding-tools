@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 81,
+  "toolCount": 87,
   "tools": [
     {
       "name": "Antigravity",
@@ -208,6 +208,18 @@
       "source": "https://github.com/cline/cline"
     },
     {
+      "name": "Codewhale",
+      "url": "https://github.com/codewhale-hq/Codewhale",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source (MIT) terminal coding agent written in Rust that supports any model and splits tasks across multiple agents.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/codewhale-hq/Codewhale"
+    },
+    {
       "name": "Codex CLI",
       "url": "https://github.com/openai/codex",
       "category": "Terminal & CLI Pair Programmers",
@@ -218,6 +230,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/openai/codex"
+    },
+    {
+      "name": "DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source (MIT) coding agent for software engineering tasks.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/esengine/DeepSeek-Reasonix"
     },
     {
       "name": "Flisk",
@@ -266,6 +290,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://imagera.ai/code"
+    },
+    {
+      "name": "jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source (MIT) Rust coding agent harness built for multi-agent development workflows.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/1jehuang/jcode"
     },
     {
       "name": "Kilo Code",
@@ -494,6 +530,30 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/Orkas-AI/Orkas"
+    },
+    {
+      "name": "Paradev",
+      "url": "https://github.com/ParadevAI/Paradev",
+      "category": "Running Agents in Parallel",
+      "description": "Open-source (MIT) parallel coding agent orchestrator for running multiple agents concurrently.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/ParadevAI/Paradev"
+    },
+    {
+      "name": "ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "category": "Running Agents in Parallel",
+      "description": "Open-source (MIT) multi-agent swarm orchestration harness with adaptive memory, vector RAG, and native Claude Code / Codex integration.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/ruvnet/ruflo"
     },
     {
       "name": "Sqwakie",
