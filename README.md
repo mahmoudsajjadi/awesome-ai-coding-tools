@@ -205,6 +205,7 @@ Use these questions to narrow down the right tool for your setup:
 - [code-review-graph](https://github.com/tirth8205/code-review-graph) — Local-first code intelligence graph for MCP and CLI that builds a persistent codebase map so AI coding tools read only relevant context during reviews.
 - [CodeRabbit](https://coderabbit.ai/) — AI-driven pull request reviewer providing line-by-line feedback, sequence diagrams, and security vulnerability checks.
 - [Cover-Agent](https://github.com/Codium-ai/cover-agent) — Open-source generative testing tool that iteratively generates unit tests until target coverage is met.
+- [Enhanciar](https://enhanciar.in) — Paid web app that reviews GitHub pull requests with the whole codebase as context, and answers code questions with source links over a hosted MCP server. Uses your own AI key.
 - [Keploy](https://github.com/keploy/keploy) — Open-source zero-code test generator that captures real network calls and creates automated regression test suites.
 - [Qodo (CodiumAI)](https://www.qodo.ai/) — Comprehensive code integrity platform analyzing PRs, writing regression tests, and enforcing code standards.
 - [Semgrep Assistant](https://semgrep.dev/) — Combines deterministic static analysis (AST rules) with LLM explanations to eliminate false-positive security findings.
