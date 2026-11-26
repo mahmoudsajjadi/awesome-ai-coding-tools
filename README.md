@@ -126,6 +126,7 @@ Use these questions to narrow down the right tool for your setup:
 - [Cline](https://github.com/cline/cline) — Autonomous coding agent extension for VS Code that executes terminal commands, inspects local browser previews, and requests human-in-the-loop permission.
 - [Codewhale](https://github.com/codewhale-hq/Codewhale) — Open-source (MIT) terminal coding agent written in Rust that supports any model and splits tasks across multiple agents.
 - [Codex CLI](https://github.com/openai/codex) — Command-line interface for OpenAI's coding models optimized for fast in-terminal code modifications and script execution.
+- [Codex Desk](https://github.com/blucca/codex-desk) — Free, MIT-licensed local browser workbench for existing Codex CLI conversations: search saved decisions, read original history, prepare follow-ups, and explicitly continue the same native thread. Uses the installed CLI and current provider settings; model usage costs and local-model availability follow that Codex configuration.
 - [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — Open-source (MIT) coding agent for software engineering tasks.
 - [Flisk](https://github.com/flisk-sh/flisk) — Agent-first local environment generator and CLI that automatically configures Docker Compose, Tilt, and Traefik stacks from an empty directory so coding agents can focus on application code.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — Google's command-line agent utilizing 1M+ token context windows to ingest entire repositories for refactoring and debugging.

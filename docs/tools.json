@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 88,
+  "toolCount": 89,
   "tools": [
     {
       "name": "Antigravity",
@@ -230,6 +230,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/openai/codex"
+    },
+    {
+      "name": "Codex Desk",
+      "url": "https://github.com/blucca/codex-desk",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Free, MIT-licensed local browser workbench for existing Codex CLI conversations: search saved decisions, read original history, prepare follow-ups, and explicitly continue the same native thread. Uses the installed CLI and current provider settings; model usage costs and local-model availability follow that Codex configuration.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-26",
+      "source": "https://github.com/blucca/codex-desk"
     },
     {
       "name": "DeepSeek-Reasonix",

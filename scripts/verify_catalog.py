@@ -23,6 +23,7 @@ CATEGORIES = [
 # Tool metadata overrides and factual catalog data
 # Fields: open_source (bool), pricing (free / freemium / paid), license (str), maintenance_status (active / slow / inactive)
 TOOL_METADATA = {
+    "Codex Desk": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/blucca/codex-desk", "last_verified": "2026-11-26"},
     "Kite (kite.new)": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://github.com/kitedotnew/kite-agent-plugins"},
     "Chrome DevTools MCP": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp"},
     "Cloud Alter Ego": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://cloudalterego.cafeboon.com"},
@@ -148,7 +149,7 @@ def verify_and_sync():
                             'pricing': meta.get('pricing', 'free'),
                             'license': meta.get('license', 'Unknown'),
                             'maintenance_status': meta.get('maintenance_status', 'active'),
-                            'last_verified': '2026-11-09',
+                            'last_verified': meta.get('last_verified', '2026-11-09'),
                             'source': meta.get('source', url)
                         })
 
