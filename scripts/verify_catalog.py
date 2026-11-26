@@ -103,6 +103,7 @@ TOOL_METADATA = {
     "Outlier": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://outlier.host/"},
     "vLLM": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/vllm-project/vllm"},
     "agent-qa": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://vostride.com"},
+    "Enhanciar": {"open_source": False, "pricing": "paid", "license": "Proprietary", "maintenance_status": "active", "source": "https://enhanciar.in"},
     "CodeRabbit": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://coderabbit.ai/"},
     "Cover-Agent": {"open_source": True, "pricing": "free", "license": "AGPL-3.0", "maintenance_status": "active", "source": "https://github.com/Codium-ai/cover-agent"},
     "Keploy": {"open_source": True, "pricing": "freemium", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/keploy/keploy"},
