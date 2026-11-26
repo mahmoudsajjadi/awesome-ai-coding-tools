@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 88,
+  "toolCount": 89,
   "tools": [
     {
       "name": "Antigravity",
@@ -998,6 +998,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/Codium-ai/cover-agent"
+    },
+    {
+      "name": "Enhanciar",
+      "url": "https://enhanciar.in",
+      "category": "Automated Testing, QA & Code Review",
+      "description": "Paid web app that reviews GitHub pull requests with the whole codebase as context, and answers code questions with source links over a hosted MCP server. Uses your own AI key.",
+      "open_source": false,
+      "pricing": "paid",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://enhanciar.in"
     },
     {
       "name": "Keploy",
