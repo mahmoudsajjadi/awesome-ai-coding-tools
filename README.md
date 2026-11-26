@@ -133,6 +133,7 @@ Use these questions to narrow down the right tool for your setup:
 - [Imagera Code](https://imagera.ai/code) — Paid terminal coding agent (CLI, built on OpenCode) that reads and edits a project, runs commands and tests, and works headless or through ACP and MCP; one plan covers Claude, GPT, Gemini and other models.
 - [jcode](https://github.com/1jehuang/jcode) — Open-source (MIT) Rust coding agent harness built for multi-agent development workflows.
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
+- [Mel](https://www.openmel.dev) — Multi-agent, multi-model agentic terminal for macOS, Windows, Linux and VS Code where a team of agents edits files, runs commands and reviews diffs, with approval cards before commands and edits. Proprietary; free with your own API key, paid plans from $20/month.
 - [Mentat](https://github.com/AbanteAI/archive-old-cli-mentat) — Open-source AI tool capable of coordinating git workflows directly in the terminal (historical CLI archived; team pivoted to MentatBot).
 - [OMK](https://github.com/dmae97/omk) — Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes.
 - [OpenCode](https://github.com/anomalyco/opencode) — Provider-agnostic open-source terminal coding agent harness supporting custom agent loops, local model routing, and unified diff execution.
