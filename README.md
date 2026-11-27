@@ -124,11 +124,14 @@ Use these questions to narrow down the right tool for your setup:
 - [Avante.nvim](https://github.com/yetone/avante.nvim) — Neovim plugin designed to emulate Cursor AI's multi-file editing capabilities natively in Lua.
 - [Claude Code](https://code.claude.com/docs) — Agentic command-line tool capable of autonomous directory indexing, running bash commands, handling git diffs, and orchestrating complex multi-file refactors.
 - [Cline](https://github.com/cline/cline) — Autonomous coding agent extension for VS Code that executes terminal commands, inspects local browser previews, and requests human-in-the-loop permission.
+- [Codewhale](https://github.com/codewhale-hq/Codewhale) — Open-source (MIT) terminal coding agent written in Rust that supports any model and splits tasks across multiple agents.
 - [Codex CLI](https://github.com/openai/codex) — Command-line interface for OpenAI's coding models optimized for fast in-terminal code modifications and script execution.
+- [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — Open-source (MIT) coding agent for software engineering tasks.
 - [Flisk](https://github.com/flisk-sh/flisk) — Agent-first local environment generator and CLI that automatically configures Docker Compose, Tilt, and Traefik stacks from an empty directory so coding agents can focus on application code.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — Google's command-line agent utilizing 1M+ token context windows to ingest entire repositories for refactoring and debugging.
 - [Goose](https://github.com/block/goose) — Open-source, extensible AI agent by Block that automates engineering tasks, script execution, and multi-tool workflows directly from the terminal.
 - [Imagera Code](https://imagera.ai/code) — Paid terminal coding agent (CLI, built on OpenCode) that reads and edits a project, runs commands and tests, and works headless or through ACP and MCP; one plan covers Claude, GPT, Gemini and other models.
+- [jcode](https://github.com/1jehuang/jcode) — Open-source (MIT) Rust coding agent harness built for multi-agent development workflows.
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
 - [Mentat](https://github.com/AbanteAI/archive-old-cli-mentat) — Open-source AI tool capable of coordinating git workflows directly in the terminal (historical CLI archived; team pivoted to MentatBot).
 - [OMK](https://github.com/dmae97/omk) — Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes.
@@ -142,6 +145,7 @@ Use these questions to narrow down the right tool for your setup:
 
 - [AgentsMesh](https://github.com/AgentsMesh/AgentsMesh) — Platform for scheduling and isolating multiple coding agents across distributed workstations.
 - [Althar](https://github.com/AltharIDE/althar) — Desktop ADE that turns requests into tasks, assigns coding agents, and has another model review the changes. Local models are supported through OpenCode.
+- [Bivy](https://github.com/bivysh/bivy) — Workspace that runs Claude Code, Codex, OpenCode, Pi and other agent CLIs as sessions on your own Mac or Linux machines or a hosted cloud computer, steered from a browser or phone, with approvals and automations started by GitHub, CI or a schedule. Local models via Ollama, LM Studio or vLLM endpoints for Pi; MIT, self-hostable.
 - [Carbon Forge](https://carbonforge.dev/) — Hosted source control (a web service reached over MCP, no local model involved) where each coding agent works in a lane, a set of patches over the trunk, instead of a git worktree. A patch that no longer applies is reported as a named conflict rather than merged automatically, and git history is rendered from the record and pushed to GitHub.
 - [ccmanager](https://github.com/kbwo/ccmanager) — Session manager for coordinating parallel CLI agent workflows across multiple repositories.
 - [Claude Squad](https://github.com/smtg-ai/claude-squad) — Terminal manager for running multiple concurrent coding agent sessions across terminal tabs.
@@ -150,7 +154,10 @@ Use these questions to narrow down the right tool for your setup:
 - [MulmoTerminal](https://github.com/receptron/mulmoterminal) — Browser-based terminal grid running parallel coding agent sessions with dedicated git worktrees per cell, backed by tmux.
 - [Orca](https://github.com/stablyai/orca) — Autonomous development environment built to orchestrate and execute a fleet of parallel coding agents.
 - [Orkas](https://github.com/Orkas-AI/Orkas) — Local-first desktop AI workforce coordinating specialist agents and external coding CLIs (Claude Code, Codex, OpenCode) with custom model endpoints.
+- [Paradev](https://github.com/ParadevAI/Paradev) — Open-source (MIT) parallel coding agent orchestrator for running multiple agents concurrently.
+- [ruflo](https://github.com/ruvnet/ruflo) — Open-source (MIT) multi-agent swarm orchestration harness with adaptive memory, vector RAG, and native Claude Code / Codex integration.
 - [Sqwakie](https://sqwakie.si/) — Live dashboard and peer-to-peer CLI/MCP messaging for Claude Code and Codex agents across a team's machines, with project kanbans agents can start, review, and finish. Free for 2 people; FSL-1.1-ALv2 (source-available).
+- [Valo](https://getvalo.dev) — Desktop workspace that runs Claude Code, Codex and local Ollama models side by side on Windows, macOS and Linux, with per-tool permissions. Closed source with a free plan.
 - [Vibe Kanban](https://github.com/BloopAI/vibe-kanban) — Kanban board dashboard to plan, dispatch, monitor, and review tasks across multiple agent CLIs.
 
 ### Model Context Protocol (MCP) Servers for Coding
@@ -163,8 +170,10 @@ Use these questions to narrow down the right tool for your setup:
 - [Context7 MCP](https://github.com/upstash/context7) — Dynamic context-curation server providing real-time AST symbol definitions and semantic codebase navigation.
 - [Docsy](https://github.com/getremcp/docsy-plugin) — Read-only hosted MCP for library/version lookup and source-linked developer docs; requires OAuth account sign-in.
 - [Filesystem & Git MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/git) — Official reference MCP server enabling agents to inspect git commits, staging areas, branches, and file structures securely.
+- [Geonode MCP Server](https://github.com/geonodecom/mcp) — Web search and content collection MCP server for documentation lookups and research; MIT-licensed server with limited keyless page extraction and a freemium API-key backend for JS rendering, crawls, and country targeting.
 - [GitHub MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/github) — Integrates GitHub issues, pull requests, repository searches, and commit reviews directly into agent reasoning loops.
 - [Ironheights](https://github.com/Frank-Masciopinto/ironheights) — Local stdio MCP server and CLI (`npx -y ironheights mcp`) that lets Claude Code, Cursor or Codex check an agent skill or MCP config before installing it, returning an A–F grade with findings for prompt injection, credential reads and remote-exec installs. Rule-based and pre-1.0, so it misses many plain-language attacks. Apache-2.0.
+- [Kite (kite.new)](https://kite.new) — Hosted remote MCP server (`https://kite.new/api/mcp`, plugin for Claude Code, Cursor and Codex) for an agent-first design tool: coding agents read and edit the same HTML/CSS design files, components, variants and variable modes that the team edits on the canvas. It is an MCP server, not a model, so local-LLM support depends on the client. Free plan / freemium.
 - [Oh My Android](https://github.com/ateymoori/oh-my-android) — Native macOS app (MIT, free) that controls the Android Emulator and adb devices from a GUI; its built-in stdio MCP server (18 tools) lets Claude Code, Codex, Cursor or VS Code see and drive the emulator. It is an MCP server, not an AI tool itself, so local-LLM support depends on the client you pair it with.
 - [Postgres MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) — Read-only schema inspector and query execution bridge enabling coding agents to validate database migrations and models.
 - [ReMCP](https://github.com/getremcp/remcp) — Hosted OAuth MCP for terminal, file, and browser actions on explicitly paired computers; actions may change device state.
@@ -188,6 +197,7 @@ Use these questions to narrow down the right tool for your setup:
 - [llama.cpp](https://github.com/ggerganov/llama.cpp) — High-performance C/C++ inference engine for quantized GGUF models with minimal hardware overhead.
 - [LM Studio](https://lmstudio.ai/) — Graphical desktop application for running local GGUF models on Apple Silicon and NVIDIA GPUs.
 - [Ollama](https://ollama.com/) — The easiest way to get up and running with local models via a single terminal command (`ollama run qwen2.5-coder`).
+- [Outlier](https://outlier.host/) — Mac desktop app (Apple Silicon) that runs open-weight models such as Qwen locally, with a Pro coding agent that edits files and runs tests; free tier, Pro paid once.
 - [vLLM](https://github.com/vllm-project/vllm) — High-throughput, memory-efficient LLM serving engine featuring PagedAttention for production local deployments.
 
 ### Automated Testing, QA & Code Review

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 79,
+  "toolCount": 89,
   "tools": [
     {
       "name": "Antigravity",
@@ -208,6 +208,18 @@
       "source": "https://github.com/cline/cline"
     },
     {
+      "name": "Codewhale",
+      "url": "https://github.com/codewhale-hq/Codewhale",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source (MIT) terminal coding agent written in Rust that supports any model and splits tasks across multiple agents.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/codewhale-hq/Codewhale"
+    },
+    {
       "name": "Codex CLI",
       "url": "https://github.com/openai/codex",
       "category": "Terminal & CLI Pair Programmers",
@@ -218,6 +230,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/openai/codex"
+    },
+    {
+      "name": "DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source (MIT) coding agent for software engineering tasks.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/esengine/DeepSeek-Reasonix"
     },
     {
       "name": "Flisk",
@@ -266,6 +290,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://imagera.ai/code"
+    },
+    {
+      "name": "jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source (MIT) Rust coding agent harness built for multi-agent development workflows.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/1jehuang/jcode"
     },
     {
       "name": "Kilo Code",
@@ -388,6 +424,18 @@
       "source": "https://github.com/AltharIDE/althar"
     },
     {
+      "name": "Bivy",
+      "url": "https://github.com/bivysh/bivy",
+      "category": "Running Agents in Parallel",
+      "description": "Workspace that runs Claude Code, Codex, OpenCode, Pi and other agent CLIs as sessions on your own Mac or Linux machines or a hosted cloud computer, steered from a browser or phone, with approvals and automations started by GitHub, CI or a schedule. Local models via Ollama, LM Studio or vLLM endpoints for Pi; MIT, self-hostable.",
+      "open_source": true,
+      "pricing": "freemium",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/bivysh/bivy"
+    },
+    {
       "name": "Carbon Forge",
       "url": "https://carbonforge.dev/",
       "category": "Running Agents in Parallel",
@@ -484,6 +532,30 @@
       "source": "https://github.com/Orkas-AI/Orkas"
     },
     {
+      "name": "Paradev",
+      "url": "https://github.com/ParadevAI/Paradev",
+      "category": "Running Agents in Parallel",
+      "description": "Open-source (MIT) parallel coding agent orchestrator for running multiple agents concurrently.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/ParadevAI/Paradev"
+    },
+    {
+      "name": "ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "category": "Running Agents in Parallel",
+      "description": "Open-source (MIT) multi-agent swarm orchestration harness with adaptive memory, vector RAG, and native Claude Code / Codex integration.",
+      "open_source": true,
+      "pricing": "free",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/ruvnet/ruflo"
+    },
+    {
       "name": "Sqwakie",
       "url": "https://sqwakie.si/",
       "category": "Running Agents in Parallel",
@@ -494,6 +566,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://sqwakie.si/"
+    },
+    {
+      "name": "Valo",
+      "url": "https://getvalo.dev",
+      "category": "Running Agents in Parallel",
+      "description": "Desktop workspace that runs Claude Code, Codex and local Ollama models side by side on Windows, macOS and Linux, with per-tool permissions. Closed source with a free plan.",
+      "open_source": false,
+      "pricing": "freemium",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://getvalo.dev"
     },
     {
       "name": "Vibe Kanban",
@@ -604,6 +688,18 @@
       "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/git"
     },
     {
+      "name": "Geonode MCP Server",
+      "url": "https://github.com/geonodecom/mcp",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Web search and content collection MCP server for documentation lookups and research; MIT-licensed server with limited keyless page extraction and a freemium API-key backend for JS rendering, crawls, and country targeting.",
+      "open_source": true,
+      "pricing": "freemium",
+      "license": "MIT",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/geonodecom/mcp"
+    },
+    {
       "name": "GitHub MCP Server",
       "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
       "category": "Model Context Protocol (MCP) Servers for Coding",
@@ -626,6 +722,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/Frank-Masciopinto/ironheights"
+    },
+    {
+      "name": "Kite (kite.new)",
+      "url": "https://kite.new",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Hosted remote MCP server (`https://kite.new/api/mcp`, plugin for Claude Code, Cursor and Codex) for an agent-first design tool: coding agents read and edit the same HTML/CSS design files, components, variants and variable modes that the team edits on the canvas. It is an MCP server, not a model, so local-LLM support depends on the client. Free plan / freemium.",
+      "open_source": false,
+      "pricing": "freemium",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/kitedotnew/kite-agent-plugins"
     },
     {
       "name": "Oh My Android",
@@ -830,6 +938,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://ollama.com/"
+    },
+    {
+      "name": "Outlier",
+      "url": "https://outlier.host/",
+      "category": "Local Execution Engines (Private & Offline)",
+      "description": "Mac desktop app (Apple Silicon) that runs open-weight models such as Qwen locally, with a Pro coding agent that edits files and runs tests; free tier, Pro paid once.",
+      "open_source": false,
+      "pricing": "freemium",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://outlier.host/"
     },
     {
       "name": "vLLM",
