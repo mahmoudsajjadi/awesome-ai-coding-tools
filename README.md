@@ -177,6 +177,7 @@ Use these questions to narrow down the right tool for your setup:
 - [Oh My Android](https://github.com/ateymoori/oh-my-android) — Native macOS app (MIT, free) that controls the Android Emulator and adb devices from a GUI; its built-in stdio MCP server (18 tools) lets Claude Code, Codex, Cursor or VS Code see and drive the emulator. It is an MCP server, not an AI tool itself, so local-LLM support depends on the client you pair it with.
 - [Postgres MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) — Read-only schema inspector and query execution bridge enabling coding agents to validate database migrations and models.
 - [ReMCP](https://github.com/getremcp/remcp) — Hosted OAuth MCP for terminal, file, and browser actions on explicitly paired computers; actions may change device state.
+- [Sandscale](https://sandscale.dev/sandboxes/mcp) — Hosted MCP server that gives coding agents a Firecracker microVM sandbox per task to run commands and move files, with allow/ask/deny rules per tool and an audit log.
 - [Serena](https://github.com/oraios/serena) — MCP toolkit for coding agents providing semantic symbol retrieval and code editing capabilities.
 - [sqlite-graph-memory](https://github.com/tonydzi/sqlite-graph-memory) — Local stdio MCP server and CLI that lets Claude Code, Cursor or Codex recall from a markdown or Obsidian notes folder, combining vector search with hops along `[[wikilinks]]` in a single SQLite file; embeddings run locally via ONNX. MIT.
 
