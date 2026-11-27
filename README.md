@@ -170,7 +170,7 @@ Use these questions to narrow down the right tool for your setup:
 - [ReMCP](https://github.com/getremcp/remcp) — Hosted OAuth MCP for terminal, file, and browser actions on explicitly paired computers; actions may change device state.
 - [Serena](https://github.com/oraios/serena) — MCP toolkit for coding agents providing semantic symbol retrieval and code editing capabilities.
 - [sqlite-graph-memory](https://github.com/tonydzi/sqlite-graph-memory) — Local stdio MCP server and CLI that lets Claude Code, Cursor or Codex recall from a markdown or Obsidian notes folder, combining vector search with hops along `[[wikilinks]]` in a single SQLite file; embeddings run locally via ONNX. MIT.
-- [Taskhold](https://taskhold.com/?ref=awesome-ai-coding-tools) — Hosted remote MCP server (Streamable HTTP, OAuth connect) that gives Claude Code, Cursor and Codex a shared task list: agents plan steps, report live progress and block with a question you answer from a live board. Paid ($12/month, 7-day trial); a task list, not a model, so local-LLM support depends on the client. Docs: https://taskhold.com/docs.
+- [Taskhold](https://taskhold.com/) — Hosted remote MCP server (Streamable HTTP, OAuth connect) that gives Claude Code, Cursor and Codex a shared task list: agents plan steps, report live progress and block with a question you answer from a live board. Paid ($12/month, 7-day trial); a task list, not a model, so local-LLM support depends on the client. Docs: https://taskhold.com/docs.
 
 ### Top Open-Weight Coding Models
 

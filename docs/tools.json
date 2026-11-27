@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 78,
+  "toolCount": 79,
   "tools": [
     {
       "name": "Antigravity",
@@ -686,6 +686,18 @@
       "maintenance_status": "active",
       "last_verified": "2026-11-09",
       "source": "https://github.com/tonydzi/sqlite-graph-memory"
+    },
+    {
+      "name": "Taskhold",
+      "url": "https://taskhold.com/",
+      "category": "Model Context Protocol (MCP) Servers for Coding",
+      "description": "Hosted remote MCP server (Streamable HTTP, OAuth connect) that gives Claude Code, Cursor and Codex a shared task list: agents plan steps, report live progress and block with a question you answer from a live board. Paid ($12/month, 7-day trial); a task list, not a model, so local-LLM support depends on the client. Docs: https://taskhold.com/docs.",
+      "open_source": false,
+      "pricing": "paid",
+      "license": "Proprietary",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://taskhold.com/"
     },
     {
       "name": "Codestral",
