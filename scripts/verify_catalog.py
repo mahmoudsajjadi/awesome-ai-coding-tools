@@ -23,6 +23,7 @@ CATEGORIES = [
 # Tool metadata overrides and factual catalog data
 # Fields: open_source (bool), pricing (free / freemium / paid), license (str), maintenance_status (active / slow / inactive)
 TOOL_METADATA = {
+    "Taskhold": {"open_source": False, "pricing": "paid", "license": "Proprietary", "maintenance_status": "active", "source": "https://taskhold.com/"},
     "Kite (kite.new)": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://github.com/kitedotnew/kite-agent-plugins"},
     "Chrome DevTools MCP": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp"},
     "Cloud Alter Ego": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://cloudalterego.cafeboon.com"},
