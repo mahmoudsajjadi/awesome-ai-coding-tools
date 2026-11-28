@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "lastUpdated": "2026-11-09",
-  "toolCount": 88,
+  "toolCount": 89,
   "tools": [
     {
       "name": "Antigravity",
@@ -326,6 +326,18 @@
       "maintenance_status": "inactive",
       "last_verified": "2026-11-09",
       "source": "https://github.com/AbanteAI/archive-old-cli-mentat"
+    },
+    {
+      "name": "Mercury CLI",
+      "url": "https://github.com/Whq02/MercuryCLI",
+      "category": "Terminal & CLI Pair Programmers",
+      "description": "Open-source (Apache-2.0) terminal coding CLI with a built-in debugger (bundled Python/JS adapters), 57-language syntax-tree search and rewrite, and cloud or local LLMs (Ollama, vLLM, llama.cpp).",
+      "open_source": true,
+      "pricing": "free",
+      "license": "Apache-2.0",
+      "maintenance_status": "active",
+      "last_verified": "2026-11-09",
+      "source": "https://github.com/Whq02/MercuryCLI"
     },
     {
       "name": "OMK",

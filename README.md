@@ -134,6 +134,7 @@ Use these questions to narrow down the right tool for your setup:
 - [jcode](https://github.com/1jehuang/jcode) — Open-source (MIT) Rust coding agent harness built for multi-agent development workflows.
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
 - [Mentat](https://github.com/AbanteAI/archive-old-cli-mentat) — Open-source AI tool capable of coordinating git workflows directly in the terminal (historical CLI archived; team pivoted to MentatBot).
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — Open-source (Apache-2.0) terminal coding CLI with a built-in debugger (bundled Python/JS adapters), 57-language syntax-tree search and rewrite, and cloud or local LLMs (Ollama, vLLM, llama.cpp).
 - [OMK](https://github.com/dmae97/omk) — Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes.
 - [OpenCode](https://github.com/anomalyco/opencode) — Provider-agnostic open-source terminal coding agent harness supporting custom agent loops, local model routing, and unified diff execution.
 - [Qwen Code](https://github.com/QwenLM/qwen-code) — Open-source AI coding agent CLI by QwenLM for terminal-based code editing, debugging, and repository workflows.

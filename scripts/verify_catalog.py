@@ -61,6 +61,7 @@ TOOL_METADATA = {
     "Imagera Code": {"open_source": False, "pricing": "paid", "license": "Proprietary", "maintenance_status": "active", "source": "https://imagera.ai/code"},
     "Kilo Code": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/Kilo-Org/kilocode"},
     "Mentat": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "inactive", "source": "https://github.com/AbanteAI/archive-old-cli-mentat"},
+    "Mercury CLI": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://github.com/Whq02/MercuryCLI"},
     "OMK": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/dmae97/omk"},
     "OpenCode": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/anomalyco/opencode"},
     "Roo Code": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "inactive", "source": "https://github.com/RooVetGit/Roo-Code"},
