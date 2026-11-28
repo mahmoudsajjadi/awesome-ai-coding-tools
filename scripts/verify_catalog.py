@@ -43,6 +43,7 @@ TOOL_METADATA = {
     "Kiro": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://kiro.dev/"},
     "PearAI": {"open_source": True, "pricing": "freemium", "license": "Apache-2.0", "maintenance_status": "active", "source": "https://trypear.ai/"},
     "Trae": {"open_source": False, "pricing": "free", "license": "Proprietary", "maintenance_status": "active", "source": "https://www.trae.ai/"},
+    "Verboo Code": {"open_source": True, "pricing": "paid", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/verbeux-ai/verboo-code-v2"},
     "Volt": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/LeulAria/volt"},
     "Windsurf": {"open_source": False, "pricing": "freemium", "license": "Proprietary", "maintenance_status": "active", "source": "https://windsurf.com/"},
     "Zed": {"open_source": True, "pricing": "free", "license": "GPL-3.0 / Apache-2.0", "maintenance_status": "active", "source": "https://zed.dev/"},
