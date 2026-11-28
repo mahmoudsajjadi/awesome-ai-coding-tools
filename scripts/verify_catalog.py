@@ -62,6 +62,7 @@ TOOL_METADATA = {
     "Kilo Code": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/Kilo-Org/kilocode"},
     "Mentat": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "inactive", "source": "https://github.com/AbanteAI/archive-old-cli-mentat"},
     "OMK": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/dmae97/omk"},
+    "Open Max": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/Max17190/open-max"},
     "OpenCode": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/anomalyco/opencode"},
     "Roo Code": {"open_source": True, "pricing": "free", "license": "Apache-2.0", "maintenance_status": "inactive", "source": "https://github.com/RooVetGit/Roo-Code"},
     "Xenon": {"open_source": True, "pricing": "free", "license": "MIT", "maintenance_status": "active", "source": "https://github.com/xianyu-sheng/Xenon"},
