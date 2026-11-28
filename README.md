@@ -135,6 +135,7 @@ Use these questions to narrow down the right tool for your setup:
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — Open-source terminal-based developer coding assistant engineered for low latency workflows.
 - [Mentat](https://github.com/AbanteAI/archive-old-cli-mentat) — Open-source AI tool capable of coordinating git workflows directly in the terminal (historical CLI archived; team pivoted to MentatBot).
 - [OMK](https://github.com/dmae97/omk) — Open-source multi-agent coding CLI for the terminal (TypeScript, MIT). Switch models mid-session; finish goals only when your test passes.
+- [Open Max](https://github.com/Max17190/open-max) — Open-source (MIT) high-performance, self-extensible terminal coding agent harness in Rust, optimized for prompt caching. Writes new tools and skills as files and calls them on its next step; works with OpenAI-compatible, Anthropic, and local models (Ollama, vLLM, llama.cpp).
 - [OpenCode](https://github.com/anomalyco/opencode) — Provider-agnostic open-source terminal coding agent harness supporting custom agent loops, local model routing, and unified diff execution.
 - [Qwen Code](https://github.com/QwenLM/qwen-code) — Open-source AI coding agent CLI by QwenLM for terminal-based code editing, debugging, and repository workflows.
 - [Roo Code](https://github.com/RooVetGit/Roo-Code) — Community-driven autonomous coding assistant extension for VS Code (repository archived May 2026).
