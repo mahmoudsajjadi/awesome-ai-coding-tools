@@ -107,6 +107,7 @@ Use these questions to narrow down the right tool for your setup:
 - [Kiro](https://kiro.dev/) — Next-generation agentic IDE featuring real-time collaborative agents and multi-file intent parsing.
 - [PearAI](https://trypear.ai/) — Open-source alternative to Cursor built on VS Code with transparent model routing and customizable backends.
 - [Trae](https://www.trae.ai/) — Adaptive AI-powered IDE by ByteDance featuring Claude 3.5 Sonnet / GPT-4o integration, workspace-wide context indexing, and agentic code transformation.
+- [Verboo Code](https://github.com/verbeux-ai/verboo-code-v2) — MIT-licensed Tauri desktop coding agent for local project workspaces. Model inference uses a Verboo account and cloud-hosted models.
 - [Volt](https://github.com/LeulAria/volt) — Open-source (MIT) agentic IDE built on the VS Code core that drives Claude Code and Codex agent CLIs over ACP and supports local LLMs via Ollama, with hunk-level review of agent edits and Git checkpoints.
 - [Windsurf](https://windsurf.com/) — Agentic IDE by Codeium featuring "Flows" that track real-time developer context and synchronized multi-step edits.
 - [Zed](https://zed.dev/) — Lightning-fast, GPU-accelerated code editor written in Rust with deep model integration and multi-model assistant panels.
